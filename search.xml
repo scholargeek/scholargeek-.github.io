@@ -1,56 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title>CSS简介与基本语法</title>
-    <url>/2019/09/01/CSS/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h1 id="CSS简介"><a href="#CSS简介" class="headerlink" title="CSS简介"></a>CSS简介</h1><p>　　层叠样式表(Cascading Style Sheets)，缩写：CSS；又称串样式列表、级联样式表、串接样式表、阶层式样式表。是一种用来为结构化文档（如HTML文档或XML应用）添加样式（字体、间距和颜色等）的计算机语言，由W3C定义和维护。CSS3现在已被大部分现代浏览器支持，而下一版的CSS4仍在开发中。</p>
-<span id="more"></span>
-
-<h2 id="CSS概述"><a href="#CSS概述" class="headerlink" title="CSS概述"></a>CSS概述</h2><p>　　CSS不仅可以静态地修饰网页，还可以配合各种脚本语言动态地对网页各元素进行格式化。CSS 能够对网页中元素位置的排版进行像素级精确控制，支持几乎所有的字体字号样式，拥有对网页对象和模型样式编辑的能力。CSS不能单独使用，必须与HTML或XML一起协同工作，为HTML或XML起装饰作用。本文主要介绍用于装饰HTML网页的CSS技术。其中HTML负责确定网页中有哪些内容，CSS确定以何种外观展现这些元素。CSS可以用于设定页面布局、设定页面元素样式、设定适用于所有网页的全局样式。CSS可以零散地直接添加在要应用样式的网页元素上，也可以集中化内置于网页、链接式引入网页以及导入式引入网页。<br>　　CSS最重要的目标是将文件的内容与它的显示分隔开来。在CSS出现前，几乎所有的HTML文件内都包含文件显示的信息，比如字体的颜色、背景应该是怎样的、如何排列、边缘、连线等等都必须一一在HTML文件内列出，有时重复列出。CSS使作者可以将这些信息中的大部分隔离出来，简化HTML文件，这些信息被放在一个辅助的，用CSS语言写的文件中。HTML文件中只包含结构和内容的信息，CSS文件中只包含样式的信息。<br>　　简而言之，CSS是一种用于装饰HTML的标记集合，是对HTML的标记扩展，可以进一步美化HTML页面以统一网页风格。</p>
-<h2 id="CSS基本内容"><a href="#CSS基本内容" class="headerlink" title="CSS基本内容"></a>CSS基本内容</h2><h3 id="CSS样式表语法"><a href="#CSS样式表语法" class="headerlink" title="CSS样式表语法"></a>CSS样式表语法</h3><figure class="highlight html"><table><tr><td class="code"><pre><span class="line">RuleSelector &#123;property: value;property:value;...&#125;</span><br><span class="line"><span class="comment">&lt;!-- 规则选择器 &#123;属性:值;属性:值...&#125; --&gt;</span></span><br></pre></td></tr></table></figure>
-
-<h3 id="CSS样式信息存储位置"><a href="#CSS样式信息存储位置" class="headerlink" title="CSS样式信息存储位置"></a>CSS样式信息存储位置</h3><p>①存储在HTML文件内部，即存放在<head><style></style></head>区内，如下：</p>
-<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="meta">&lt;!DOCTYPE <span class="keyword">html</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">html</span> <span class="attr">lang</span>=<span class="string">&quot;en&quot;</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">head</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">meta</span> <span class="attr">charset</span>=<span class="string">&quot;UTF-8&quot;</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">meta</span> <span class="attr">name</span>=<span class="string">&quot;viewport&quot;</span> <span class="attr">content</span>=<span class="string">&quot;width=device-width, initial-scale=1.0&quot;</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">title</span>&gt;</span>静夜思<span class="tag">&lt;/<span class="name">title</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">style</span>&gt;</span><span class="language-css"></span></span><br><span class="line"><span class="language-css">        <span class="selector-tag">p</span> &#123;</span></span><br><span class="line"><span class="language-css">            <span class="attribute">font-size</span>: large;</span></span><br><span class="line"><span class="language-css">            <span class="attribute">font-weight</span>: bold;</span></span><br><span class="line"><span class="language-css">            <span class="attribute">color</span>: pink;</span></span><br><span class="line"><span class="language-css">            <span class="attribute">text-decoration-line</span>: underline;</span></span><br><span class="line"><span class="language-css">        &#125;</span></span><br><span class="line"><span class="language-css"></span></span><br><span class="line"><span class="language-css">        <span class="selector-class">.one</span> &#123;</span></span><br><span class="line"><span class="language-css">            <span class="attribute">color</span>: blue;</span></span><br><span class="line"><span class="language-css">            <span class="attribute">font-weight</span>: <span class="number">800</span>;</span></span><br><span class="line"><span class="language-css">        &#125;</span></span><br><span class="line"><span class="language-css"></span></span><br><span class="line"><span class="language-css">        <span class="selector-class">.two</span> &#123;</span></span><br><span class="line"><span class="language-css">            <span class="attribute">color</span>: green;</span></span><br><span class="line"><span class="language-css">            <span class="attribute">font-weight</span>: <span class="number">800</span>;</span></span><br><span class="line"><span class="language-css">        &#125;</span></span><br><span class="line"><span class="language-css">    </span><span class="tag">&lt;/<span class="name">style</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">head</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">p</span>&gt;</span>静夜思<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">span</span> <span class="attr">class</span>=<span class="string">&quot;one&quot;</span>&gt;</span>床前明月光，<span class="tag">&lt;/<span class="name">span</span>&gt;</span><span class="tag">&lt;<span class="name">br</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">span</span> <span class="attr">class</span>=<span class="string">&quot;two&quot;</span>&gt;</span>疑是地上霜。<span class="tag">&lt;/<span class="name">span</span>&gt;</span><span class="tag">&lt;<span class="name">br</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">span</span> <span class="attr">class</span>=<span class="string">&quot;one&quot;</span>&gt;</span>举头望明月，<span class="tag">&lt;/<span class="name">span</span>&gt;</span><span class="tag">&lt;<span class="name">br</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">span</span> <span class="attr">class</span>=<span class="string">&quot;two&quot;</span>&gt;</span>低头思故乡。<span class="tag">&lt;/<span class="name">span</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></span><br></pre></td></tr></table></figure>
-<p>②存储在独立文件中，即存放在例如扩展名为<code>my.css</code>的文件中，可在需要美化的HTML文件中使用<code>&lt;link rel=&quot;stylesheet&quot; href=&quot;./css/my.css&quot; /&gt;</code>引用。如下：</p>
-<figure class="highlight css"><table><tr><td class="code"><pre><span class="line">&lt;!-- my<span class="selector-class">.css</span> --&gt;</span><br><span class="line"><span class="selector-id">#two</span> <span class="selector-class">.foolish</span>&#123;</span><br><span class="line">    <span class="attribute">font-size</span>: <span class="number">28px</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-id">#two</span> &gt; <span class="selector-tag">p</span>&#123;</span><br><span class="line">    <span class="attribute">color</span>: red;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-id">#one</span> &gt; <span class="selector-tag">span</span>,<span class="selector-id">#two</span> <span class="selector-class">.foolish</span>&#123;</span><br><span class="line">    <span class="attribute">border</span>: <span class="number">6px</span> solid blue;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="meta">&lt;!DOCTYPE <span class="keyword">html</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">html</span> <span class="attr">lang</span>=<span class="string">&quot;en&quot;</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">head</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">meta</span> <span class="attr">charset</span>=<span class="string">&quot;UTF-8&quot;</span> /&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">meta</span> <span class="attr">name</span>=<span class="string">&quot;viewport&quot;</span> <span class="attr">content</span>=<span class="string">&quot;width=device-width, initial-scale=1.0&quot;</span> /&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">title</span>&gt;</span>CSS练习<span class="tag">&lt;/<span class="name">title</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">link</span> <span class="attr">rel</span>=<span class="string">&quot;stylesheet&quot;</span> <span class="attr">href</span>=<span class="string">&quot;./css/my.css&quot;</span> /&gt;</span></span><br><span class="line"></span><br><span class="line">  <span class="tag">&lt;/<span class="name">head</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">&quot;one&quot;</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">p</span> <span class="attr">id</span>=<span class="string">&quot;China&quot;</span> <span class="attr">class</span>=<span class="string">&quot;foolish&quot;</span>&gt;</span>中国<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">span</span>&gt;</span>新加坡<span class="tag">&lt;/<span class="name">span</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"></span><br><span class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">&quot;two&quot;</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">span</span>&gt;</span>中国<span class="tag">&lt;/<span class="name">span</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">div</span>&gt;</span>美国<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">p</span>&gt;</span>韩国<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">br</span> /&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">div</span>&gt;</span>日本<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">span</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">p</span> <span class="attr">class</span>=<span class="string">&quot;foolish&quot;</span>&gt;</span>俄罗斯<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;/<span class="name">span</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></span><br></pre></td></tr></table></figure>
-<h3 id="规则选择器"><a href="#规则选择器" class="headerlink" title="规则选择器"></a>规则选择器</h3><p>规则选择器用于指定需要美化的HTML元素位置,包括:标签选择器、ID选择器、类别选择器、万用选择器、通配符选择器。</p>
-<p>●标签选择器：使当前网页中所有相同的标签共享一个样式</p>
-<figure class="highlight html"><table><tr><td class="code"><pre><span class="line">标签名&#123;</span><br><span class="line">	属性名:值;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>●ID选择器：使当前网页指定ID的标签使用一个样式</p>
-<figure class="highlight html"><table><tr><td class="code"><pre><span class="line">#id&#123;</span><br><span class="line">	属性名:值;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<p>●类别选择器：使当前网页指定的class标签为同一类以共享一个样式</p>
-<figure class="highlight html"><table><tr><td class="code"><pre><span class="line">.class&#123;</span><br><span class="line">	属性名:值;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<p>●后代选择器：从父标签与后代标签的关系以定位到后代确定样式</p>
-<figure class="highlight html"><table><tr><td class="code"><pre><span class="line">父标签 后代标签(要定位的标签)&#123;</span><br><span class="line">	属性名:值;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<p>●父子选择器：从父标签定位到子标签确定样式</p>
-<figure class="highlight html"><table><tr><td class="code"><pre><span class="line">父标签 &gt; 子标签&#123;</span><br><span class="line">	属性名:值;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<p>●并列选择器：同时选择多个无关系的标签确定样式</p>
-<figure class="highlight html"><table><tr><td class="code"><pre><span class="line">标签1,标签2,标签3&#123;</span><br><span class="line">	属性名:值;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<p>●通用选择器：使当前网页所有标签添加指定样式</p>
-<figure class="highlight html"><table><tr><td class="code"><pre><span class="line">*&#123;</span><br><span class="line">	属性名:值;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-
-<hr>
-<p><strong>版权声明</strong></p>
-<p><img src="/images/cc.png"></p>
-<p><a href="https://scholargeek.github.io/">Scholar’s Blog</a> by <a href="https://scholargeek.github.io/About/">scholargeek</a> is licensed under a <a href="http://creativecommons.org/licenses/by-nc-nd/4.0/">Creative Commons BY-NC-ND 4.0 International License</a>.<br>由<a href="https://scholargeek.github.io/About/">董仕麟</a>创作并维护的<a href="https://scholargeek.github.io/">scholargeek</a>博客采用<a href="http://creativecommons.org/licenses/by-nc-nd/4.0/">创作共用保留署名-非商业-禁止演绎4.0国际许可证</a>。</p>
-<p>本文首发于<a href="https://scholargeek.github.io/">Scholar’s Blog</a>博客，版权所有，侵权必究。</p>
-<p>本文永久链接：<a href="https://scholargeek.github.io/2019/09/01/CSS/">https://scholargeek.github.io/2019/09/01/CSS/</a></p>
-]]></content>
-      <categories>
-        <category>编程</category>
-      </categories>
-      <tags>
-        <tag>CSS</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>ASCII编码</title>
     <url>/2018/02/02/ASCII%E7%BC%96%E7%A0%81/</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p>ASCII（American Standard Code for Information Interchange，美国信息互换标准代码）是一套基于拉丁字母的字符编码，共收录了 128 个字符，用一个字节就可以存储，它等同于国际标准 ISO&#x2F;IEC 646。<br>ASCII 编码于 1967 年第一次发布，最后一次更新是在 1986 年，迄今为止共收录了 128 个字符，包含了基本的拉丁字母（英文字母）、阿拉伯数字（也就是 1234567890）、标点符号（,.!等）、特殊符号（@#$%^&amp;等）以及一些具有控制功能的字符（往往不会显示出来）。</p>
@@ -991,6 +941,56 @@
       </tags>
   </entry>
   <entry>
+    <title>CSS简介与基本语法</title>
+    <url>/2019/09/01/CSS/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h1 id="CSS简介"><a href="#CSS简介" class="headerlink" title="CSS简介"></a>CSS简介</h1><p>　　层叠样式表(Cascading Style Sheets)，缩写：CSS；又称串样式列表、级联样式表、串接样式表、阶层式样式表。是一种用来为结构化文档（如HTML文档或XML应用）添加样式（字体、间距和颜色等）的计算机语言，由W3C定义和维护。CSS3现在已被大部分现代浏览器支持，而下一版的CSS4仍在开发中。</p>
+<span id="more"></span>
+
+<h2 id="CSS概述"><a href="#CSS概述" class="headerlink" title="CSS概述"></a>CSS概述</h2><p>　　CSS不仅可以静态地修饰网页，还可以配合各种脚本语言动态地对网页各元素进行格式化。CSS 能够对网页中元素位置的排版进行像素级精确控制，支持几乎所有的字体字号样式，拥有对网页对象和模型样式编辑的能力。CSS不能单独使用，必须与HTML或XML一起协同工作，为HTML或XML起装饰作用。本文主要介绍用于装饰HTML网页的CSS技术。其中HTML负责确定网页中有哪些内容，CSS确定以何种外观展现这些元素。CSS可以用于设定页面布局、设定页面元素样式、设定适用于所有网页的全局样式。CSS可以零散地直接添加在要应用样式的网页元素上，也可以集中化内置于网页、链接式引入网页以及导入式引入网页。<br>　　CSS最重要的目标是将文件的内容与它的显示分隔开来。在CSS出现前，几乎所有的HTML文件内都包含文件显示的信息，比如字体的颜色、背景应该是怎样的、如何排列、边缘、连线等等都必须一一在HTML文件内列出，有时重复列出。CSS使作者可以将这些信息中的大部分隔离出来，简化HTML文件，这些信息被放在一个辅助的，用CSS语言写的文件中。HTML文件中只包含结构和内容的信息，CSS文件中只包含样式的信息。<br>　　简而言之，CSS是一种用于装饰HTML的标记集合，是对HTML的标记扩展，可以进一步美化HTML页面以统一网页风格。</p>
+<h2 id="CSS基本内容"><a href="#CSS基本内容" class="headerlink" title="CSS基本内容"></a>CSS基本内容</h2><h3 id="CSS样式表语法"><a href="#CSS样式表语法" class="headerlink" title="CSS样式表语法"></a>CSS样式表语法</h3><figure class="highlight html"><table><tr><td class="code"><pre><span class="line">RuleSelector &#123;property: value;property:value;...&#125;</span><br><span class="line"><span class="comment">&lt;!-- 规则选择器 &#123;属性:值;属性:值...&#125; --&gt;</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="CSS样式信息存储位置"><a href="#CSS样式信息存储位置" class="headerlink" title="CSS样式信息存储位置"></a>CSS样式信息存储位置</h3><p>①存储在HTML文件内部，即存放在<head><style></style></head>区内，如下：</p>
+<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="meta">&lt;!DOCTYPE <span class="keyword">html</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">html</span> <span class="attr">lang</span>=<span class="string">&quot;en&quot;</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">head</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">meta</span> <span class="attr">charset</span>=<span class="string">&quot;UTF-8&quot;</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">meta</span> <span class="attr">name</span>=<span class="string">&quot;viewport&quot;</span> <span class="attr">content</span>=<span class="string">&quot;width=device-width, initial-scale=1.0&quot;</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">title</span>&gt;</span>静夜思<span class="tag">&lt;/<span class="name">title</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">style</span>&gt;</span><span class="language-css"></span></span><br><span class="line"><span class="language-css">        <span class="selector-tag">p</span> &#123;</span></span><br><span class="line"><span class="language-css">            <span class="attribute">font-size</span>: large;</span></span><br><span class="line"><span class="language-css">            <span class="attribute">font-weight</span>: bold;</span></span><br><span class="line"><span class="language-css">            <span class="attribute">color</span>: pink;</span></span><br><span class="line"><span class="language-css">            <span class="attribute">text-decoration-line</span>: underline;</span></span><br><span class="line"><span class="language-css">        &#125;</span></span><br><span class="line"><span class="language-css"></span></span><br><span class="line"><span class="language-css">        <span class="selector-class">.one</span> &#123;</span></span><br><span class="line"><span class="language-css">            <span class="attribute">color</span>: blue;</span></span><br><span class="line"><span class="language-css">            <span class="attribute">font-weight</span>: <span class="number">800</span>;</span></span><br><span class="line"><span class="language-css">        &#125;</span></span><br><span class="line"><span class="language-css"></span></span><br><span class="line"><span class="language-css">        <span class="selector-class">.two</span> &#123;</span></span><br><span class="line"><span class="language-css">            <span class="attribute">color</span>: green;</span></span><br><span class="line"><span class="language-css">            <span class="attribute">font-weight</span>: <span class="number">800</span>;</span></span><br><span class="line"><span class="language-css">        &#125;</span></span><br><span class="line"><span class="language-css">    </span><span class="tag">&lt;/<span class="name">style</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">head</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">p</span>&gt;</span>静夜思<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">span</span> <span class="attr">class</span>=<span class="string">&quot;one&quot;</span>&gt;</span>床前明月光，<span class="tag">&lt;/<span class="name">span</span>&gt;</span><span class="tag">&lt;<span class="name">br</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">span</span> <span class="attr">class</span>=<span class="string">&quot;two&quot;</span>&gt;</span>疑是地上霜。<span class="tag">&lt;/<span class="name">span</span>&gt;</span><span class="tag">&lt;<span class="name">br</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">span</span> <span class="attr">class</span>=<span class="string">&quot;one&quot;</span>&gt;</span>举头望明月，<span class="tag">&lt;/<span class="name">span</span>&gt;</span><span class="tag">&lt;<span class="name">br</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">span</span> <span class="attr">class</span>=<span class="string">&quot;two&quot;</span>&gt;</span>低头思故乡。<span class="tag">&lt;/<span class="name">span</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<p>②存储在独立文件中，即存放在例如扩展名为<code>my.css</code>的文件中，可在需要美化的HTML文件中使用<code>&lt;link rel=&quot;stylesheet&quot; href=&quot;./css/my.css&quot; /&gt;</code>引用。如下：</p>
+<figure class="highlight css"><table><tr><td class="code"><pre><span class="line">&lt;!-- my<span class="selector-class">.css</span> --&gt;</span><br><span class="line"><span class="selector-id">#two</span> <span class="selector-class">.foolish</span>&#123;</span><br><span class="line">    <span class="attribute">font-size</span>: <span class="number">28px</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-id">#two</span> &gt; <span class="selector-tag">p</span>&#123;</span><br><span class="line">    <span class="attribute">color</span>: red;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-id">#one</span> &gt; <span class="selector-tag">span</span>,<span class="selector-id">#two</span> <span class="selector-class">.foolish</span>&#123;</span><br><span class="line">    <span class="attribute">border</span>: <span class="number">6px</span> solid blue;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="meta">&lt;!DOCTYPE <span class="keyword">html</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">html</span> <span class="attr">lang</span>=<span class="string">&quot;en&quot;</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">head</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">meta</span> <span class="attr">charset</span>=<span class="string">&quot;UTF-8&quot;</span> /&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">meta</span> <span class="attr">name</span>=<span class="string">&quot;viewport&quot;</span> <span class="attr">content</span>=<span class="string">&quot;width=device-width, initial-scale=1.0&quot;</span> /&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">title</span>&gt;</span>CSS练习<span class="tag">&lt;/<span class="name">title</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">link</span> <span class="attr">rel</span>=<span class="string">&quot;stylesheet&quot;</span> <span class="attr">href</span>=<span class="string">&quot;./css/my.css&quot;</span> /&gt;</span></span><br><span class="line"></span><br><span class="line">  <span class="tag">&lt;/<span class="name">head</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">&quot;one&quot;</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">p</span> <span class="attr">id</span>=<span class="string">&quot;China&quot;</span> <span class="attr">class</span>=<span class="string">&quot;foolish&quot;</span>&gt;</span>中国<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">span</span>&gt;</span>新加坡<span class="tag">&lt;/<span class="name">span</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"></span><br><span class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">&quot;two&quot;</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">span</span>&gt;</span>中国<span class="tag">&lt;/<span class="name">span</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">div</span>&gt;</span>美国<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">p</span>&gt;</span>韩国<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">br</span> /&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">div</span>&gt;</span>日本<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">span</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">p</span> <span class="attr">class</span>=<span class="string">&quot;foolish&quot;</span>&gt;</span>俄罗斯<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;/<span class="name">span</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<h3 id="规则选择器"><a href="#规则选择器" class="headerlink" title="规则选择器"></a>规则选择器</h3><p>规则选择器用于指定需要美化的HTML元素位置,包括:标签选择器、ID选择器、类别选择器、万用选择器、通配符选择器。</p>
+<p>●标签选择器：使当前网页中所有相同的标签共享一个样式</p>
+<figure class="highlight html"><table><tr><td class="code"><pre><span class="line">标签名&#123;</span><br><span class="line">	属性名:值;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>●ID选择器：使当前网页指定ID的标签使用一个样式</p>
+<figure class="highlight html"><table><tr><td class="code"><pre><span class="line">#id&#123;</span><br><span class="line">	属性名:值;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>●类别选择器：使当前网页指定的class标签为同一类以共享一个样式</p>
+<figure class="highlight html"><table><tr><td class="code"><pre><span class="line">.class&#123;</span><br><span class="line">	属性名:值;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>●后代选择器：从父标签与后代标签的关系以定位到后代确定样式</p>
+<figure class="highlight html"><table><tr><td class="code"><pre><span class="line">父标签 后代标签(要定位的标签)&#123;</span><br><span class="line">	属性名:值;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>●父子选择器：从父标签定位到子标签确定样式</p>
+<figure class="highlight html"><table><tr><td class="code"><pre><span class="line">父标签 &gt; 子标签&#123;</span><br><span class="line">	属性名:值;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>●并列选择器：同时选择多个无关系的标签确定样式</p>
+<figure class="highlight html"><table><tr><td class="code"><pre><span class="line">标签1,标签2,标签3&#123;</span><br><span class="line">	属性名:值;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>●通用选择器：使当前网页所有标签添加指定样式</p>
+<figure class="highlight html"><table><tr><td class="code"><pre><span class="line">*&#123;</span><br><span class="line">	属性名:值;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+<hr>
+<p><strong>版权声明</strong></p>
+<p><img src="/images/cc.png"></p>
+<p><a href="https://scholargeek.github.io/">Scholar’s Blog</a> by <a href="https://scholargeek.github.io/About/">scholargeek</a> is licensed under a <a href="http://creativecommons.org/licenses/by-nc-nd/4.0/">Creative Commons BY-NC-ND 4.0 International License</a>.<br>由<a href="https://scholargeek.github.io/About/">董仕麟</a>创作并维护的<a href="https://scholargeek.github.io/">scholargeek</a>博客采用<a href="http://creativecommons.org/licenses/by-nc-nd/4.0/">创作共用保留署名-非商业-禁止演绎4.0国际许可证</a>。</p>
+<p>本文首发于<a href="https://scholargeek.github.io/">Scholar’s Blog</a>博客，版权所有，侵权必究。</p>
+<p>本文永久链接：<a href="https://scholargeek.github.io/2019/09/01/CSS/">https://scholargeek.github.io/2019/09/01/CSS/</a></p>
+]]></content>
+      <categories>
+        <category>编程</category>
+      </categories>
+      <tags>
+        <tag>CSS</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>CSS进阶内容学习</title>
     <url>/2019/09/06/CSS1/</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h1 id="CSS进阶1"><a href="#CSS进阶1" class="headerlink" title="CSS进阶1"></a>CSS进阶1</h1><p>　　本文将表述关于盒子模型和其样式定位的内容。了解CSS盒子模型的概念、计算、以及如何设置元素的宽度和高度。</p>
@@ -1247,212 +1247,6 @@
       </tags>
   </entry>
   <entry>
-    <title>C语言学习2</title>
-    <url>/2018/02/05/C%E8%AF%AD%E8%A8%80%E5%AD%A6%E4%B9%A02/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h1 id="运算符与表达式"><a href="#运算符与表达式" class="headerlink" title="运算符与表达式"></a>运算符与表达式</h1><span id="more"></span>
-<h2 id="C语言运算符简述"><a href="#C语言运算符简述" class="headerlink" title="C语言运算符简述"></a>C语言运算符简述</h2><h3 id="运算符简介"><a href="#运算符简介" class="headerlink" title="运算符简介"></a>运算符简介</h3><p>算术运算符：+  -  *  &#x2F;  %<br>关系运算符：&gt;  &gt;&#x3D;  &#x3D;&#x3D;  !&#x3D;  &lt;  &lt;&#x3D;<br>位运算符：&gt;&gt;  &lt;&lt;  ~  &amp;  |  ^<br>逻辑运算符：！  ||  &amp;&amp;<br>条件运算符：？ ：<br>指针运算符：&amp;  *<br>赋值运算符：&#x3D;<br>逗号运算符：,<br>字节运算符：sizeof<br>强制运算符：(类型名)(表达式)</p>
-<h3 id="运算符的结合性和优先级"><a href="#运算符的结合性和优先级" class="headerlink" title="运算符的结合性和优先级"></a>运算符的结合性和优先级</h3><p>　　所有的单目运算符、条件运算符、赋值运算符其扩展运算符，结合方向都是从右向左，其余运算符的结合方向为从左向右。<br>    初等运算符&gt;单目运算符&gt;算术运算符(先乘除再加减)&gt;关系运算符&gt;逻辑运算符(不含！)&gt;条件运算符&gt;赋值运算符&gt;逗号运算符<br>其中 初等运算符即：圆括号()、下标运算符[]、结构体成员运算符-&gt;</p>
-<h3 id="强制类型转换运算符"><a href="#强制类型转换运算符" class="headerlink" title="强制类型转换运算符"></a>强制类型转换运算符</h3><p>1.可以利用强制类型转换符将一个表达式转换成所需类型。<br>2.一般形式 (类型名)(表达式)</p>
-<h3 id="逗号运算符和逗号表达式"><a href="#逗号运算符和逗号表达式" class="headerlink" title="逗号运算符和逗号表达式"></a>逗号运算符和逗号表达式</h3><p>1.逗号表达式：用逗号运算符将几个表达式连接起来。<br>2.一般形式：表达式1，表达式2，···，表达式n<br>3.求解过程：先求解表达式1，然后依次求解表达式2，直到表达式n的值。<br>表达式n的值即为整个逗号表达式的值。</p>
-<h2 id="算数运算符和算术表达式"><a href="#算数运算符和算术表达式" class="headerlink" title="算数运算符和算术表达式"></a>算数运算符和算术表达式</h2><h3 id="基本的算术运算符"><a href="#基本的算术运算符" class="headerlink" title="基本的算术运算符"></a>基本的算术运算符</h3><p>1.分类： + (加法运算符或正值运算符)    - (减法运算符或负值运算符)    * (乘)    &#x2F; (除)    % (取余)<br>其中“%”运算的两端必须为整数，其余运算对象可以是整形或实型。<br>2.运算符两边数值必须一致才能进行运算，若不一致系统会自动进行类型转换(向长度方向增加进行)<br>3.所有实数的运算都是以双精度方式进行的，若是单精度数值，则需要在尾数后补0转换为双精度数。</p>
-<h3 id="算术表达式和运算符的优先级与结合性"><a href="#算术表达式和运算符的优先级与结合性" class="headerlink" title="算术表达式和运算符的优先级与结合性"></a>算术表达式和运算符的优先级与结合性</h3><p>1.定义：用算术运算符和括号将运算量连接起来，符合C语言语法规则的表达式。<br>2.运算对象：函数、常量、变量···<br>3.运算规则</p>
-<table>
-<thead>
-<tr>
-<th>规则</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>可使用多层圆括号，但括号必须配对。运算时由内向外依次计算各表达式的值。</td>
-</tr>
-<tr>
-<td>对于不同优先级的运算符，按运算符的优先级由高到低进行运算，若优先级相同，则按结合方向进行运算。</td>
-</tr>
-<tr>
-<td>若运算符两侧的操作数类型不同，则先利用自动转换或强制类型转换，再运算。</td>
-</tr>
-</tbody></table>
-<h3 id="自加、自减运算符"><a href="#自加、自减运算符" class="headerlink" title="自加、自减运算符"></a>自加、自减运算符</h3><p>1.作用：“++”(自加运算符) 使运算变量的值增1，“–”(自减运算符) 使运算变量的值减1。<br>2.均是单目运算符。运算对象可以是整形或实型变量，但不可以是常量和表达式。<br>3.作为前缀或后缀与变量构成一个表达式。<br>4.结合方向：自右向左</p>
-<h2 id="赋值运算符和赋值表达式"><a href="#赋值运算符和赋值表达式" class="headerlink" title="赋值运算符和赋值表达式"></a>赋值运算符和赋值表达式</h2><h3 id="赋值运算符和赋值表达式-1"><a href="#赋值运算符和赋值表达式-1" class="headerlink" title="赋值运算符和赋值表达式"></a>赋值运算符和赋值表达式</h3><p>1.”&#x3D;”称做赋值运算符，作用是将一个数值赋给一个变量或将一个变量的值赋给另一个变量，由赋值运算符组成的表达式称为赋值表达式。<br>2.一般形式：变量名 &#x3D; 表达式</p>
-<table>
-<thead>
-<tr>
-<th>规则</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>赋值运算符的优先级别高于逗号运算符</td>
-</tr>
-<tr>
-<td>赋值运算符“&#x3D;”和等于运算符“&#x3D;&#x3D;”不同</td>
-</tr>
-<tr>
-<td>赋值运算符的左侧只能是变量，而不能是常量或表达式。右侧可以是表达式，包括赋值表达式</td>
-</tr>
-<tr>
-<td>规定最左边变量得到的新值即为整个赋值表达式的值。</td>
-</tr>
-</tbody></table>
-<h3 id="复合的赋值运算符"><a href="#复合的赋值运算符" class="headerlink" title="复合的赋值运算符"></a>复合的赋值运算符</h3><p>在赋值运算符之前加上其它运算符可构成复合赋值运算符</p>
-<table>
-<thead>
-<tr>
-<th>规则</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>两个符号之间不可有空格</td>
-</tr>
-<tr>
-<td>复合赋值运算符的优先级与赋值运算符相同</td>
-</tr>
-</tbody></table>
-<h3 id="赋值运算中的类型转换"><a href="#赋值运算中的类型转换" class="headerlink" title="赋值运算中的类型转换"></a>赋值运算中的类型转换</h3><p>如果赋值运算符两侧的类型不一致，在赋值前系统将自动先把右侧表达式求得的数值按赋值号左边变量的类型进行转换(也可强制转换)</p>
-<h2 id="位运算"><a href="#位运算" class="headerlink" title="位运算"></a>位运算</h2><h3 id="位运算符及含义"><a href="#位运算符及含义" class="headerlink" title="位运算符及含义"></a>位运算符及含义</h3><table>
-<thead>
-<tr>
-<th>运算符</th>
-<th>含义</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>&amp; (按位与)</td>
-<td>若两个相应的二进制位都为1，则该位结果为1，否则为0</td>
-</tr>
-<tr>
-<td>&#96;</td>
-<td>&#96; (按位或)</td>
-</tr>
-<tr>
-<td>^ (按位异或)</td>
-<td>若两个二进制位相同，则结果为0，不同则为1</td>
-</tr>
-<tr>
-<td>~ (按位取反)</td>
-<td>即0变1,1变0</td>
-</tr>
-<tr>
-<td>&lt;&lt; (左移)</td>
-<td>将一个数的二进制位全部左移若干位</td>
-</tr>
-<tr>
-<td>&gt;&gt; (右移)</td>
-<td>将一个数的二进制位全部右移若干位</td>
-</tr>
-</tbody></table>
-<p>▲以上除”~”之外，均为双目运算符，要求两侧各有一个运算量，且运算量只能是整型或字符型数据，不能为实型数据。</p>
-<hr>
-<p><strong>版权声明</strong></p>
-<p><img src="/images/cc.png"></p>
-<p><a href="https://scholargeek.github.io/">Scholar’s Blog</a> by <a href="https://scholargeek.github.io/About/">scholargeek</a> is licensed under a <a href="http://creativecommons.org/licenses/by-nc-nd/4.0/">Creative Commons BY-NC-ND 4.0 International License</a>.<br>由<a href="https://scholargeek.github.io/About/">董仕麟</a>创作并维护的<a href="https://scholargeek.github.io/">scholargeek</a>博客采用<a href="http://creativecommons.org/licenses/by-nc-nd/4.0/">创作共用保留署名-非商业-禁止演绎4.0国际许可证</a>。</p>
-<p>本文首发于<a href="https://scholargeek.github.io/">Scholar’s Blog</a>博客，版权所有，侵权必究。</p>
-<p>本文永久链接：<a href="https://scholargeek.github.io/2018/02/05/C%E8%AF%AD%E8%A8%80%E5%AD%A6%E4%B9%A02/">https://scholargeek.github.io/2018/02/05/C%E8%AF%AD%E8%A8%80%E5%AD%A6%E4%B9%A02/</a></p>
-]]></content>
-      <categories>
-        <category>编程</category>
-      </categories>
-      <tags>
-        <tag>C</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>C语言学习3</title>
-    <url>/2018/02/06/C%E8%AF%AD%E8%A8%80%E5%AD%A6%E4%B9%A03/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h1 id="基本语句"><a href="#基本语句" class="headerlink" title="基本语句"></a>基本语句</h1><span id="more"></span>
-<h2 id="单个字符的输入与输出"><a href="#单个字符的输入与输出" class="headerlink" title="单个字符的输入与输出"></a>单个字符的输入与输出</h2><h3 id="字符输出函数putchar"><a href="#字符输出函数putchar" class="headerlink" title="字符输出函数putchar()"></a>字符输出函数putchar()</h3><p>putchar() 函数的作用是向终端输入一个字符。</p>
-<h3 id="字符输入函数getchar"><a href="#字符输入函数getchar" class="headerlink" title="字符输入函数getchar()"></a>字符输入函数getchar()</h3><p>getchar()函数的作用是从终端输入一个字符。<br>getchar()函数没有参数，其函数值为从输入设备得到的字符。</p>
-<h2 id="数据格式的输入与输出"><a href="#数据格式的输入与输出" class="headerlink" title="数据格式的输入与输出"></a>数据格式的输入与输出</h2><h3 id="格式化输出函数"><a href="#格式化输出函数" class="headerlink" title="格式化输出函数"></a>格式化输出函数</h3><p>printf()函数是C语言提供的标准输出函数，它的作用是向终端(或系统隐含指定的输出设备)按指定格式输出若干个数据。</p>
-<figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="built_in">printf</span>(格式控制,输出列表);</span><br></pre></td></tr></table></figure>
-<p>①”格式控制”：用双引号括起来的字符串是”格式控制”字符串，它包含以下两种信息。<br>●格式转换说明，由”%”和格式字符组成<br>●需要原样输出的字符也写在格式控制内<br>②”输出列表”：需要输出的一些数据，可以是常量、变量或表达式。输出列表中各输出项用逗号隔开。</p>
-<p>可在“%”与格式字符之间输入”宽度说明”，左对齐符号”-“,前导符号”0”等。</p>
-<table>
-<thead>
-<tr>
-<th>格式字符</th>
-<th>说明</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>d</td>
-<td>用来对十进制进行输入输出</td>
-</tr>
-<tr>
-<td>o</td>
-<td>以八进制数形式输出整数</td>
-</tr>
-<tr>
-<td>x</td>
-<td>以十六进制数形式输出整数</td>
-</tr>
-<tr>
-<td>u</td>
-<td>用来输出unsigned型数据，即输出无符号的十进制数</td>
-</tr>
-<tr>
-<td>c</td>
-<td>用来输出一个字符</td>
-</tr>
-<tr>
-<td>s</td>
-<td>用来输出一个字符串</td>
-</tr>
-<tr>
-<td>f</td>
-<td>用来输出实数(单、双精度)，以小数形式输出，完全输出整数部分</td>
-</tr>
-<tr>
-<td>e</td>
-<td>以指数形式输出实数</td>
-</tr>
-<tr>
-<td>g</td>
-<td>自动以最短表达形式输出实数</td>
-</tr>
-</tbody></table>
-<p>●格式控制串中，格式说明与输出项从左到右，在类型上必须一一对应匹配。<br>●在格式控制串中，格式说明与输出项个数要相等。<br>●在格式控制串中，可以包含任意的合法字符(包括转义字符),在输出它们时将原样输出。<br>●如果输出%，则应在格式控制串用两个连续的百分号“%%”表示。</p>
-<p>printf() 格式控制符形式 %[flag][width][.precision]type<br>type:输出类型 如 %d %f %c %lf<br>width:最小输出宽度 至少占几个字符的位置[整体]<br>precision:输出小数精度。(当小数部分位数大于它时,会按四舍五入原则丢掉多于的数字；当小于它时则在其后补0)<br>用于整数时，precision表示最小输出宽度，与width不同 整数宽度将会在最左边补0<br>用于字符时，precision表示最大输出宽度，截取多于宽度的字符。<br>flag:标志字符</p>
-<table>
-<thead>
-<tr>
-<th>字符</th>
-<th>含义</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>-</td>
-<td>表示左对齐，如果没有，默认右对齐</td>
-</tr>
-<tr>
-<td>+</td>
-<td>表示输出符号(正负号)，若没有默认仅负数时输出符号</td>
-</tr>
-<tr>
-<td>空格</td>
-<td>值为正加空格，值为负默认负号</td>
-</tr>
-<tr>
-<td>#</td>
-<td>表示八、十六进制前缀(八进制前缀为0，十六进制前缀为0x),无论实数、有无小数皆在后面加小数点。</td>
-</tr>
-</tbody></table>
-<h3 id="格式化输入函数"><a href="#格式化输入函数" class="headerlink" title="格式化输入函数"></a>格式化输入函数</h3><figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="built_in">scanf</span>(格式控制，地址表列);</span><br></pre></td></tr></table></figure>
-<p>其中scanf是函数名，”格式控制”的含义与printf()中相同。<br>“地址表列”，由若干变量地址组成，既可以是变量地址，也可以是字符串的首地址。<br>scanf()函数中的格式说明也是以%开始，以一个格式字符结束，中间可以加入附加字符。<br>●对unsigned型变量，可以用%d %o %x 格式输入<br>●在scanf()函数中格式字符前可以用一个整数指定输入数据所占宽度，但对输入实型数不能指定其小数位宽度。<br>●在格式控制串、格式说明的个数应该与输入项的个数相等，且要类型匹配。<br>●scanf()函数中的输入项只能是地址表达式，而不能是变量名或其它内容。<br>●如果在”格式控制”字串中除了格式说明以外还有其它字符，则在输入数据时应输入与这些字符相同的字符。<br>●在用”%c”格式输入字符时，空格字符和转义字符都可以作为有效字符输入。<br>●在输入数据时，若实际输入数据少于输入项个数，scanf()函数会等待输入，直到满足条件或遇到非法字符才结束，若实际输入数据多于输入项个数，多于数据将留在缓冲区备用，作为下一次输入操作的数据。<br>●在输入数据时，遇到以下情况时认为输入结束：空格、回车、跳格(Tab)</p>
-<p>scanf() 读取字符串时遇空格则结束，不会读取空格后的字符串。<br>scanf() 格式控制符形式: %{*}{width}type<br>type:表示读取数据的类型，如:%d %s %[a-z] %[<code>^\n</code>] 等<br>width表示 最大读取宽度(可有可无)<br>*表示丢弃读取到的数据(可有可无)</p>
-<hr>
-<p><strong>版权声明</strong></p>
-<p><img src="/images/cc.png"></p>
-<p><a href="https://scholargeek.github.io/">Scholar’s Blog</a> by <a href="https://scholargeek.github.io/About/">scholargeek</a> is licensed under a <a href="http://creativecommons.org/licenses/by-nc-nd/4.0/">Creative Commons BY-NC-ND 4.0 International License</a>.<br>由<a href="https://scholargeek.github.io/About/">董仕麟</a>创作并维护的<a href="https://scholargeek.github.io/">scholargeek</a>博客采用<a href="http://creativecommons.org/licenses/by-nc-nd/4.0/">创作共用保留署名-非商业-禁止演绎4.0国际许可证</a>。</p>
-<p>本文首发于<a href="https://scholargeek.github.io/">Scholar’s Blog</a>博客，版权所有，侵权必究。</p>
-<p>本文永久链接：<a href="https://scholargeek.github.io/2018/02/06/C%E8%AF%AD%E8%A8%80%E5%AD%A6%E4%B9%A03/">https://scholargeek.github.io/2018/02/06/C%E8%AF%AD%E8%A8%80%E5%AD%A6%E4%B9%A03/</a></p>
-]]></content>
-      <categories>
-        <category>编程</category>
-      </categories>
-      <tags>
-        <tag>C</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>C语言学习10</title>
     <url>/2018/02/20/C%E8%AF%AD%E8%A8%80%E5%AD%A6%E4%B9%A010/</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h1 id="文件"><a href="#文件" class="headerlink" title="文件"></a>文件</h1><p>本文将详述C语言中关于文件的相关知识。</p>
@@ -1633,35 +1427,203 @@
       </tags>
   </entry>
   <entry>
-    <title>C语言学习5</title>
-    <url>/2018/02/10/C%E8%AF%AD%E8%A8%80%E5%AD%A6%E4%B9%A05/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h1 id="数组"><a href="#数组" class="headerlink" title="数组"></a>数组</h1><p>本文将描述数组的定义与应用、字符串处理等知识。</p>
-<span id="more"></span>
-
-<h2 id="一维数组的定义和引用"><a href="#一维数组的定义和引用" class="headerlink" title="一维数组的定义和引用"></a>一维数组的定义和引用</h2><h3 id="一维数组的定义"><a href="#一维数组的定义" class="headerlink" title="一维数组的定义"></a>一维数组的定义</h3><p>一维数组是指数组中的每一个元素只带有一个下标的数组。定义方式：类型说明符 数组名[常量表达式]</p>
-<h3 id="一维数组元素的引用"><a href="#一维数组元素的引用" class="headerlink" title="一维数组元素的引用"></a>一维数组元素的引用</h3><p>数组元素的引用形式为：数组名[下标表达式]<br>说明：<br>●一个数组元素实质上是一个变量名，代表内存中的一个存储单元，一个数组占据的是一连串连续的存储单元。<br>●引用数组元素时，数组的下标可以是整型常量，也可以是整形表达式。<br>●数组必须先定义后使用<br>●只能逐个引用数组元素而不能一次引用整个数组。</p>
-<h3 id="一维数组的初始化"><a href="#一维数组的初始化" class="headerlink" title="一维数组的初始化"></a>一维数组的初始化</h3><p>当数组定义后，系统会为该数组在内存中开辟一串连续的存储单元，但这些存储单元中并没有确定的值。可以在定义数组时为包含的数组元素赋初值。如：int a[6]&#x3D;{0,1,2,3,4,5}<br>说明：<br>●所赋初值放在一对花括号中，数值类型必须与所说明类型一致。<br>●所赋初值之间用逗号隔开，系统将按这些数组的排列顺序，从a[0]元素开始依次给数组a中的元素赋初值。<br>●不能跳过前面的元素给后面的元素赋初值，但是允许为前面元素赋值为0。<br>●当所赋初值个数少于所定义数组的元素个数时，将自动给后面的其他元素补初值0。<br>●可以通过赋初值来定义一维数组的大小，定义数组时的一对方括号中可以不指定数组的大小。</p>
-<h2 id="二维数组的定义和引用"><a href="#二维数组的定义和引用" class="headerlink" title="二维数组的定义和引用"></a>二维数组的定义和引用</h2><h3 id="二维数组的定义"><a href="#二维数组的定义" class="headerlink" title="二维数组的定义"></a>二维数组的定义</h3><p>1.在C语言中，二维数组中元素排列的顺序是：按行存放，即在内存中先顺序存放第一行元素，再存放第二行的元素。二维数组元素的存储总是占用一块连续的内存单元。<br>2.一般形式:  类型说明符 数组名[常量表达式][常量表达式]</p>
-<h3 id="二维数组元素的引用"><a href="#二维数组元素的引用" class="headerlink" title="二维数组元素的引用"></a>二维数组元素的引用</h3><p>表示形式:    数组名[下标表达式1][下标表达式2]<br>●数组的下标可以是整型表达式<br>●数组元素可以出现在表达式中，可以被赋值</p>
-<h3 id="二维数组的初始化"><a href="#二维数组的初始化" class="headerlink" title="二维数组的初始化"></a>二维数组的初始化</h3><p>●可以在定义二维数组的同时给二维数组的元素赋初值<br>●全部初值放在一对花括号中，每一行的初值又分别括在一对花括号中，之间用逗号隔开。<br>●当某一对花括号内的初值个数少于该行中元素的个数时，系统将自动地给后面的元素赋初值0<br>●不能跳过每行前面的元素而给后面的元素赋值。<br>●对于二维数组，只可以省略第一个方括号中的常量表达式，但不能省略第二个方括号中的常量表达式。</p>
-<h3 id="通过赋初值定义二维数组的大小"><a href="#通过赋初值定义二维数组的大小" class="headerlink" title="通过赋初值定义二维数组的大小"></a>通过赋初值定义二维数组的大小</h3><p>对于一维数组，可以在数组定义语句中省略方括号中的常量表达式，通过所赋初值的个数来确定数组的大小；<br>对于二维数组，只可以省略第一个方括号中的常量表达式，而不能省略第二个方括号中的常量表达式。</p>
-<h2 id="字符数组"><a href="#字符数组" class="headerlink" title="字符数组"></a>字符数组</h2><h3 id="字符数组的定义"><a href="#字符数组的定义" class="headerlink" title="字符数组的定义"></a>字符数组的定义</h3><p>字符数组就是数组中的每一个元素都是字符。定义方法同普通数组的定义相同，即逐个对数组元素赋值。</p>
-<h3 id="字符数组的初始化及引用"><a href="#字符数组的初始化及引用" class="headerlink" title="字符数组的初始化及引用"></a>字符数组的初始化及引用</h3><p>1.初始化：对字符数组初始化，可逐个元素地赋值，即把字符逐个赋给数组元素。<br>●如果花括号中提供的初值个数(即字符个数)大于数组长度，则编译时会按语法错误处理。<br>●如果初值个数小于数组长度，则将这些字符赋值给数组中前面那些元素，其余元素定为空字符\0;<br>2.引用形式：采用下标引用，即<br>    数组名[下标]</p>
-<h3 id="字符串和字符串结束标志"><a href="#字符串和字符串结束标志" class="headerlink" title="字符串和字符串结束标志"></a>字符串和字符串结束标志</h3><p>C语言中，将字符串作为字符数组来处理。为测定字符串的实际长度，C语言规定了一个字符串结束标志，以字符”\0”代表。就是说，在遇到字符”\0”时，表示字符串结束，由它前面的字符组成字符串。</p>
-<h3 id="字符数组的输入输出"><a href="#字符数组的输入输出" class="headerlink" title="字符数组的输入输出"></a>字符数组的输入输出</h3><p>字符数组的输入输出有两种方法：<br>●用”%c”格式符将字符逐个输入或输出。<br>●用”%s”格式符将整个字符串一次输入或输出。</p>
-<p>在C语言中，有两个函数可以在控制台(显示器)上输出字符串<br>●puts() 输出字符串并自动换行，该函数只能输出字符串。<br>●printf() 通过格式控制符%s输出字符串，不能自动换行。除了字符串，printf()还可输出其他类型数据。</p>
-<p>在C语言中，有两个函数可以从键盘上输入字符串，它们是<br>●scanf() 通过格式控制符%s输入字符串。除了字符串，scanf()还能输入其他类型的数据。[遇到空格就结束输入，无法含有空格]<br>●gets() 直接输入字符串，并且只能输入字符串。[认为空格也是字符串的一部分，以回车作为字符串结束]</p>
-<h3 id="字符串处理函数"><a href="#字符串处理函数" class="headerlink" title="字符串处理函数"></a>字符串处理函数</h3><p>C语言没有提供对字符串进行整体操作的运算符，但在C语言的函数库中提供了一些用来处理字符串的函数。在调用这些函数前，必须在程序前面命令行包含标准头文件”string.h”。<br>●puts() 调用形式为puts(字符数组),将一个字符串(以”\0”结束)输出到终端设备。<br>●gets() 调用形式为gets(字符数组),从终端输入一个字符串到字符数组中，并得到一个函数值。<br>●strcpy() 调用形式strcpy(字符数组1,字符数组2),把字符数组2所指字符串的内容复制到字符数组1所指存储空间中。函数返回字符数组1的值，即目的串的首地址。<br>●strcat() 调用形式为strcat(字符数组1,字符数组2),该函数将字符数组2所指字符串的内容连接到字符数组1所指的字符串后面，并自动覆盖字符数值1串末尾的”\0”。该函数返回字符数组1的地址值。<br>●strlen() 调用形式为strlen(字符数组),此函数计算出以字符数组为起始地址的字符串的长度，并作为函数值返回。<br>●strcmp() 调用形式为strcmp(字符数组1,字符数组2),该函数用来比较字符数组1和字符数组2所指字符串的大小。若字符数组1&gt;字符数组2，函数值大于0(正数)；若字符数组1&#x3D;字符数组2，函数值等于0；若字符数组1&lt;字符数组2，函数值小于0(负数)。</p>
-<h3 id="C语言数组是静态的"><a href="#C语言数组是静态的" class="headerlink" title="C语言数组是静态的"></a>C语言数组是静态的</h3><p>在C语言中，数组一旦被定义，占用的内存空间就是固定的，容量就是不可改变的，既不能在任何位置插入元素，也不能在任何位置删除元素，只能读取和修改元素，我们将这样的数组称为<em>静态数组</em><br>▲动态数组：指数组在定义后可以改变容量，允许任意位置插入或删除元素的数组。<br>一般 C、C++等编译型语言不支持动态数组；而PHP、JavaScript等解释型语言支持动态数组。</p>
-<h3 id="数组越界与溢出"><a href="#数组越界与溢出" class="headerlink" title="数组越界与溢出"></a>数组越界与溢出</h3><p>数组越界: 当数组下标小于0或大于等于数组长度时引用 就会发生越界(out of bounds),即访问数组以外的内存。<br>下标小于0即<em>下限越界</em>(Off Normal Lower)<br>下标大于等于数组长度即为<em>上限越界</em>(Off Normal Upper)<br>数组溢出:即赋予数组元素的个数超过数组长度。</p>
-<p>注意：在用字符串给字符数组赋值时，要保证数值长度大于字符串长度，以容纳结束符”\0”。</p>
-<p>C语言变长数组(VLA, Variable Langth Array)：使用变量指明数组长度。<br>●在C89标准中，必须使用常量表达式指明数组长度。<br>●在C99标准中，可以使用变量指明数组长度。<br>变长数组仍是静态数组，其长度一旦定义就无法改变。</p>
+    <title>C语言学习3</title>
+    <url>/2018/02/06/C%E8%AF%AD%E8%A8%80%E5%AD%A6%E4%B9%A03/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h1 id="基本语句"><a href="#基本语句" class="headerlink" title="基本语句"></a>基本语句</h1><span id="more"></span>
+<h2 id="单个字符的输入与输出"><a href="#单个字符的输入与输出" class="headerlink" title="单个字符的输入与输出"></a>单个字符的输入与输出</h2><h3 id="字符输出函数putchar"><a href="#字符输出函数putchar" class="headerlink" title="字符输出函数putchar()"></a>字符输出函数putchar()</h3><p>putchar() 函数的作用是向终端输入一个字符。</p>
+<h3 id="字符输入函数getchar"><a href="#字符输入函数getchar" class="headerlink" title="字符输入函数getchar()"></a>字符输入函数getchar()</h3><p>getchar()函数的作用是从终端输入一个字符。<br>getchar()函数没有参数，其函数值为从输入设备得到的字符。</p>
+<h2 id="数据格式的输入与输出"><a href="#数据格式的输入与输出" class="headerlink" title="数据格式的输入与输出"></a>数据格式的输入与输出</h2><h3 id="格式化输出函数"><a href="#格式化输出函数" class="headerlink" title="格式化输出函数"></a>格式化输出函数</h3><p>printf()函数是C语言提供的标准输出函数，它的作用是向终端(或系统隐含指定的输出设备)按指定格式输出若干个数据。</p>
+<figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="built_in">printf</span>(格式控制,输出列表);</span><br></pre></td></tr></table></figure>
+<p>①”格式控制”：用双引号括起来的字符串是”格式控制”字符串，它包含以下两种信息。<br>●格式转换说明，由”%”和格式字符组成<br>●需要原样输出的字符也写在格式控制内<br>②”输出列表”：需要输出的一些数据，可以是常量、变量或表达式。输出列表中各输出项用逗号隔开。</p>
+<p>可在“%”与格式字符之间输入”宽度说明”，左对齐符号”-“,前导符号”0”等。</p>
+<table>
+<thead>
+<tr>
+<th>格式字符</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>d</td>
+<td>用来对十进制进行输入输出</td>
+</tr>
+<tr>
+<td>o</td>
+<td>以八进制数形式输出整数</td>
+</tr>
+<tr>
+<td>x</td>
+<td>以十六进制数形式输出整数</td>
+</tr>
+<tr>
+<td>u</td>
+<td>用来输出unsigned型数据，即输出无符号的十进制数</td>
+</tr>
+<tr>
+<td>c</td>
+<td>用来输出一个字符</td>
+</tr>
+<tr>
+<td>s</td>
+<td>用来输出一个字符串</td>
+</tr>
+<tr>
+<td>f</td>
+<td>用来输出实数(单、双精度)，以小数形式输出，完全输出整数部分</td>
+</tr>
+<tr>
+<td>e</td>
+<td>以指数形式输出实数</td>
+</tr>
+<tr>
+<td>g</td>
+<td>自动以最短表达形式输出实数</td>
+</tr>
+</tbody></table>
+<p>●格式控制串中，格式说明与输出项从左到右，在类型上必须一一对应匹配。<br>●在格式控制串中，格式说明与输出项个数要相等。<br>●在格式控制串中，可以包含任意的合法字符(包括转义字符),在输出它们时将原样输出。<br>●如果输出%，则应在格式控制串用两个连续的百分号“%%”表示。</p>
+<p>printf() 格式控制符形式 %[flag][width][.precision]type<br>type:输出类型 如 %d %f %c %lf<br>width:最小输出宽度 至少占几个字符的位置[整体]<br>precision:输出小数精度。(当小数部分位数大于它时,会按四舍五入原则丢掉多于的数字；当小于它时则在其后补0)<br>用于整数时，precision表示最小输出宽度，与width不同 整数宽度将会在最左边补0<br>用于字符时，precision表示最大输出宽度，截取多于宽度的字符。<br>flag:标志字符</p>
+<table>
+<thead>
+<tr>
+<th>字符</th>
+<th>含义</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>-</td>
+<td>表示左对齐，如果没有，默认右对齐</td>
+</tr>
+<tr>
+<td>+</td>
+<td>表示输出符号(正负号)，若没有默认仅负数时输出符号</td>
+</tr>
+<tr>
+<td>空格</td>
+<td>值为正加空格，值为负默认负号</td>
+</tr>
+<tr>
+<td>#</td>
+<td>表示八、十六进制前缀(八进制前缀为0，十六进制前缀为0x),无论实数、有无小数皆在后面加小数点。</td>
+</tr>
+</tbody></table>
+<h3 id="格式化输入函数"><a href="#格式化输入函数" class="headerlink" title="格式化输入函数"></a>格式化输入函数</h3><figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="built_in">scanf</span>(格式控制，地址表列);</span><br></pre></td></tr></table></figure>
+<p>其中scanf是函数名，”格式控制”的含义与printf()中相同。<br>“地址表列”，由若干变量地址组成，既可以是变量地址，也可以是字符串的首地址。<br>scanf()函数中的格式说明也是以%开始，以一个格式字符结束，中间可以加入附加字符。<br>●对unsigned型变量，可以用%d %o %x 格式输入<br>●在scanf()函数中格式字符前可以用一个整数指定输入数据所占宽度，但对输入实型数不能指定其小数位宽度。<br>●在格式控制串、格式说明的个数应该与输入项的个数相等，且要类型匹配。<br>●scanf()函数中的输入项只能是地址表达式，而不能是变量名或其它内容。<br>●如果在”格式控制”字串中除了格式说明以外还有其它字符，则在输入数据时应输入与这些字符相同的字符。<br>●在用”%c”格式输入字符时，空格字符和转义字符都可以作为有效字符输入。<br>●在输入数据时，若实际输入数据少于输入项个数，scanf()函数会等待输入，直到满足条件或遇到非法字符才结束，若实际输入数据多于输入项个数，多于数据将留在缓冲区备用，作为下一次输入操作的数据。<br>●在输入数据时，遇到以下情况时认为输入结束：空格、回车、跳格(Tab)</p>
+<p>scanf() 读取字符串时遇空格则结束，不会读取空格后的字符串。<br>scanf() 格式控制符形式: %{*}{width}type<br>type:表示读取数据的类型，如:%d %s %[a-z] %[<code>^\n</code>] 等<br>width表示 最大读取宽度(可有可无)<br>*表示丢弃读取到的数据(可有可无)</p>
 <hr>
 <p><strong>版权声明</strong></p>
 <p><img src="/images/cc.png"></p>
 <p><a href="https://scholargeek.github.io/">Scholar’s Blog</a> by <a href="https://scholargeek.github.io/About/">scholargeek</a> is licensed under a <a href="http://creativecommons.org/licenses/by-nc-nd/4.0/">Creative Commons BY-NC-ND 4.0 International License</a>.<br>由<a href="https://scholargeek.github.io/About/">董仕麟</a>创作并维护的<a href="https://scholargeek.github.io/">scholargeek</a>博客采用<a href="http://creativecommons.org/licenses/by-nc-nd/4.0/">创作共用保留署名-非商业-禁止演绎4.0国际许可证</a>。</p>
 <p>本文首发于<a href="https://scholargeek.github.io/">Scholar’s Blog</a>博客，版权所有，侵权必究。</p>
-<p>本文永久链接：<a href="https://scholargeek.github.io/2018/02/10/C%E8%AF%AD%E8%A8%80%E5%AD%A6%E4%B9%A05/">https://scholargeek.github.io/2018/02/10/C%E8%AF%AD%E8%A8%80%E5%AD%A6%E4%B9%A05/</a></p>
+<p>本文永久链接：<a href="https://scholargeek.github.io/2018/02/06/C%E8%AF%AD%E8%A8%80%E5%AD%A6%E4%B9%A03/">https://scholargeek.github.io/2018/02/06/C%E8%AF%AD%E8%A8%80%E5%AD%A6%E4%B9%A03/</a></p>
+]]></content>
+      <categories>
+        <category>编程</category>
+      </categories>
+      <tags>
+        <tag>C</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>C语言学习2</title>
+    <url>/2018/02/05/C%E8%AF%AD%E8%A8%80%E5%AD%A6%E4%B9%A02/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h1 id="运算符与表达式"><a href="#运算符与表达式" class="headerlink" title="运算符与表达式"></a>运算符与表达式</h1><span id="more"></span>
+<h2 id="C语言运算符简述"><a href="#C语言运算符简述" class="headerlink" title="C语言运算符简述"></a>C语言运算符简述</h2><h3 id="运算符简介"><a href="#运算符简介" class="headerlink" title="运算符简介"></a>运算符简介</h3><p>算术运算符：+  -  *  &#x2F;  %<br>关系运算符：&gt;  &gt;&#x3D;  &#x3D;&#x3D;  !&#x3D;  &lt;  &lt;&#x3D;<br>位运算符：&gt;&gt;  &lt;&lt;  ~  &amp;  |  ^<br>逻辑运算符：！  ||  &amp;&amp;<br>条件运算符：？ ：<br>指针运算符：&amp;  *<br>赋值运算符：&#x3D;<br>逗号运算符：,<br>字节运算符：sizeof<br>强制运算符：(类型名)(表达式)</p>
+<h3 id="运算符的结合性和优先级"><a href="#运算符的结合性和优先级" class="headerlink" title="运算符的结合性和优先级"></a>运算符的结合性和优先级</h3><p>　　所有的单目运算符、条件运算符、赋值运算符其扩展运算符，结合方向都是从右向左，其余运算符的结合方向为从左向右。<br>    初等运算符&gt;单目运算符&gt;算术运算符(先乘除再加减)&gt;关系运算符&gt;逻辑运算符(不含！)&gt;条件运算符&gt;赋值运算符&gt;逗号运算符<br>其中 初等运算符即：圆括号()、下标运算符[]、结构体成员运算符-&gt;</p>
+<h3 id="强制类型转换运算符"><a href="#强制类型转换运算符" class="headerlink" title="强制类型转换运算符"></a>强制类型转换运算符</h3><p>1.可以利用强制类型转换符将一个表达式转换成所需类型。<br>2.一般形式 (类型名)(表达式)</p>
+<h3 id="逗号运算符和逗号表达式"><a href="#逗号运算符和逗号表达式" class="headerlink" title="逗号运算符和逗号表达式"></a>逗号运算符和逗号表达式</h3><p>1.逗号表达式：用逗号运算符将几个表达式连接起来。<br>2.一般形式：表达式1，表达式2，···，表达式n<br>3.求解过程：先求解表达式1，然后依次求解表达式2，直到表达式n的值。<br>表达式n的值即为整个逗号表达式的值。</p>
+<h2 id="算数运算符和算术表达式"><a href="#算数运算符和算术表达式" class="headerlink" title="算数运算符和算术表达式"></a>算数运算符和算术表达式</h2><h3 id="基本的算术运算符"><a href="#基本的算术运算符" class="headerlink" title="基本的算术运算符"></a>基本的算术运算符</h3><p>1.分类： + (加法运算符或正值运算符)    - (减法运算符或负值运算符)    * (乘)    &#x2F; (除)    % (取余)<br>其中“%”运算的两端必须为整数，其余运算对象可以是整形或实型。<br>2.运算符两边数值必须一致才能进行运算，若不一致系统会自动进行类型转换(向长度方向增加进行)<br>3.所有实数的运算都是以双精度方式进行的，若是单精度数值，则需要在尾数后补0转换为双精度数。</p>
+<h3 id="算术表达式和运算符的优先级与结合性"><a href="#算术表达式和运算符的优先级与结合性" class="headerlink" title="算术表达式和运算符的优先级与结合性"></a>算术表达式和运算符的优先级与结合性</h3><p>1.定义：用算术运算符和括号将运算量连接起来，符合C语言语法规则的表达式。<br>2.运算对象：函数、常量、变量···<br>3.运算规则</p>
+<table>
+<thead>
+<tr>
+<th>规则</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>可使用多层圆括号，但括号必须配对。运算时由内向外依次计算各表达式的值。</td>
+</tr>
+<tr>
+<td>对于不同优先级的运算符，按运算符的优先级由高到低进行运算，若优先级相同，则按结合方向进行运算。</td>
+</tr>
+<tr>
+<td>若运算符两侧的操作数类型不同，则先利用自动转换或强制类型转换，再运算。</td>
+</tr>
+</tbody></table>
+<h3 id="自加、自减运算符"><a href="#自加、自减运算符" class="headerlink" title="自加、自减运算符"></a>自加、自减运算符</h3><p>1.作用：“++”(自加运算符) 使运算变量的值增1，“–”(自减运算符) 使运算变量的值减1。<br>2.均是单目运算符。运算对象可以是整形或实型变量，但不可以是常量和表达式。<br>3.作为前缀或后缀与变量构成一个表达式。<br>4.结合方向：自右向左</p>
+<h2 id="赋值运算符和赋值表达式"><a href="#赋值运算符和赋值表达式" class="headerlink" title="赋值运算符和赋值表达式"></a>赋值运算符和赋值表达式</h2><h3 id="赋值运算符和赋值表达式-1"><a href="#赋值运算符和赋值表达式-1" class="headerlink" title="赋值运算符和赋值表达式"></a>赋值运算符和赋值表达式</h3><p>1.”&#x3D;”称做赋值运算符，作用是将一个数值赋给一个变量或将一个变量的值赋给另一个变量，由赋值运算符组成的表达式称为赋值表达式。<br>2.一般形式：变量名 &#x3D; 表达式</p>
+<table>
+<thead>
+<tr>
+<th>规则</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>赋值运算符的优先级别高于逗号运算符</td>
+</tr>
+<tr>
+<td>赋值运算符“&#x3D;”和等于运算符“&#x3D;&#x3D;”不同</td>
+</tr>
+<tr>
+<td>赋值运算符的左侧只能是变量，而不能是常量或表达式。右侧可以是表达式，包括赋值表达式</td>
+</tr>
+<tr>
+<td>规定最左边变量得到的新值即为整个赋值表达式的值。</td>
+</tr>
+</tbody></table>
+<h3 id="复合的赋值运算符"><a href="#复合的赋值运算符" class="headerlink" title="复合的赋值运算符"></a>复合的赋值运算符</h3><p>在赋值运算符之前加上其它运算符可构成复合赋值运算符</p>
+<table>
+<thead>
+<tr>
+<th>规则</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>两个符号之间不可有空格</td>
+</tr>
+<tr>
+<td>复合赋值运算符的优先级与赋值运算符相同</td>
+</tr>
+</tbody></table>
+<h3 id="赋值运算中的类型转换"><a href="#赋值运算中的类型转换" class="headerlink" title="赋值运算中的类型转换"></a>赋值运算中的类型转换</h3><p>如果赋值运算符两侧的类型不一致，在赋值前系统将自动先把右侧表达式求得的数值按赋值号左边变量的类型进行转换(也可强制转换)</p>
+<h2 id="位运算"><a href="#位运算" class="headerlink" title="位运算"></a>位运算</h2><h3 id="位运算符及含义"><a href="#位运算符及含义" class="headerlink" title="位运算符及含义"></a>位运算符及含义</h3><table>
+<thead>
+<tr>
+<th>运算符</th>
+<th>含义</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>&amp; (按位与)</td>
+<td>若两个相应的二进制位都为1，则该位结果为1，否则为0</td>
+</tr>
+<tr>
+<td>&#96;</td>
+<td>&#96; (按位或)</td>
+</tr>
+<tr>
+<td>^ (按位异或)</td>
+<td>若两个二进制位相同，则结果为0，不同则为1</td>
+</tr>
+<tr>
+<td>~ (按位取反)</td>
+<td>即0变1,1变0</td>
+</tr>
+<tr>
+<td>&lt;&lt; (左移)</td>
+<td>将一个数的二进制位全部左移若干位</td>
+</tr>
+<tr>
+<td>&gt;&gt; (右移)</td>
+<td>将一个数的二进制位全部右移若干位</td>
+</tr>
+</tbody></table>
+<p>▲以上除”~”之外，均为双目运算符，要求两侧各有一个运算量，且运算量只能是整型或字符型数据，不能为实型数据。</p>
+<hr>
+<p><strong>版权声明</strong></p>
+<p><img src="/images/cc.png"></p>
+<p><a href="https://scholargeek.github.io/">Scholar’s Blog</a> by <a href="https://scholargeek.github.io/About/">scholargeek</a> is licensed under a <a href="http://creativecommons.org/licenses/by-nc-nd/4.0/">Creative Commons BY-NC-ND 4.0 International License</a>.<br>由<a href="https://scholargeek.github.io/About/">董仕麟</a>创作并维护的<a href="https://scholargeek.github.io/">scholargeek</a>博客采用<a href="http://creativecommons.org/licenses/by-nc-nd/4.0/">创作共用保留署名-非商业-禁止演绎4.0国际许可证</a>。</p>
+<p>本文首发于<a href="https://scholargeek.github.io/">Scholar’s Blog</a>博客，版权所有，侵权必究。</p>
+<p>本文永久链接：<a href="https://scholargeek.github.io/2018/02/05/C%E8%AF%AD%E8%A8%80%E5%AD%A6%E4%B9%A02/">https://scholargeek.github.io/2018/02/05/C%E8%AF%AD%E8%A8%80%E5%AD%A6%E4%B9%A02/</a></p>
 ]]></content>
       <categories>
         <category>编程</category>
@@ -1718,6 +1680,44 @@
 <p><a href="https://scholargeek.github.io/">Scholar’s Blog</a> by <a href="https://scholargeek.github.io/About/">scholargeek</a> is licensed under a <a href="http://creativecommons.org/licenses/by-nc-nd/4.0/">Creative Commons BY-NC-ND 4.0 International License</a>.<br>由<a href="https://scholargeek.github.io/About/">董仕麟</a>创作并维护的<a href="https://scholargeek.github.io/">scholargeek</a>博客采用<a href="http://creativecommons.org/licenses/by-nc-nd/4.0/">创作共用保留署名-非商业-禁止演绎4.0国际许可证</a>。</p>
 <p>本文首发于<a href="https://scholargeek.github.io/">Scholar’s Blog</a>博客，版权所有，侵权必究。</p>
 <p>本文永久链接：<a href="https://scholargeek.github.io/2018/02/08/C%E8%AF%AD%E8%A8%80%E5%AD%A6%E4%B9%A04/">https://scholargeek.github.io/2018/02/08/C%E8%AF%AD%E8%A8%80%E5%AD%A6%E4%B9%A04/</a></p>
+]]></content>
+      <categories>
+        <category>编程</category>
+      </categories>
+      <tags>
+        <tag>C</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>C语言学习5</title>
+    <url>/2018/02/10/C%E8%AF%AD%E8%A8%80%E5%AD%A6%E4%B9%A05/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h1 id="数组"><a href="#数组" class="headerlink" title="数组"></a>数组</h1><p>本文将描述数组的定义与应用、字符串处理等知识。</p>
+<span id="more"></span>
+
+<h2 id="一维数组的定义和引用"><a href="#一维数组的定义和引用" class="headerlink" title="一维数组的定义和引用"></a>一维数组的定义和引用</h2><h3 id="一维数组的定义"><a href="#一维数组的定义" class="headerlink" title="一维数组的定义"></a>一维数组的定义</h3><p>一维数组是指数组中的每一个元素只带有一个下标的数组。定义方式：类型说明符 数组名[常量表达式]</p>
+<h3 id="一维数组元素的引用"><a href="#一维数组元素的引用" class="headerlink" title="一维数组元素的引用"></a>一维数组元素的引用</h3><p>数组元素的引用形式为：数组名[下标表达式]<br>说明：<br>●一个数组元素实质上是一个变量名，代表内存中的一个存储单元，一个数组占据的是一连串连续的存储单元。<br>●引用数组元素时，数组的下标可以是整型常量，也可以是整形表达式。<br>●数组必须先定义后使用<br>●只能逐个引用数组元素而不能一次引用整个数组。</p>
+<h3 id="一维数组的初始化"><a href="#一维数组的初始化" class="headerlink" title="一维数组的初始化"></a>一维数组的初始化</h3><p>当数组定义后，系统会为该数组在内存中开辟一串连续的存储单元，但这些存储单元中并没有确定的值。可以在定义数组时为包含的数组元素赋初值。如：int a[6]&#x3D;{0,1,2,3,4,5}<br>说明：<br>●所赋初值放在一对花括号中，数值类型必须与所说明类型一致。<br>●所赋初值之间用逗号隔开，系统将按这些数组的排列顺序，从a[0]元素开始依次给数组a中的元素赋初值。<br>●不能跳过前面的元素给后面的元素赋初值，但是允许为前面元素赋值为0。<br>●当所赋初值个数少于所定义数组的元素个数时，将自动给后面的其他元素补初值0。<br>●可以通过赋初值来定义一维数组的大小，定义数组时的一对方括号中可以不指定数组的大小。</p>
+<h2 id="二维数组的定义和引用"><a href="#二维数组的定义和引用" class="headerlink" title="二维数组的定义和引用"></a>二维数组的定义和引用</h2><h3 id="二维数组的定义"><a href="#二维数组的定义" class="headerlink" title="二维数组的定义"></a>二维数组的定义</h3><p>1.在C语言中，二维数组中元素排列的顺序是：按行存放，即在内存中先顺序存放第一行元素，再存放第二行的元素。二维数组元素的存储总是占用一块连续的内存单元。<br>2.一般形式:  类型说明符 数组名[常量表达式][常量表达式]</p>
+<h3 id="二维数组元素的引用"><a href="#二维数组元素的引用" class="headerlink" title="二维数组元素的引用"></a>二维数组元素的引用</h3><p>表示形式:    数组名[下标表达式1][下标表达式2]<br>●数组的下标可以是整型表达式<br>●数组元素可以出现在表达式中，可以被赋值</p>
+<h3 id="二维数组的初始化"><a href="#二维数组的初始化" class="headerlink" title="二维数组的初始化"></a>二维数组的初始化</h3><p>●可以在定义二维数组的同时给二维数组的元素赋初值<br>●全部初值放在一对花括号中，每一行的初值又分别括在一对花括号中，之间用逗号隔开。<br>●当某一对花括号内的初值个数少于该行中元素的个数时，系统将自动地给后面的元素赋初值0<br>●不能跳过每行前面的元素而给后面的元素赋值。<br>●对于二维数组，只可以省略第一个方括号中的常量表达式，但不能省略第二个方括号中的常量表达式。</p>
+<h3 id="通过赋初值定义二维数组的大小"><a href="#通过赋初值定义二维数组的大小" class="headerlink" title="通过赋初值定义二维数组的大小"></a>通过赋初值定义二维数组的大小</h3><p>对于一维数组，可以在数组定义语句中省略方括号中的常量表达式，通过所赋初值的个数来确定数组的大小；<br>对于二维数组，只可以省略第一个方括号中的常量表达式，而不能省略第二个方括号中的常量表达式。</p>
+<h2 id="字符数组"><a href="#字符数组" class="headerlink" title="字符数组"></a>字符数组</h2><h3 id="字符数组的定义"><a href="#字符数组的定义" class="headerlink" title="字符数组的定义"></a>字符数组的定义</h3><p>字符数组就是数组中的每一个元素都是字符。定义方法同普通数组的定义相同，即逐个对数组元素赋值。</p>
+<h3 id="字符数组的初始化及引用"><a href="#字符数组的初始化及引用" class="headerlink" title="字符数组的初始化及引用"></a>字符数组的初始化及引用</h3><p>1.初始化：对字符数组初始化，可逐个元素地赋值，即把字符逐个赋给数组元素。<br>●如果花括号中提供的初值个数(即字符个数)大于数组长度，则编译时会按语法错误处理。<br>●如果初值个数小于数组长度，则将这些字符赋值给数组中前面那些元素，其余元素定为空字符\0;<br>2.引用形式：采用下标引用，即<br>    数组名[下标]</p>
+<h3 id="字符串和字符串结束标志"><a href="#字符串和字符串结束标志" class="headerlink" title="字符串和字符串结束标志"></a>字符串和字符串结束标志</h3><p>C语言中，将字符串作为字符数组来处理。为测定字符串的实际长度，C语言规定了一个字符串结束标志，以字符”\0”代表。就是说，在遇到字符”\0”时，表示字符串结束，由它前面的字符组成字符串。</p>
+<h3 id="字符数组的输入输出"><a href="#字符数组的输入输出" class="headerlink" title="字符数组的输入输出"></a>字符数组的输入输出</h3><p>字符数组的输入输出有两种方法：<br>●用”%c”格式符将字符逐个输入或输出。<br>●用”%s”格式符将整个字符串一次输入或输出。</p>
+<p>在C语言中，有两个函数可以在控制台(显示器)上输出字符串<br>●puts() 输出字符串并自动换行，该函数只能输出字符串。<br>●printf() 通过格式控制符%s输出字符串，不能自动换行。除了字符串，printf()还可输出其他类型数据。</p>
+<p>在C语言中，有两个函数可以从键盘上输入字符串，它们是<br>●scanf() 通过格式控制符%s输入字符串。除了字符串，scanf()还能输入其他类型的数据。[遇到空格就结束输入，无法含有空格]<br>●gets() 直接输入字符串，并且只能输入字符串。[认为空格也是字符串的一部分，以回车作为字符串结束]</p>
+<h3 id="字符串处理函数"><a href="#字符串处理函数" class="headerlink" title="字符串处理函数"></a>字符串处理函数</h3><p>C语言没有提供对字符串进行整体操作的运算符，但在C语言的函数库中提供了一些用来处理字符串的函数。在调用这些函数前，必须在程序前面命令行包含标准头文件”string.h”。<br>●puts() 调用形式为puts(字符数组),将一个字符串(以”\0”结束)输出到终端设备。<br>●gets() 调用形式为gets(字符数组),从终端输入一个字符串到字符数组中，并得到一个函数值。<br>●strcpy() 调用形式strcpy(字符数组1,字符数组2),把字符数组2所指字符串的内容复制到字符数组1所指存储空间中。函数返回字符数组1的值，即目的串的首地址。<br>●strcat() 调用形式为strcat(字符数组1,字符数组2),该函数将字符数组2所指字符串的内容连接到字符数组1所指的字符串后面，并自动覆盖字符数值1串末尾的”\0”。该函数返回字符数组1的地址值。<br>●strlen() 调用形式为strlen(字符数组),此函数计算出以字符数组为起始地址的字符串的长度，并作为函数值返回。<br>●strcmp() 调用形式为strcmp(字符数组1,字符数组2),该函数用来比较字符数组1和字符数组2所指字符串的大小。若字符数组1&gt;字符数组2，函数值大于0(正数)；若字符数组1&#x3D;字符数组2，函数值等于0；若字符数组1&lt;字符数组2，函数值小于0(负数)。</p>
+<h3 id="C语言数组是静态的"><a href="#C语言数组是静态的" class="headerlink" title="C语言数组是静态的"></a>C语言数组是静态的</h3><p>在C语言中，数组一旦被定义，占用的内存空间就是固定的，容量就是不可改变的，既不能在任何位置插入元素，也不能在任何位置删除元素，只能读取和修改元素，我们将这样的数组称为<em>静态数组</em><br>▲动态数组：指数组在定义后可以改变容量，允许任意位置插入或删除元素的数组。<br>一般 C、C++等编译型语言不支持动态数组；而PHP、JavaScript等解释型语言支持动态数组。</p>
+<h3 id="数组越界与溢出"><a href="#数组越界与溢出" class="headerlink" title="数组越界与溢出"></a>数组越界与溢出</h3><p>数组越界: 当数组下标小于0或大于等于数组长度时引用 就会发生越界(out of bounds),即访问数组以外的内存。<br>下标小于0即<em>下限越界</em>(Off Normal Lower)<br>下标大于等于数组长度即为<em>上限越界</em>(Off Normal Upper)<br>数组溢出:即赋予数组元素的个数超过数组长度。</p>
+<p>注意：在用字符串给字符数组赋值时，要保证数值长度大于字符串长度，以容纳结束符”\0”。</p>
+<p>C语言变长数组(VLA, Variable Langth Array)：使用变量指明数组长度。<br>●在C89标准中，必须使用常量表达式指明数组长度。<br>●在C99标准中，可以使用变量指明数组长度。<br>变长数组仍是静态数组，其长度一旦定义就无法改变。</p>
+<hr>
+<p><strong>版权声明</strong></p>
+<p><img src="/images/cc.png"></p>
+<p><a href="https://scholargeek.github.io/">Scholar’s Blog</a> by <a href="https://scholargeek.github.io/About/">scholargeek</a> is licensed under a <a href="http://creativecommons.org/licenses/by-nc-nd/4.0/">Creative Commons BY-NC-ND 4.0 International License</a>.<br>由<a href="https://scholargeek.github.io/About/">董仕麟</a>创作并维护的<a href="https://scholargeek.github.io/">scholargeek</a>博客采用<a href="http://creativecommons.org/licenses/by-nc-nd/4.0/">创作共用保留署名-非商业-禁止演绎4.0国际许可证</a>。</p>
+<p>本文首发于<a href="https://scholargeek.github.io/">Scholar’s Blog</a>博客，版权所有，侵权必究。</p>
+<p>本文永久链接：<a href="https://scholargeek.github.io/2018/02/10/C%E8%AF%AD%E8%A8%80%E5%AD%A6%E4%B9%A05/">https://scholargeek.github.io/2018/02/10/C%E8%AF%AD%E8%A8%80%E5%AD%A6%E4%B9%A05/</a></p>
 ]]></content>
       <categories>
         <category>编程</category>
@@ -2319,33 +2319,6 @@ num_140=2
       </tags>
   </entry>
   <entry>
-    <title>Hexo博客默认主题的修改与美化16</title>
-    <url>/2019/07/31/Hexo%E5%8D%9A%E5%AE%A2%E9%BB%98%E8%AE%A4%E4%B8%BB%E9%A2%98%E7%9A%84%E4%BF%AE%E6%94%B9%E4%B8%8E%E7%BE%8E%E5%8C%9616/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h1 id="给博客中导航栏添加GitHub快捷链接"><a href="#给博客中导航栏添加GitHub快捷链接" class="headerlink" title="给博客中导航栏添加GitHub快捷链接"></a>给博客中导航栏添加GitHub快捷链接</h1><p>技术博客的内容一般与GitHub有密切联系，给博客导航栏添加快捷按钮十分方便开发者。<br>本文将详述如何给导航栏添加快捷链接。</p>
-<span id="more"></span>
-<ol>
-<li><p>首先打开<a href="https://tholman.com/github-corners/">https://tholman.com/github-corners/</a> 选择合适的样式并复制源码</p>
-</li>
-<li><p>把复制的源码粘贴到\blog\themes\landscape\layout\ layout.ejs 中的</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">&lt;div class=&quot;outer&quot;&gt;</span><br></pre></td></tr></table></figure>
-<p>下方，保存文件即可。</p>
-</li>
-</ol>
-<hr>
-<p><strong>版权声明</strong></p>
-<p><img src="/images/cc.png"></p>
-<p><a href="https://scholargeek.github.io/">Scholar’s Blog</a> by <a href="https://scholargeek.github.io/About/">scholargeek</a> is licensed under a <a href="http://creativecommons.org/licenses/by-nc-nd/4.0/">Creative Commons BY-NC-ND 4.0 International License</a>.<br>由<a href="https://scholargeek.github.io/About/">董仕麟</a>创作并维护的<a href="https://scholargeek.github.io/">scholargeek</a>博客采用<a href="http://creativecommons.org/licenses/by-nc-nd/4.0/">创作共用保留署名-非商业-禁止演绎4.0国际许可证</a>。</p>
-<p>本文首发于<a href="https://scholargeek.github.io/">Scholar’s Blog</a>博客，版权所有，侵权必究。</p>
-<p>本文永久链接：<a href="https://scholargeek.github.io/2019/07/31/Hexo%E5%8D%9A%E5%AE%A2%E9%BB%98%E8%AE%A4%E4%B8%BB%E9%A2%98%E7%9A%84%E4%BF%AE%E6%94%B9%E4%B8%8E%E7%BE%8E%E5%8C%9616/">https://scholargeek.github.io/2019/07/31/Hexo%E5%8D%9A%E5%AE%A2%E9%BB%98%E8%AE%A4%E4%B8%BB%E9%A2%98%E7%9A%84%E4%BF%AE%E6%94%B9%E4%B8%8E%E7%BE%8E%E5%8C%9616/</a></p>
-]]></content>
-      <categories>
-        <category>教程</category>
-      </categories>
-      <tags>
-        <tag>Hexo</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>Hexo博客默认主题的修改与美化14</title>
     <url>/2019/07/28/Hexo%E5%8D%9A%E5%AE%A2%E9%BB%98%E8%AE%A4%E4%B8%BB%E9%A2%98%E7%9A%84%E4%BF%AE%E6%94%B9%E4%B8%8E%E7%BE%8E%E5%8C%9614/</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h1 id="修改博客中导航栏的颜色与字体"><a href="#修改博客中导航栏的颜色与字体" class="headerlink" title="修改博客中导航栏的颜色与字体"></a>修改博客中导航栏的颜色与字体</h1><p>Hexo博客默认主题landscape中的导航栏字体太小，背景色太单调，如果想设置该怎么办呢？本文将详述导航栏颜色与字体的设置。</p>
@@ -2400,26 +2373,24 @@ num_140=2
       </tags>
   </entry>
   <entry>
-    <title>Hexo博客默认主题的修改与美化3</title>
-    <url>/2019/07/17/Hexo%E5%8D%9A%E5%AE%A2%E9%BB%98%E8%AE%A4%E4%B8%BB%E9%A2%98%E7%9A%84%E4%BF%AE%E6%94%B9%E4%B8%8E%E7%BE%8E%E5%8C%963/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h1 id="使Hexo博客根据文章标识自动添加目录"><a href="#使Hexo博客根据文章标识自动添加目录" class="headerlink" title="使Hexo博客根据文章标识自动添加目录"></a>使Hexo博客根据文章标识自动添加目录</h1><p>Hexo博客系统的核心支持生成目录（Table of Contents），但其默认的主题Landscape并不支持目录的显示。本文将详述如何使博文自动添加目录</p>
+    <title>Hexo博客默认主题的修改与美化16</title>
+    <url>/2019/07/31/Hexo%E5%8D%9A%E5%AE%A2%E9%BB%98%E8%AE%A4%E4%B8%BB%E9%A2%98%E7%9A%84%E4%BF%AE%E6%94%B9%E4%B8%8E%E7%BE%8E%E5%8C%9616/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h1 id="给博客中导航栏添加GitHub快捷链接"><a href="#给博客中导航栏添加GitHub快捷链接" class="headerlink" title="给博客中导航栏添加GitHub快捷链接"></a>给博客中导航栏添加GitHub快捷链接</h1><p>技术博客的内容一般与GitHub有密切联系，给博客导航栏添加快捷按钮十分方便开发者。<br>本文将详述如何给导航栏添加快捷链接。</p>
 <span id="more"></span>
-<h2 id="如何自动生成目录"><a href="#如何自动生成目录" class="headerlink" title="如何自动生成目录"></a>如何自动生成目录</h2><pre><code>只需对Landscape的主题文件简单修改并添加目录的CSS样式，就可以在文章前面显示友好的目录了。
-首先要编辑文章显示页面的模板，也就是themes/landscape/layout/_partial/article.ejs文件。为了将目录生成在正文之前，首先在这个文件中找到&lt;%- post.content %&gt;，并在这一行之前加入如下代码：
-</code></pre>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">&lt;!-- Table of Contents --&gt;</span><br><span class="line">&lt;% if (!index &amp;&amp; post.toc)&#123; %&gt;</span><br><span class="line"> &lt;div id=&quot;toc&quot; class=&quot;toc-article&quot;&gt;</span><br><span class="line"> &lt;strong class=&quot;toc-title&quot;&gt;文章目录&lt;/strong&gt;</span><br><span class="line"> &lt;%- toc(post.content) %&gt;</span><br><span class="line"> &lt;/div&gt;</span><br><span class="line">&lt;% &#125; %&gt;</span><br></pre></td></tr></table></figure>
-<pre><code>但仅仅如此，显示并不美观。接着修改themes/landscape/source/css/_partial/article.styl文件，在文件内容的最后，添加如下代码：
-</code></pre>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">/*toc*/</span><br><span class="line">.toc-article</span><br><span class="line"> background #eee</span><br><span class="line"> border 1px solid #bbb</span><br><span class="line"> border-radius 10px</span><br><span class="line"> margin 1.5em 0 0.3em 1.5em</span><br><span class="line"> padding 1.2em 1em 0 1em</span><br><span class="line"> max-width 28%</span><br><span class="line">.toc-title</span><br><span class="line"> font-size 120%</span><br><span class="line">#toc</span><br><span class="line"> line-height 1em</span><br><span class="line"> font-size 0.9em</span><br><span class="line"> float right</span><br><span class="line"> .toc</span><br><span class="line"> padding 0</span><br><span class="line"> margin 1em</span><br><span class="line"> line-height 1.8em</span><br><span class="line"> li</span><br><span class="line"> list-style-type none</span><br><span class="line"> .toc-child</span><br><span class="line"> margin-left 1em</span><br></pre></td></tr></table></figure>
-<pre><code>代码释义：toc-article指定了目录整个&lt;div&gt;的背景色、边框色、倒角半径、各种间距以及最大的宽度。注意这里最好指定目录的最大宽度，我将其设为了28%，也就是文章正文那个框的宽度的28%，也可以设为一个固定的长度，为了能适配各种不同尺寸的屏幕，最好还是设置为百分比。如果不指定最大宽度，遇到比较长的标题时，生成的目录会非常难看。toc-title指的就是“文章目录”那四个字，这四个字要比其他字大一些，将其字号设为其他字的120%。#toc.toc指定了目录列表的一些细节，将font-size设为0.9em会让目录的字比文章的字稍小一些。最后的.toc-child指定了二级目录的缩进量。
-</code></pre>
-<p>如果想使Markdown文件的博文生成目录，则需要在编辑MD文章开头的front-matter（—之前的区域）中添加一句toc: true 即可为此篇文章添加目录。</p>
+<ol>
+<li><p>首先打开<a href="https://tholman.com/github-corners/">https://tholman.com/github-corners/</a> 选择合适的样式并复制源码</p>
+</li>
+<li><p>把复制的源码粘贴到\blog\themes\landscape\layout\ layout.ejs 中的</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">&lt;div class=&quot;outer&quot;&gt;</span><br></pre></td></tr></table></figure>
+<p>下方，保存文件即可。</p>
+</li>
+</ol>
 <hr>
 <p><strong>版权声明</strong></p>
 <p><img src="/images/cc.png"></p>
 <p><a href="https://scholargeek.github.io/">Scholar’s Blog</a> by <a href="https://scholargeek.github.io/About/">scholargeek</a> is licensed under a <a href="http://creativecommons.org/licenses/by-nc-nd/4.0/">Creative Commons BY-NC-ND 4.0 International License</a>.<br>由<a href="https://scholargeek.github.io/About/">董仕麟</a>创作并维护的<a href="https://scholargeek.github.io/">scholargeek</a>博客采用<a href="http://creativecommons.org/licenses/by-nc-nd/4.0/">创作共用保留署名-非商业-禁止演绎4.0国际许可证</a>。</p>
 <p>本文首发于<a href="https://scholargeek.github.io/">Scholar’s Blog</a>博客，版权所有，侵权必究。</p>
-<p>本文永久链接：<a href="https://scholargeek.github.io/2019/07/17/Hexo%E5%8D%9A%E5%AE%A2%E9%BB%98%E8%AE%A4%E4%B8%BB%E9%A2%98%E7%9A%84%E4%BF%AE%E6%94%B9%E4%B8%8E%E7%BE%8E%E5%8C%963/">https://scholargeek.github.io/2019/07/17/Hexo%E5%8D%9A%E5%AE%A2%E9%BB%98%E8%AE%A4%E4%B8%BB%E9%A2%98%E7%9A%84%E4%BF%AE%E6%94%B9%E4%B8%8E%E7%BE%8E%E5%8C%963/</a></p>
+<p>本文永久链接：<a href="https://scholargeek.github.io/2019/07/31/Hexo%E5%8D%9A%E5%AE%A2%E9%BB%98%E8%AE%A4%E4%B8%BB%E9%A2%98%E7%9A%84%E4%BF%AE%E6%94%B9%E4%B8%8E%E7%BE%8E%E5%8C%9616/">https://scholargeek.github.io/2019/07/31/Hexo%E5%8D%9A%E5%AE%A2%E9%BB%98%E8%AE%A4%E4%B8%BB%E9%A2%98%E7%9A%84%E4%BF%AE%E6%94%B9%E4%B8%8E%E7%BE%8E%E5%8C%9616/</a></p>
 ]]></content>
       <categories>
         <category>教程</category>
@@ -2472,6 +2443,35 @@ num_140=2
       </tags>
   </entry>
   <entry>
+    <title>Hexo博客默认主题的修改与美化3</title>
+    <url>/2019/07/17/Hexo%E5%8D%9A%E5%AE%A2%E9%BB%98%E8%AE%A4%E4%B8%BB%E9%A2%98%E7%9A%84%E4%BF%AE%E6%94%B9%E4%B8%8E%E7%BE%8E%E5%8C%963/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h1 id="使Hexo博客根据文章标识自动添加目录"><a href="#使Hexo博客根据文章标识自动添加目录" class="headerlink" title="使Hexo博客根据文章标识自动添加目录"></a>使Hexo博客根据文章标识自动添加目录</h1><p>Hexo博客系统的核心支持生成目录（Table of Contents），但其默认的主题Landscape并不支持目录的显示。本文将详述如何使博文自动添加目录</p>
+<span id="more"></span>
+<h2 id="如何自动生成目录"><a href="#如何自动生成目录" class="headerlink" title="如何自动生成目录"></a>如何自动生成目录</h2><pre><code>只需对Landscape的主题文件简单修改并添加目录的CSS样式，就可以在文章前面显示友好的目录了。
+首先要编辑文章显示页面的模板，也就是themes/landscape/layout/_partial/article.ejs文件。为了将目录生成在正文之前，首先在这个文件中找到&lt;%- post.content %&gt;，并在这一行之前加入如下代码：
+</code></pre>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">&lt;!-- Table of Contents --&gt;</span><br><span class="line">&lt;% if (!index &amp;&amp; post.toc)&#123; %&gt;</span><br><span class="line"> &lt;div id=&quot;toc&quot; class=&quot;toc-article&quot;&gt;</span><br><span class="line"> &lt;strong class=&quot;toc-title&quot;&gt;文章目录&lt;/strong&gt;</span><br><span class="line"> &lt;%- toc(post.content) %&gt;</span><br><span class="line"> &lt;/div&gt;</span><br><span class="line">&lt;% &#125; %&gt;</span><br></pre></td></tr></table></figure>
+<pre><code>但仅仅如此，显示并不美观。接着修改themes/landscape/source/css/_partial/article.styl文件，在文件内容的最后，添加如下代码：
+</code></pre>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">/*toc*/</span><br><span class="line">.toc-article</span><br><span class="line"> background #eee</span><br><span class="line"> border 1px solid #bbb</span><br><span class="line"> border-radius 10px</span><br><span class="line"> margin 1.5em 0 0.3em 1.5em</span><br><span class="line"> padding 1.2em 1em 0 1em</span><br><span class="line"> max-width 28%</span><br><span class="line">.toc-title</span><br><span class="line"> font-size 120%</span><br><span class="line">#toc</span><br><span class="line"> line-height 1em</span><br><span class="line"> font-size 0.9em</span><br><span class="line"> float right</span><br><span class="line"> .toc</span><br><span class="line"> padding 0</span><br><span class="line"> margin 1em</span><br><span class="line"> line-height 1.8em</span><br><span class="line"> li</span><br><span class="line"> list-style-type none</span><br><span class="line"> .toc-child</span><br><span class="line"> margin-left 1em</span><br></pre></td></tr></table></figure>
+<pre><code>代码释义：toc-article指定了目录整个&lt;div&gt;的背景色、边框色、倒角半径、各种间距以及最大的宽度。注意这里最好指定目录的最大宽度，我将其设为了28%，也就是文章正文那个框的宽度的28%，也可以设为一个固定的长度，为了能适配各种不同尺寸的屏幕，最好还是设置为百分比。如果不指定最大宽度，遇到比较长的标题时，生成的目录会非常难看。toc-title指的就是“文章目录”那四个字，这四个字要比其他字大一些，将其字号设为其他字的120%。#toc.toc指定了目录列表的一些细节，将font-size设为0.9em会让目录的字比文章的字稍小一些。最后的.toc-child指定了二级目录的缩进量。
+</code></pre>
+<p>如果想使Markdown文件的博文生成目录，则需要在编辑MD文章开头的front-matter（—之前的区域）中添加一句toc: true 即可为此篇文章添加目录。</p>
+<hr>
+<p><strong>版权声明</strong></p>
+<p><img src="/images/cc.png"></p>
+<p><a href="https://scholargeek.github.io/">Scholar’s Blog</a> by <a href="https://scholargeek.github.io/About/">scholargeek</a> is licensed under a <a href="http://creativecommons.org/licenses/by-nc-nd/4.0/">Creative Commons BY-NC-ND 4.0 International License</a>.<br>由<a href="https://scholargeek.github.io/About/">董仕麟</a>创作并维护的<a href="https://scholargeek.github.io/">scholargeek</a>博客采用<a href="http://creativecommons.org/licenses/by-nc-nd/4.0/">创作共用保留署名-非商业-禁止演绎4.0国际许可证</a>。</p>
+<p>本文首发于<a href="https://scholargeek.github.io/">Scholar’s Blog</a>博客，版权所有，侵权必究。</p>
+<p>本文永久链接：<a href="https://scholargeek.github.io/2019/07/17/Hexo%E5%8D%9A%E5%AE%A2%E9%BB%98%E8%AE%A4%E4%B8%BB%E9%A2%98%E7%9A%84%E4%BF%AE%E6%94%B9%E4%B8%8E%E7%BE%8E%E5%8C%963/">https://scholargeek.github.io/2019/07/17/Hexo%E5%8D%9A%E5%AE%A2%E9%BB%98%E8%AE%A4%E4%B8%BB%E9%A2%98%E7%9A%84%E4%BF%AE%E6%94%B9%E4%B8%8E%E7%BE%8E%E5%8C%963/</a></p>
+]]></content>
+      <categories>
+        <category>教程</category>
+      </categories>
+      <tags>
+        <tag>Hexo</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Hexo博客默认主题的修改与美化4</title>
     <url>/2019/07/18/Hexo%E5%8D%9A%E5%AE%A2%E9%BB%98%E8%AE%A4%E4%B8%BB%E9%A2%98%E7%9A%84%E4%BF%AE%E6%94%B9%E4%B8%8E%E7%BE%8E%E5%8C%964/</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h1 id="自动使每篇文章附带版权信息"><a href="#自动使每篇文章附带版权信息" class="headerlink" title="自动使每篇文章附带版权信息"></a>自动使每篇文章附带版权信息</h1><p>现今大多数网站的内容都有版权保护，如何给自己的Hexo博客网站的每篇文章添加版权信息呢？本文将详述如何自动为博文添加版权。</p>
@@ -2488,6 +2488,31 @@ num_140=2
 <p><a href="https://scholargeek.github.io/">Scholar’s Blog</a> by <a href="https://scholargeek.github.io/About/">scholargeek</a> is licensed under a <a href="http://creativecommons.org/licenses/by-nc-nd/4.0/">Creative Commons BY-NC-ND 4.0 International License</a>.<br>由<a href="https://scholargeek.github.io/About/">董仕麟</a>创作并维护的<a href="https://scholargeek.github.io/">scholargeek</a>博客采用<a href="http://creativecommons.org/licenses/by-nc-nd/4.0/">创作共用保留署名-非商业-禁止演绎4.0国际许可证</a>。</p>
 <p>本文首发于<a href="https://scholargeek.github.io/">Scholar’s Blog</a>博客，版权所有，侵权必究。</p>
 <p>本文永久链接：<a href="https://scholargeek.github.io/2019/07/18/Hexo%E5%8D%9A%E5%AE%A2%E9%BB%98%E8%AE%A4%E4%B8%BB%E9%A2%98%E7%9A%84%E4%BF%AE%E6%94%B9%E4%B8%8E%E7%BE%8E%E5%8C%964/">https://scholargeek.github.io/2019/07/18/Hexo%E5%8D%9A%E5%AE%A2%E9%BB%98%E8%AE%A4%E4%B8%BB%E9%A2%98%E7%9A%84%E4%BF%AE%E6%94%B9%E4%B8%8E%E7%BE%8E%E5%8C%964/</a></p>
+]]></content>
+      <categories>
+        <category>教程</category>
+      </categories>
+      <tags>
+        <tag>Hexo</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Hexo博客默认主题的修改与美化5</title>
+    <url>/2019/07/19/Hexo%E5%8D%9A%E5%AE%A2%E9%BB%98%E8%AE%A4%E4%B8%BB%E9%A2%98%E7%9A%84%E4%BF%AE%E6%94%B9%E4%B8%8E%E7%BE%8E%E5%8C%965/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h1 id="使博文自带分享栏"><a href="#使博文自带分享栏" class="headerlink" title="使博文自带分享栏"></a>使博文自带分享栏</h1><p>许多网站内容都允许分享，本文将详述如何给每篇博文附带分享栏功能。</p>
+<span id="more"></span>
+<p>首先获取百度分享源码，代码如下：</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">&lt;% if (!index)&#123; %&gt;</span><br><span class="line"></span><br><span class="line">&lt;div class=&quot;bdsharebuttonbox&quot;&gt;&lt;a href=&quot;#&quot; class=&quot;_bds_more&quot; data-cmd=&quot;more&quot;&gt;分享本文&lt;/a&gt;&lt;a href=&quot;#&quot; class=&quot;bds_tsina&quot; data-cmd=&quot;tsina&quot; title=&quot;分享到新浪微博&quot;&gt;&lt;/a&gt;&lt;a href=&quot;#&quot; class=&quot;bds_renren&quot; data-cmd=&quot;renren&quot; title=&quot;分享到人人网&quot;&gt;&lt;/a&gt;&lt;a href=&quot;#&quot; class=&quot;bds_douban&quot; data-cmd=&quot;douban&quot; title=&quot;分享到豆瓣网&quot;&gt;&lt;/a&gt;&lt;a href=&quot;#&quot; class=&quot;bds_qzone&quot; data-cmd=&quot;qzone&quot; title=&quot;分享到QQ空间&quot;&gt;&lt;/a&gt;&lt;a href=&quot;#&quot; class=&quot;bds_fbook&quot; data-cmd=&quot;fbook&quot; title=&quot;分享到Facebook&quot;&gt;&lt;/a&gt;&lt;a href=&quot;#&quot; class=&quot;bds_twi&quot; data-cmd=&quot;twi&quot; title=&quot;分享到Twitter&quot;&gt;&lt;/a&gt;&lt;a href=&quot;#&quot; class=&quot;bds_mail&quot; data-cmd=&quot;mail&quot; title=&quot;分享到邮件分享&quot;&gt;&lt;/a&gt;&lt;a href=&quot;#&quot; class=&quot;bds_print&quot; data-cmd=&quot;print&quot; title=&quot;分享到打印&quot;&gt;&lt;/a&gt;&lt;a href=&quot;#&quot; class=&quot;bds_copy&quot; data-cmd=&quot;copy&quot; title=&quot;分享到复制网址&quot;&gt;&lt;/a&gt;&lt;a class=&quot;bds_count&quot; data-cmd=&quot;count&quot;&gt;&lt;/a&gt;&lt;/div&gt;</span><br><span class="line"></span><br><span class="line">&lt;script&gt;window._bd_share_config=&#123;&quot;common&quot;:&#123;&quot;bdSnsKey&quot;:&#123;&#125;,&quot;bdText&quot;:&quot;&quot;,&quot;bdMini&quot;:&quot;2&quot;,&quot;bdMiniList&quot;:false,&quot;bdPic&quot;:&quot;&quot;,&quot;bdStyle&quot;:&quot;2&quot;,&quot;bdSize&quot;:&quot;24&quot;&#125;,&quot;share&quot;:&#123;&#125;&#125;;with(document)0[(getElementsByTagName(&#x27;head&#x27;)[0]||body).appendChild(createElement(&#x27;script&#x27;)).src=&#x27;http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion=&#x27;+~(-new Date()/36e5)];&lt;/script&gt;</span><br><span class="line"></span><br><span class="line">&lt;% &#125; %&gt;</span><br></pre></td></tr></table></figure>
+<p>将其保存到blog\themes\landscape\layout_partial\post\baidu-share.ejs中</p>
+<p>再到blog\themes\landscape\layout_partial\duoshuo-comment.ejs文件中添加如下代码：</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">&lt;section id=&quot;comments&quot;&gt;</span><br><span class="line"> &lt;div class=&quot;ds-thread&quot;&gt;&lt;/div&gt;</span><br><span class="line">&lt;script type=&quot;text/javascript&quot;&gt;</span><br><span class="line">var duoshuoQuery = &#123;short_name:&quot;&lt;%- config.duoshuo_shortname %&gt;&quot;&#125;;</span><br><span class="line"></span><br><span class="line"> (function() &#123;</span><br><span class="line"> var ds = document.createElement(&#x27;script&#x27;);</span><br><span class="line"> ds.type = &#x27;text/javascript&#x27;;ds.async = true;</span><br><span class="line"> ds.src = &#x27;http://static.duoshuo.com/embed.js&#x27;;</span><br><span class="line"> ds.charset = &#x27;UTF-8&#x27;;</span><br><span class="line"> (document.getElementsByTagName(&#x27;head&#x27;)[0]</span><br><span class="line"> || document.getElementsByTagName(&#x27;body&#x27;)[0]).appendChild(ds);</span><br><span class="line"> &#125;)();</span><br><span class="line"></span><br><span class="line"> &lt;/script&gt;</span><br><span class="line">&lt;/section&gt;</span><br></pre></td></tr></table></figure>
+<p>最后编辑主题配置文件，即在blog\themes\landscape_config.yml文件中，添加<br>baidu_share: true<br>即可实现在博文下方附带分享栏。</p>
+<hr>
+<p><strong>版权声明</strong></p>
+<p><img src="/images/cc.png"></p>
+<p><a href="https://scholargeek.github.io/">Scholar’s Blog</a> by <a href="https://scholargeek.github.io/About/">scholargeek</a> is licensed under a <a href="http://creativecommons.org/licenses/by-nc-nd/4.0/">Creative Commons BY-NC-ND 4.0 International License</a>.<br>由<a href="https://scholargeek.github.io/About/">董仕麟</a>创作并维护的<a href="https://scholargeek.github.io/">scholargeek</a>博客采用<a href="http://creativecommons.org/licenses/by-nc-nd/4.0/">创作共用保留署名-非商业-禁止演绎4.0国际许可证</a>。</p>
+<p>本文首发于<a href="https://scholargeek.github.io/">Scholar’s Blog</a>博客，版权所有，侵权必究。</p>
+<p>本文永久链接：<a href="https://scholargeek.github.io/2019/07/19/Hexo%E5%8D%9A%E5%AE%A2%E9%BB%98%E8%AE%A4%E4%B8%BB%E9%A2%98%E7%9A%84%E4%BF%AE%E6%94%B9%E4%B8%8E%E7%BE%8E%E5%8C%965/">https://scholargeek.github.io/2019/07/19/Hexo%E5%8D%9A%E5%AE%A2%E9%BB%98%E8%AE%A4%E4%B8%BB%E9%A2%98%E7%9A%84%E4%BF%AE%E6%94%B9%E4%B8%8E%E7%BE%8E%E5%8C%965/</a></p>
 ]]></content>
       <categories>
         <category>教程</category>
@@ -2523,55 +2548,20 @@ num_140=2
       </tags>
   </entry>
   <entry>
-    <title>Hexo博客默认主题的修改与美化7</title>
-    <url>/2019/07/21/Hexo%E5%8D%9A%E5%AE%A2%E9%BB%98%E8%AE%A4%E4%B8%BB%E9%A2%98%E7%9A%84%E4%BF%AE%E6%94%B9%E4%B8%8E%E7%BE%8E%E5%8C%967/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h1 id="Hexo博客Landscape主题的字体和JS库的优化"><a href="#Hexo博客Landscape主题的字体和JS库的优化" class="headerlink" title="Hexo博客Landscape主题的字体和JS库的优化"></a>Hexo博客Landscape主题的字体和JS库的优化</h1><p>本文将详述如何优化Hexo博客默认主题的jQuery库和字体</p>
+    <title>Hexo博客默认主题的修改与美化8</title>
+    <url>/2019/07/22/Hexo%E5%8D%9A%E5%AE%A2%E9%BB%98%E8%AE%A4%E4%B8%BB%E9%A2%98%E7%9A%84%E4%BF%AE%E6%94%B9%E4%B8%8E%E7%BE%8E%E5%8C%968/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h1 id="设置网站的图标Favicon"><a href="#设置网站的图标Favicon" class="headerlink" title="设置网站的图标Favicon"></a>设置网站的图标Favicon</h1><p><strong>Favicon</strong>是_favorites icon_的缩写，亦被称为<strong>website icon</strong>（网页图标）。<br>本文将详述博客网站如何设置网页图标。</p>
 <span id="more"></span>
-<h2 id="jQuery库的优化"><a href="#jQuery库的优化" class="headerlink" title="jQuery库的优化"></a>jQuery库的优化</h2><p>目的：将jQuery替换成百度提供的服务，且在百度的服务暂时不可用时，能够以网站上自带的jQuery作为备份服务。<br>方法：<br>1.修改blog\themes\landscape\layout_partial&#x2F;after-footer.ejs文件，将17行的</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">&lt;script src=&quot;//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js&quot;&gt;&lt;/script&gt;</span><br></pre></td></tr></table></figure>
-<p>替换为：</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">&lt;script src=&quot;http://apps.bdimg.com/libs/jquery/2.0.3/jquery.min.js&quot;&gt;&lt;/script&gt;</span><br><span class="line"></span><br><span class="line">&lt;script type=&quot;text/javascript&quot;&gt;</span><br><span class="line"></span><br><span class="line">//&lt;![CDATA[</span><br><span class="line">if (typeof jQuery == &#x27;undefined&#x27;) &#123;</span><br><span class="line"> document.write(unescape(&quot;%3Cscript src=&#x27;/js/jquery-2.0.3.min.js&#x27; type=&#x27;text/javascript&#x27;%3E%3C/script%3E&quot;));</span><br><span class="line">&#125;</span><br><span class="line">// ]]&gt;</span><br><span class="line"></span><br><span class="line">&lt;/script&gt;</span><br></pre></td></tr></table></figure>
-<p>2.去jQuery官方下载合适版本的jQuery并将其放到themes&#x2F;landscape&#x2F;source&#x2F;js&#x2F;目录下，将其命名为jquery-2.0.3.min.js 最后将该文件开头处的 <del>&#x2F;&#x2F;@ sourceMappingURL&#x3D;jquery-2.0.3.min.map</del> 这一行代码删去，否则会导致博客无法生成。</p>
-<h2 id="字体优化"><a href="#字体优化" class="headerlink" title="字体优化"></a>字体优化</h2><p>目的：优化博客字体，使页面在多个平台上自动显示较合适的字体。<br>方法：1.修改themes&#x2F;landscape&#x2F;source&#x2F;css&#x2F;_variables.styl这一文件，将其中第22行</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">font-sans = &quot;Helvetica Neue&quot;, Helvetica, Arial, sans-serif</span><br></pre></td></tr></table></figure>
-<p>替换为：</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">font-sans = &quot;Helvetica Neue&quot;, &quot;Helvetica&quot;, &quot;Hiragino Sans GB&quot;, &quot;Microsoft YaHei&quot;, &quot;Source Han Sans CN&quot;, &quot;WenQuanYi Micro Hei&quot;, Arial, sans-serif</span><br></pre></td></tr></table></figure>
-<p>2.放弃Google的Source Code Pro等宽字体，修改themes&#x2F;landscape&#x2F;source&#x2F;css&#x2F;_variables.styl文件，将其中第24行</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">font-mono = &quot;Source Code Pro&quot;, Consolas, Monaco, Menlo, Consolas, monospace</span><br></pre></td></tr></table></figure>
-<p>替换为<br>    font-mono &#x3D; Consolas, Monaco, Menlo, monospace<br>3.最后删除引用Google字体的代码，编辑文件themes&#x2F;landscape&#x2F;layout&#x2F;_partial&#x2F;after-footer.ejs，将其中的</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">&lt;link href=&quot;http://fonts.googleapis.com/css?family=Source+Code+Pro&quot; rel=&quot;stylesheet&quot; type=&quot;text/css&quot;&gt;</span><br></pre></td></tr></table></figure>
-<p>删除即可。</p>
+
+<p>首先选择合适的图片转换为.ico格式，可在<a href="http://tool.lu/favicon/">http://tool.lu/favicon/</a> 在线转换格式，当然也可以使用图片编辑工具转换，最后得到favicon.ico图标文件，放入blog\source文件夹内即可。<br>然后编辑主题配置文件blog\themes\landscape_config.yml 添加如下代码：</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">favicon: /favicon.ico</span><br></pre></td></tr></table></figure>
+<p>即完成了网页图标的添加。</p>
 <hr>
 <p><strong>版权声明</strong></p>
 <p><img src="/images/cc.png"></p>
 <p><a href="https://scholargeek.github.io/">Scholar’s Blog</a> by <a href="https://scholargeek.github.io/About/">scholargeek</a> is licensed under a <a href="http://creativecommons.org/licenses/by-nc-nd/4.0/">Creative Commons BY-NC-ND 4.0 International License</a>.<br>由<a href="https://scholargeek.github.io/About/">董仕麟</a>创作并维护的<a href="https://scholargeek.github.io/">scholargeek</a>博客采用<a href="http://creativecommons.org/licenses/by-nc-nd/4.0/">创作共用保留署名-非商业-禁止演绎4.0国际许可证</a>。</p>
 <p>本文首发于<a href="https://scholargeek.github.io/">Scholar’s Blog</a>博客，版权所有，侵权必究。</p>
-<p>本文永久链接：<a href="https://scholargeek.github.io/2019/07/21/Hexo%E5%8D%9A%E5%AE%A2%E9%BB%98%E8%AE%A4%E4%B8%BB%E9%A2%98%E7%9A%84%E4%BF%AE%E6%94%B9%E4%B8%8E%E7%BE%8E%E5%8C%967/">https://scholargeek.github.io/2019/07/21/Hexo%E5%8D%9A%E5%AE%A2%E9%BB%98%E8%AE%A4%E4%B8%BB%E9%A2%98%E7%9A%84%E4%BF%AE%E6%94%B9%E4%B8%8E%E7%BE%8E%E5%8C%967/</a></p>
-]]></content>
-      <categories>
-        <category>教程</category>
-      </categories>
-      <tags>
-        <tag>Hexo</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Hexo博客默认主题的修改与美化5</title>
-    <url>/2019/07/19/Hexo%E5%8D%9A%E5%AE%A2%E9%BB%98%E8%AE%A4%E4%B8%BB%E9%A2%98%E7%9A%84%E4%BF%AE%E6%94%B9%E4%B8%8E%E7%BE%8E%E5%8C%965/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h1 id="使博文自带分享栏"><a href="#使博文自带分享栏" class="headerlink" title="使博文自带分享栏"></a>使博文自带分享栏</h1><p>许多网站内容都允许分享，本文将详述如何给每篇博文附带分享栏功能。</p>
-<span id="more"></span>
-<p>首先获取百度分享源码，代码如下：</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">&lt;% if (!index)&#123; %&gt;</span><br><span class="line"></span><br><span class="line">&lt;div class=&quot;bdsharebuttonbox&quot;&gt;&lt;a href=&quot;#&quot; class=&quot;_bds_more&quot; data-cmd=&quot;more&quot;&gt;分享本文&lt;/a&gt;&lt;a href=&quot;#&quot; class=&quot;bds_tsina&quot; data-cmd=&quot;tsina&quot; title=&quot;分享到新浪微博&quot;&gt;&lt;/a&gt;&lt;a href=&quot;#&quot; class=&quot;bds_renren&quot; data-cmd=&quot;renren&quot; title=&quot;分享到人人网&quot;&gt;&lt;/a&gt;&lt;a href=&quot;#&quot; class=&quot;bds_douban&quot; data-cmd=&quot;douban&quot; title=&quot;分享到豆瓣网&quot;&gt;&lt;/a&gt;&lt;a href=&quot;#&quot; class=&quot;bds_qzone&quot; data-cmd=&quot;qzone&quot; title=&quot;分享到QQ空间&quot;&gt;&lt;/a&gt;&lt;a href=&quot;#&quot; class=&quot;bds_fbook&quot; data-cmd=&quot;fbook&quot; title=&quot;分享到Facebook&quot;&gt;&lt;/a&gt;&lt;a href=&quot;#&quot; class=&quot;bds_twi&quot; data-cmd=&quot;twi&quot; title=&quot;分享到Twitter&quot;&gt;&lt;/a&gt;&lt;a href=&quot;#&quot; class=&quot;bds_mail&quot; data-cmd=&quot;mail&quot; title=&quot;分享到邮件分享&quot;&gt;&lt;/a&gt;&lt;a href=&quot;#&quot; class=&quot;bds_print&quot; data-cmd=&quot;print&quot; title=&quot;分享到打印&quot;&gt;&lt;/a&gt;&lt;a href=&quot;#&quot; class=&quot;bds_copy&quot; data-cmd=&quot;copy&quot; title=&quot;分享到复制网址&quot;&gt;&lt;/a&gt;&lt;a class=&quot;bds_count&quot; data-cmd=&quot;count&quot;&gt;&lt;/a&gt;&lt;/div&gt;</span><br><span class="line"></span><br><span class="line">&lt;script&gt;window._bd_share_config=&#123;&quot;common&quot;:&#123;&quot;bdSnsKey&quot;:&#123;&#125;,&quot;bdText&quot;:&quot;&quot;,&quot;bdMini&quot;:&quot;2&quot;,&quot;bdMiniList&quot;:false,&quot;bdPic&quot;:&quot;&quot;,&quot;bdStyle&quot;:&quot;2&quot;,&quot;bdSize&quot;:&quot;24&quot;&#125;,&quot;share&quot;:&#123;&#125;&#125;;with(document)0[(getElementsByTagName(&#x27;head&#x27;)[0]||body).appendChild(createElement(&#x27;script&#x27;)).src=&#x27;http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion=&#x27;+~(-new Date()/36e5)];&lt;/script&gt;</span><br><span class="line"></span><br><span class="line">&lt;% &#125; %&gt;</span><br></pre></td></tr></table></figure>
-<p>将其保存到blog\themes\landscape\layout_partial\post\baidu-share.ejs中</p>
-<p>再到blog\themes\landscape\layout_partial\duoshuo-comment.ejs文件中添加如下代码：</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">&lt;section id=&quot;comments&quot;&gt;</span><br><span class="line"> &lt;div class=&quot;ds-thread&quot;&gt;&lt;/div&gt;</span><br><span class="line">&lt;script type=&quot;text/javascript&quot;&gt;</span><br><span class="line">var duoshuoQuery = &#123;short_name:&quot;&lt;%- config.duoshuo_shortname %&gt;&quot;&#125;;</span><br><span class="line"></span><br><span class="line"> (function() &#123;</span><br><span class="line"> var ds = document.createElement(&#x27;script&#x27;);</span><br><span class="line"> ds.type = &#x27;text/javascript&#x27;;ds.async = true;</span><br><span class="line"> ds.src = &#x27;http://static.duoshuo.com/embed.js&#x27;;</span><br><span class="line"> ds.charset = &#x27;UTF-8&#x27;;</span><br><span class="line"> (document.getElementsByTagName(&#x27;head&#x27;)[0]</span><br><span class="line"> || document.getElementsByTagName(&#x27;body&#x27;)[0]).appendChild(ds);</span><br><span class="line"> &#125;)();</span><br><span class="line"></span><br><span class="line"> &lt;/script&gt;</span><br><span class="line">&lt;/section&gt;</span><br></pre></td></tr></table></figure>
-<p>最后编辑主题配置文件，即在blog\themes\landscape_config.yml文件中，添加<br>baidu_share: true<br>即可实现在博文下方附带分享栏。</p>
-<hr>
-<p><strong>版权声明</strong></p>
-<p><img src="/images/cc.png"></p>
-<p><a href="https://scholargeek.github.io/">Scholar’s Blog</a> by <a href="https://scholargeek.github.io/About/">scholargeek</a> is licensed under a <a href="http://creativecommons.org/licenses/by-nc-nd/4.0/">Creative Commons BY-NC-ND 4.0 International License</a>.<br>由<a href="https://scholargeek.github.io/About/">董仕麟</a>创作并维护的<a href="https://scholargeek.github.io/">scholargeek</a>博客采用<a href="http://creativecommons.org/licenses/by-nc-nd/4.0/">创作共用保留署名-非商业-禁止演绎4.0国际许可证</a>。</p>
-<p>本文首发于<a href="https://scholargeek.github.io/">Scholar’s Blog</a>博客，版权所有，侵权必究。</p>
-<p>本文永久链接：<a href="https://scholargeek.github.io/2019/07/19/Hexo%E5%8D%9A%E5%AE%A2%E9%BB%98%E8%AE%A4%E4%B8%BB%E9%A2%98%E7%9A%84%E4%BF%AE%E6%94%B9%E4%B8%8E%E7%BE%8E%E5%8C%965/">https://scholargeek.github.io/2019/07/19/Hexo%E5%8D%9A%E5%AE%A2%E9%BB%98%E8%AE%A4%E4%B8%BB%E9%A2%98%E7%9A%84%E4%BF%AE%E6%94%B9%E4%B8%8E%E7%BE%8E%E5%8C%965/</a></p>
+<p>本文永久链接：<a href="https://scholargeek.github.io/2019/07/22/Hexo%E5%8D%9A%E5%AE%A2%E9%BB%98%E8%AE%A4%E4%B8%BB%E9%A2%98%E7%9A%84%E4%BF%AE%E6%94%B9%E4%B8%8E%E7%BE%8E%E5%8C%968/">https://scholargeek.github.io/2019/07/22/Hexo%E5%8D%9A%E5%AE%A2%E9%BB%98%E8%AE%A4%E4%B8%BB%E9%A2%98%E7%9A%84%E4%BF%AE%E6%94%B9%E4%B8%8E%E7%BE%8E%E5%8C%968/</a></p>
 ]]></content>
       <categories>
         <category>教程</category>
@@ -2599,20 +2589,30 @@ num_140=2
       </tags>
   </entry>
   <entry>
-    <title>Hexo博客默认主题的修改与美化8</title>
-    <url>/2019/07/22/Hexo%E5%8D%9A%E5%AE%A2%E9%BB%98%E8%AE%A4%E4%B8%BB%E9%A2%98%E7%9A%84%E4%BF%AE%E6%94%B9%E4%B8%8E%E7%BE%8E%E5%8C%968/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h1 id="设置网站的图标Favicon"><a href="#设置网站的图标Favicon" class="headerlink" title="设置网站的图标Favicon"></a>设置网站的图标Favicon</h1><p><strong>Favicon</strong>是_favorites icon_的缩写，亦被称为<strong>website icon</strong>（网页图标）。<br>本文将详述博客网站如何设置网页图标。</p>
+    <title>Hexo博客默认主题的修改与美化7</title>
+    <url>/2019/07/21/Hexo%E5%8D%9A%E5%AE%A2%E9%BB%98%E8%AE%A4%E4%B8%BB%E9%A2%98%E7%9A%84%E4%BF%AE%E6%94%B9%E4%B8%8E%E7%BE%8E%E5%8C%967/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h1 id="Hexo博客Landscape主题的字体和JS库的优化"><a href="#Hexo博客Landscape主题的字体和JS库的优化" class="headerlink" title="Hexo博客Landscape主题的字体和JS库的优化"></a>Hexo博客Landscape主题的字体和JS库的优化</h1><p>本文将详述如何优化Hexo博客默认主题的jQuery库和字体</p>
 <span id="more"></span>
-
-<p>首先选择合适的图片转换为.ico格式，可在<a href="http://tool.lu/favicon/">http://tool.lu/favicon/</a> 在线转换格式，当然也可以使用图片编辑工具转换，最后得到favicon.ico图标文件，放入blog\source文件夹内即可。<br>然后编辑主题配置文件blog\themes\landscape_config.yml 添加如下代码：</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">favicon: /favicon.ico</span><br></pre></td></tr></table></figure>
-<p>即完成了网页图标的添加。</p>
+<h2 id="jQuery库的优化"><a href="#jQuery库的优化" class="headerlink" title="jQuery库的优化"></a>jQuery库的优化</h2><p>目的：将jQuery替换成百度提供的服务，且在百度的服务暂时不可用时，能够以网站上自带的jQuery作为备份服务。<br>方法：<br>1.修改blog\themes\landscape\layout_partial&#x2F;after-footer.ejs文件，将17行的</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">&lt;script src=&quot;//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js&quot;&gt;&lt;/script&gt;</span><br></pre></td></tr></table></figure>
+<p>替换为：</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">&lt;script src=&quot;http://apps.bdimg.com/libs/jquery/2.0.3/jquery.min.js&quot;&gt;&lt;/script&gt;</span><br><span class="line"></span><br><span class="line">&lt;script type=&quot;text/javascript&quot;&gt;</span><br><span class="line"></span><br><span class="line">//&lt;![CDATA[</span><br><span class="line">if (typeof jQuery == &#x27;undefined&#x27;) &#123;</span><br><span class="line"> document.write(unescape(&quot;%3Cscript src=&#x27;/js/jquery-2.0.3.min.js&#x27; type=&#x27;text/javascript&#x27;%3E%3C/script%3E&quot;));</span><br><span class="line">&#125;</span><br><span class="line">// ]]&gt;</span><br><span class="line"></span><br><span class="line">&lt;/script&gt;</span><br></pre></td></tr></table></figure>
+<p>2.去jQuery官方下载合适版本的jQuery并将其放到themes&#x2F;landscape&#x2F;source&#x2F;js&#x2F;目录下，将其命名为jquery-2.0.3.min.js 最后将该文件开头处的 <del>&#x2F;&#x2F;@ sourceMappingURL&#x3D;jquery-2.0.3.min.map</del> 这一行代码删去，否则会导致博客无法生成。</p>
+<h2 id="字体优化"><a href="#字体优化" class="headerlink" title="字体优化"></a>字体优化</h2><p>目的：优化博客字体，使页面在多个平台上自动显示较合适的字体。<br>方法：1.修改themes&#x2F;landscape&#x2F;source&#x2F;css&#x2F;_variables.styl这一文件，将其中第22行</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">font-sans = &quot;Helvetica Neue&quot;, Helvetica, Arial, sans-serif</span><br></pre></td></tr></table></figure>
+<p>替换为：</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">font-sans = &quot;Helvetica Neue&quot;, &quot;Helvetica&quot;, &quot;Hiragino Sans GB&quot;, &quot;Microsoft YaHei&quot;, &quot;Source Han Sans CN&quot;, &quot;WenQuanYi Micro Hei&quot;, Arial, sans-serif</span><br></pre></td></tr></table></figure>
+<p>2.放弃Google的Source Code Pro等宽字体，修改themes&#x2F;landscape&#x2F;source&#x2F;css&#x2F;_variables.styl文件，将其中第24行</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">font-mono = &quot;Source Code Pro&quot;, Consolas, Monaco, Menlo, Consolas, monospace</span><br></pre></td></tr></table></figure>
+<p>替换为<br>    font-mono &#x3D; Consolas, Monaco, Menlo, monospace<br>3.最后删除引用Google字体的代码，编辑文件themes&#x2F;landscape&#x2F;layout&#x2F;_partial&#x2F;after-footer.ejs，将其中的</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">&lt;link href=&quot;http://fonts.googleapis.com/css?family=Source+Code+Pro&quot; rel=&quot;stylesheet&quot; type=&quot;text/css&quot;&gt;</span><br></pre></td></tr></table></figure>
+<p>删除即可。</p>
 <hr>
 <p><strong>版权声明</strong></p>
 <p><img src="/images/cc.png"></p>
 <p><a href="https://scholargeek.github.io/">Scholar’s Blog</a> by <a href="https://scholargeek.github.io/About/">scholargeek</a> is licensed under a <a href="http://creativecommons.org/licenses/by-nc-nd/4.0/">Creative Commons BY-NC-ND 4.0 International License</a>.<br>由<a href="https://scholargeek.github.io/About/">董仕麟</a>创作并维护的<a href="https://scholargeek.github.io/">scholargeek</a>博客采用<a href="http://creativecommons.org/licenses/by-nc-nd/4.0/">创作共用保留署名-非商业-禁止演绎4.0国际许可证</a>。</p>
 <p>本文首发于<a href="https://scholargeek.github.io/">Scholar’s Blog</a>博客，版权所有，侵权必究。</p>
-<p>本文永久链接：<a href="https://scholargeek.github.io/2019/07/22/Hexo%E5%8D%9A%E5%AE%A2%E9%BB%98%E8%AE%A4%E4%B8%BB%E9%A2%98%E7%9A%84%E4%BF%AE%E6%94%B9%E4%B8%8E%E7%BE%8E%E5%8C%968/">https://scholargeek.github.io/2019/07/22/Hexo%E5%8D%9A%E5%AE%A2%E9%BB%98%E8%AE%A4%E4%B8%BB%E9%A2%98%E7%9A%84%E4%BF%AE%E6%94%B9%E4%B8%8E%E7%BE%8E%E5%8C%968/</a></p>
+<p>本文永久链接：<a href="https://scholargeek.github.io/2019/07/21/Hexo%E5%8D%9A%E5%AE%A2%E9%BB%98%E8%AE%A4%E4%B8%BB%E9%A2%98%E7%9A%84%E4%BF%AE%E6%94%B9%E4%B8%8E%E7%BE%8E%E5%8C%967/">https://scholargeek.github.io/2019/07/21/Hexo%E5%8D%9A%E5%AE%A2%E9%BB%98%E8%AE%A4%E4%B8%BB%E9%A2%98%E7%9A%84%E4%BF%AE%E6%94%B9%E4%B8%8E%E7%BE%8E%E5%8C%967/</a></p>
 ]]></content>
       <categories>
         <category>教程</category>
@@ -3083,6 +3083,67 @@ num_140=2
       </tags>
   </entry>
   <entry>
+    <title>数据库学习2</title>
+    <url>/2023/02/03/MySQL2/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h1 id="MySQL进阶"><a href="#MySQL进阶" class="headerlink" title="MySQL进阶"></a>MySQL进阶</h1><p>　　本文将简述MySQL进阶查询基本语法，如 “AS用法”、“条件判断”、“限制结果条目”、“聚合函数”、“排序”、“分组统计”、“多表查询”。</p>
+<span id="more"></span>
+
+<h2 id="AS用法与条件替换"><a href="#AS用法与条件替换" class="headerlink" title="AS用法与条件替换"></a>AS用法与条件替换</h2><p>　　关键字AS用来设置别名。<br>●使用AS语句设置别名时，关键字AS可省略。<br>●设置别名时，保证不能与库中其他表或字段名起冲突。</p>
+<p>　　条件判断(CASE WHEN XX THEN XX1 ELSE XX2 END)用于将结果集中的数据根据条件替换为指定字符。<br>●如果字段值XX为真，则返回结果XX1，否则返回结果XX2。</p>
+<p><strong>例：</strong>查询地址为上海的员工姓名和性别，性别要求F显示为女而M显示为男。</p>
+<figure class="highlight sql"><table><tr><td class="code"><pre><span class="line"><span class="comment">-- 条件替换即若性别为F显示女否则显示男，将字段重命名为sex</span></span><br><span class="line"><span class="keyword">SELECT</span> ename,(<span class="keyword">CASE</span> <span class="keyword">WHEN</span> sex<span class="operator">=</span><span class="string">&#x27;F&#x27;</span> <span class="keyword">THEN</span> <span class="string">&#x27;女&#x27;</span> <span class="keyword">ELSE</span> <span class="string">&#x27;男&#x27;</span> <span class="keyword">END</span>) <span class="keyword">AS</span> sex</span><br><span class="line"><span class="keyword">FROM</span> emp</span><br><span class="line"><span class="keyword">WHERE</span> address<span class="operator">=</span><span class="string">&#x27;上海&#x27;</span></span><br></pre></td></tr></table></figure>
+<h2 id="限制结果条目"><a href="#限制结果条目" class="headerlink" title="限制结果条目"></a>限制结果条目</h2><p>　　<code>LIMIT [offset,] number</code><br>　　LIMIT的第一个参数是位置偏移量（可选参数），即设置 MySQL 从哪一行开始显示，第二个参数是设置返回记录行的最大数目。<br>●offset作为可选参数，第一条记录的位置偏移量为0。<br>●返回SELECT查询结果的前几行或指定开始行显示条目数。</p>
+<p><strong>例：</strong>查询学生表信息3-6行的姓名与年龄。</p>
+<figure class="highlight sql"><table><tr><td class="code"><pre><span class="line"><span class="comment">-- 查询3-6行数据即 偏移量为3-1，显示数量为6-3+1</span></span><br><span class="line"><span class="keyword">SELECT</span> stuName,stuAge</span><br><span class="line"><span class="keyword">FROM</span> student</span><br><span class="line">LIMIT <span class="number">2</span>,<span class="number">4</span></span><br></pre></td></tr></table></figure>
+<h2 id="聚合函数"><a href="#聚合函数" class="headerlink" title="聚合函数"></a>聚合函数</h2><p>　　聚合函数是对表中数据记录进行集中概括而设计的一类函数，常用聚合函数有平均值、最大值、最小值、总和、计数等。<br>●avg(）返回指定列的平均值<br>●max(）返回指定列的最大值<br>●min(）返回指定列的最小值<br>●sum(）返回指定列的所有值之和<br>●count(）返回指定列中非NULL值的个数</p>
+<p><strong>例：</strong>查询计算机专业学生最大年龄、最小年龄、平均年龄、总年龄、总人数。</p>
+<figure class="highlight sql"><table><tr><td class="code"><pre><span class="line"><span class="keyword">SELECT</span> <span class="built_in">MAX</span>(stuAge),<span class="built_in">MIN</span>(stuAge),<span class="built_in">AVG</span>(stuAge),<span class="built_in">SUM</span>(stuAge),<span class="built_in">COUNT</span>(<span class="operator">*</span>)</span><br><span class="line"><span class="keyword">FROM</span> student</span><br><span class="line"><span class="keyword">WHERE</span> stuMajor<span class="operator">=</span><span class="string">&#x27;计算机&#x27;</span>;</span><br></pre></td></tr></table></figure>
+<h2 id="去重与条件NULL关键字"><a href="#去重与条件NULL关键字" class="headerlink" title="去重与条件NULL关键字"></a>去重与条件NULL关键字</h2><p>　　查询数据时若显示重复的行记录，删除重复行可在SELECT语句中使用DISTINCT子句。语法如下：</p>
+<figure class="highlight sql"><table><tr><td class="code"><pre><span class="line"><span class="keyword">SELECT</span> <span class="keyword">DISTINCT</span> columns</span><br><span class="line"><span class="keyword">FROM</span> table_name</span><br><span class="line"><span class="keyword">WHERE</span> where_conditions;</span><br></pre></td></tr></table></figure>
+<p><strong>例：</strong>查询所有的员工来自那些城市（不能重复显示地名且NULL不显示）。</p>
+<figure class="highlight sql"><table><tr><td class="code"><pre><span class="line"><span class="keyword">SELECT</span> <span class="keyword">DISTINCT</span> city </span><br><span class="line"><span class="keyword">FROM</span> emp</span><br><span class="line"><span class="keyword">WHERE</span> city <span class="keyword">IS</span> <span class="keyword">NOT</span> <span class="keyword">NULL</span>;</span><br></pre></td></tr></table></figure>
+<p>　　MySQL中处理NULL必须使用 IS NULL 和 IS NOT NULL 运算符。<br>　　MySQL使用 SQL SELECT 命令及 WHERE 子句来读取数据表中的数据,但是当提供的查询条件字段为 NULL 时，该命令可能就无法正常工作。为了处理这种情况，MySQL提供了三大运算符:<br>● IS NULL: 当列的值是 NULL,此运算符返回 true。<br>● IS NOT NULL: 当列的值不为 NULL, 运算符返回 true。<br>● &lt;&#x3D;&gt;: 比较操作符（不同于 &#x3D; 运算符），当比较的的两个值相等或者都为 NULL 时返回 true。</p>
+<h2 id="NULL条件函数"><a href="#NULL条件函数" class="headerlink" title="NULL条件函数"></a>NULL条件函数</h2><p>　　IF()、IFNULL()、NULLIF()、ISNULL()函数的使用。<br>●IF()函数<br><code>IF(expr1,expr2,expr3)</code><br>如果expr1的值为true，则返回expr2的值，如果expr1的值为false，则返回expr3的值。</p>
+<figure class="highlight sql"><table><tr><td class="code"><pre><span class="line"><span class="keyword">SELECT</span> IF(<span class="literal">TRUE</span>,<span class="string">&#x27;A&#x27;</span>,<span class="string">&#x27;B&#x27;</span>);    <span class="comment">-- 输出结果：A</span></span><br><span class="line"><span class="keyword">SELECT</span> IF(<span class="literal">FALSE</span>,<span class="string">&#x27;A&#x27;</span>,<span class="string">&#x27;B&#x27;</span>);   <span class="comment">-- 输出结果：B</span></span><br></pre></td></tr></table></figure>
+<p>●IFNULL()函数<br><code>IFNULL(expr1,expr2)</code><br>如果expr1的值为null，则返回expr2的值，如果expr1的值不为null，则返回expr1的值。</p>
+<figure class="highlight sql"><table><tr><td class="code"><pre><span class="line"><span class="keyword">SELECT</span> IFNULL(<span class="keyword">NULL</span>,<span class="string">&#x27;A&#x27;</span>);    <span class="comment">-- 输出结果：A</span></span><br><span class="line"><span class="keyword">SELECT</span> IFNULL(<span class="string">&#x27;HELLO&#x27;</span>,<span class="string">&#x27;A&#x27;</span>); <span class="comment">-- 输出结果：HELLO</span></span><br></pre></td></tr></table></figure>
+<p>●NULLIF()函数<br><code>NULLIF(expr1,expr2)</code><br>如果expr1&#x3D;expr2成立，那么返回值为null，否则返回值为expr1的值。</p>
+<figure class="highlight sql"><table><tr><td class="code"><pre><span class="line"><span class="keyword">SELECT</span> <span class="built_in">NULLIF</span>(<span class="string">&#x27;A&#x27;</span>,<span class="string">&#x27;A&#x27;</span>);     <span class="comment">-- 输出结果：null</span></span><br><span class="line"><span class="keyword">SELECT</span> <span class="built_in">NULLIF</span>(<span class="string">&#x27;A&#x27;</span>,<span class="string">&#x27;B&#x27;</span>);     <span class="comment">-- 输出结果：A</span></span><br></pre></td></tr></table></figure>
+<p>●ISNULL()函数<br><code>ISNULL(expr)</code><br>如果expr的值为null，则返回1，如果expr1的值不为null，则返回0。</p>
+<figure class="highlight sql"><table><tr><td class="code"><pre><span class="line"><span class="keyword">SELECT</span> ISNULL(<span class="keyword">NULL</span>);        <span class="comment">-- 输出结果：1</span></span><br><span class="line"><span class="keyword">SELECT</span> ISNULL(<span class="string">&#x27;HELLO&#x27;</span>);     <span class="comment">-- 输出结果：0</span></span><br></pre></td></tr></table></figure>
+<h2 id="排序"><a href="#排序" class="headerlink" title="排序"></a>排序</h2><p>　　按关键字排序查询数据时使用<code>ORDER BY</code>语句来实现排序。语法如下：</p>
+<figure class="highlight sql"><table><tr><td class="code"><pre><span class="line"><span class="keyword">SELECT</span> column1, column2,…</span><br><span class="line"><span class="keyword">FROM</span> table_name </span><br><span class="line"><span class="keyword">ORDER</span> <span class="keyword">BY</span> column1, column2,…<span class="keyword">ASC</span><span class="operator">|</span><span class="keyword">DESC</span>;</span><br></pre></td></tr></table></figure>
+<p>●排序可针对一个或多个字段<br>●ASC：升序，默认排序方式<br>●DESC：降序</p>
+<p><strong>例：</strong>查询产品表所有信息，根据库存由小到大排列。</p>
+<figure class="highlight sql"><table><tr><td class="code"><pre><span class="line"><span class="keyword">SELECT</span> productID,pName,price,pes</span><br><span class="line"><span class="keyword">FROM</span> product</span><br><span class="line"><span class="keyword">ORDER</span> <span class="keyword">BY</span> pes <span class="keyword">ASC</span>;</span><br></pre></td></tr></table></figure>
+<h2 id="分组统计"><a href="#分组统计" class="headerlink" title="分组统计"></a>分组统计</h2><p>　　查询数据结果同时包括普通字段和聚合函数需进行分组统计，这时使用<code>GROUP BY</code>语句对结果进行分组。语法如下：</p>
+<figure class="highlight sql"><table><tr><td class="code"><pre><span class="line"><span class="keyword">SELECT</span> column_name, aggregate_function(column_name)</span><br><span class="line"><span class="keyword">FROM</span> table_name </span><br><span class="line"><span class="keyword">WHERE</span> column_name operator <span class="keyword">value</span></span><br><span class="line"><span class="keyword">GROUP</span> <span class="keyword">BY</span> column_name;</span><br></pre></td></tr></table></figure>
+<p>●通常结合聚合函数一起使用<br>●以按一个或多个字段对结果进行分组</p>
+<p><strong>例：</strong>查询员工表每个专业的员工总人数，显示专业名称和总人数。</p>
+<figure class="highlight sql"><table><tr><td class="code"><pre><span class="line"><span class="keyword">SELECT</span> major,<span class="built_in">COUNT</span>(<span class="operator">*</span>)</span><br><span class="line"><span class="keyword">FROM</span> emp</span><br><span class="line"><span class="keyword">GROUP</span> <span class="keyword">BY</span> major</span><br></pre></td></tr></table></figure>
+<p>　　HAVING子句的使用。在SELECT语句中使用HAVING子句来指定一组行或聚合的过滤条件。HAVING子句通常与GROUP BY子句一起使用，以根据指定的条件过滤分组。如果省略GROUP BY子句，则HAVING子句的行为与WHERE子句类似。<br>　　注意：HAVING子句将过滤条件应用于每组分行，而WHERE子句将过滤条件应用于每个单独的行。</p>
+<p><strong>例：</strong>查询除北京外的每个城市的客户总人数，只显示1人以上的城市名称和总人数。</p>
+<figure class="highlight sql"><table><tr><td class="code"><pre><span class="line"><span class="keyword">SELECT</span> cAddress,<span class="built_in">COUNT</span>(<span class="operator">*</span>) <span class="keyword">AS</span> TotalNumber</span><br><span class="line"><span class="keyword">FROM</span> customer</span><br><span class="line"><span class="keyword">WHERE</span> cAddress<span class="operator">&lt;&gt;</span><span class="string">&#x27;北京&#x27;</span></span><br><span class="line"><span class="keyword">GROUP</span> <span class="keyword">BY</span> cAddress</span><br><span class="line"><span class="keyword">HAVING</span> TotalNumber<span class="operator">&gt;</span><span class="number">1</span></span><br></pre></td></tr></table></figure>
+<h2 id="多表查询"><a href="#多表查询" class="headerlink" title="多表查询"></a>多表查询</h2><p>　　多表查询常使用内连接即查询操作列出与连接条件匹配的数据行。语法如下：</p>
+<figure class="highlight sql"><table><tr><td class="code"><pre><span class="line"><span class="comment">-- 法1</span></span><br><span class="line"><span class="keyword">SELECT</span> <span class="keyword">column</span> name(s) </span><br><span class="line"><span class="keyword">FROM</span> table1 <span class="keyword">INNER</span> <span class="keyword">JOIN</span> table2 <span class="keyword">ON</span> table1.column_name <span class="operator">=</span> table2.column_name;</span><br><span class="line"></span><br><span class="line"><span class="comment">-- 法2</span></span><br><span class="line"><span class="keyword">SELECT</span> T1.column1, T2.column2,…</span><br><span class="line"><span class="keyword">FROM</span> table_name1 <span class="keyword">AS</span> T1,table_name2 <span class="keyword">AS</span> T2,…</span><br><span class="line"><span class="keyword">WHERE</span> T1.column_keyname<span class="operator">=</span>T2.column_keyname</span><br></pre></td></tr></table></figure>
+<p><strong>例：</strong>查询IOT2020班和IOT2022班的软件方向的班级名称和学生姓名。</p>
+<figure class="highlight sql"><table><tr><td class="code"><pre><span class="line"><span class="keyword">SELECT</span> c.bjname,s.stuName</span><br><span class="line"><span class="keyword">FROM</span> classes c,student s</span><br><span class="line"><span class="keyword">WHERE</span> c.bjid<span class="operator">=</span>s.bjid <span class="keyword">AND</span> c.bjname <span class="keyword">IN</span> (<span class="string">&#x27;IOT2020&#x27;</span>,<span class="string">&#x27;IOT2022&#x27;</span>) <span class="keyword">AND</span> s.stuMajor<span class="operator">=</span><span class="string">&#x27;软件&#x27;</span>;</span><br></pre></td></tr></table></figure>
+<h1 id="SQL查询方法"><a href="#SQL查询方法" class="headerlink" title="SQL查询方法"></a>SQL查询方法</h1><p>①搭建查询结构：<code>SELECT ... FROM ... WHERE ...</code><br>②找出需要查询的表名写在FROM后<br>③建立关系即将各表外键进行内连接<br>④将需求筛选条件写在WHERE后<br>⑤将需求显示的要素写在SELECT后</p>
+<hr>
+<p><strong>版权声明</strong></p>
+<p><img src="/images/cc.png"></p>
+<p><a href="https://scholargeek.github.io/">Scholar’s Blog</a> by <a href="https://scholargeek.github.io/About/">scholargeek</a> is licensed under a <a href="http://creativecommons.org/licenses/by-nc-nd/4.0/">Creative Commons BY-NC-ND 4.0 International License</a>.<br>由<a href="https://scholargeek.github.io/About/">董仕麟</a>创作并维护的<a href="https://scholargeek.github.io/">scholargeek</a>博客采用<a href="http://creativecommons.org/licenses/by-nc-nd/4.0/">创作共用保留署名-非商业-禁止演绎4.0国际许可证</a>。</p>
+<p>本文首发于<a href="https://scholargeek.github.io/">Scholar’s Blog</a>博客，版权所有，侵权必究。</p>
+<p>本文永久链接：<a href="https://scholargeek.github.io/2023/02/03/MySQL2/">https://scholargeek.github.io/2023/02/03/MySQL2/</a></p>
+]]></content>
+      <categories>
+        <category>编程</category>
+      </categories>
+      <tags>
+        <tag>MySQL</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>数据库学习3</title>
     <url>/2023/02/05/MySQL3/</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h1 id="MySQL高级查询"><a href="#MySQL高级查询" class="headerlink" title="MySQL高级查询"></a>MySQL高级查询</h1><p>　　本文将简述MySQL高级查询基本语法，如 “常用日期函数”、“外连接查询”、“交叉连接”、“自查询”、“行列转换”。</p>
@@ -3211,64 +3272,25 @@ num_140=2
       </tags>
   </entry>
   <entry>
-    <title>数据库学习2</title>
-    <url>/2023/02/03/MySQL2/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h1 id="MySQL进阶"><a href="#MySQL进阶" class="headerlink" title="MySQL进阶"></a>MySQL进阶</h1><p>　　本文将简述MySQL进阶查询基本语法，如 “AS用法”、“条件判断”、“限制结果条目”、“聚合函数”、“排序”、“分组统计”、“多表查询”。</p>
+    <title>Shell简介</title>
+    <url>/2018/08/28/Shell/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h1 id="壳层简介"><a href="#壳层简介" class="headerlink" title="壳层简介"></a>壳层简介</h1><p>　　Shell（壳层）在计算机科学中指“为用户提供用户界面”的软件，通常指的是命令行界面的解析器。一般来说是指操作系统中提供访问内核所提供之服务的程序。Shell也用于泛指所有为用户提供操作界面的程序，也就是程序和用户交互的层面。</p>
 <span id="more"></span>
 
-<h2 id="AS用法与条件替换"><a href="#AS用法与条件替换" class="headerlink" title="AS用法与条件替换"></a>AS用法与条件替换</h2><p>　　关键字AS用来设置别名。<br>●使用AS语句设置别名时，关键字AS可省略。<br>●设置别名时，保证不能与库中其他表或字段名起冲突。</p>
-<p>　　条件判断(CASE WHEN XX THEN XX1 ELSE XX2 END)用于将结果集中的数据根据条件替换为指定字符。<br>●如果字段值XX为真，则返回结果XX1，否则返回结果XX2。</p>
-<p><strong>例：</strong>查询地址为上海的员工姓名和性别，性别要求F显示为女而M显示为男。</p>
-<figure class="highlight sql"><table><tr><td class="code"><pre><span class="line"><span class="comment">-- 条件替换即若性别为F显示女否则显示男，将字段重命名为sex</span></span><br><span class="line"><span class="keyword">SELECT</span> ename,(<span class="keyword">CASE</span> <span class="keyword">WHEN</span> sex<span class="operator">=</span><span class="string">&#x27;F&#x27;</span> <span class="keyword">THEN</span> <span class="string">&#x27;女&#x27;</span> <span class="keyword">ELSE</span> <span class="string">&#x27;男&#x27;</span> <span class="keyword">END</span>) <span class="keyword">AS</span> sex</span><br><span class="line"><span class="keyword">FROM</span> emp</span><br><span class="line"><span class="keyword">WHERE</span> address<span class="operator">=</span><span class="string">&#x27;上海&#x27;</span></span><br></pre></td></tr></table></figure>
-<h2 id="限制结果条目"><a href="#限制结果条目" class="headerlink" title="限制结果条目"></a>限制结果条目</h2><p>　　<code>LIMIT [offset,] number</code><br>　　LIMIT的第一个参数是位置偏移量（可选参数），即设置 MySQL 从哪一行开始显示，第二个参数是设置返回记录行的最大数目。<br>●offset作为可选参数，第一条记录的位置偏移量为0。<br>●返回SELECT查询结果的前几行或指定开始行显示条目数。</p>
-<p><strong>例：</strong>查询学生表信息3-6行的姓名与年龄。</p>
-<figure class="highlight sql"><table><tr><td class="code"><pre><span class="line"><span class="comment">-- 查询3-6行数据即 偏移量为3-1，显示数量为6-3+1</span></span><br><span class="line"><span class="keyword">SELECT</span> stuName,stuAge</span><br><span class="line"><span class="keyword">FROM</span> student</span><br><span class="line">LIMIT <span class="number">2</span>,<span class="number">4</span></span><br></pre></td></tr></table></figure>
-<h2 id="聚合函数"><a href="#聚合函数" class="headerlink" title="聚合函数"></a>聚合函数</h2><p>　　聚合函数是对表中数据记录进行集中概括而设计的一类函数，常用聚合函数有平均值、最大值、最小值、总和、计数等。<br>●avg(）返回指定列的平均值<br>●max(）返回指定列的最大值<br>●min(）返回指定列的最小值<br>●sum(）返回指定列的所有值之和<br>●count(）返回指定列中非NULL值的个数</p>
-<p><strong>例：</strong>查询计算机专业学生最大年龄、最小年龄、平均年龄、总年龄、总人数。</p>
-<figure class="highlight sql"><table><tr><td class="code"><pre><span class="line"><span class="keyword">SELECT</span> <span class="built_in">MAX</span>(stuAge),<span class="built_in">MIN</span>(stuAge),<span class="built_in">AVG</span>(stuAge),<span class="built_in">SUM</span>(stuAge),<span class="built_in">COUNT</span>(<span class="operator">*</span>)</span><br><span class="line"><span class="keyword">FROM</span> student</span><br><span class="line"><span class="keyword">WHERE</span> stuMajor<span class="operator">=</span><span class="string">&#x27;计算机&#x27;</span>;</span><br></pre></td></tr></table></figure>
-<h2 id="去重与条件NULL关键字"><a href="#去重与条件NULL关键字" class="headerlink" title="去重与条件NULL关键字"></a>去重与条件NULL关键字</h2><p>　　查询数据时若显示重复的行记录，删除重复行可在SELECT语句中使用DISTINCT子句。语法如下：</p>
-<figure class="highlight sql"><table><tr><td class="code"><pre><span class="line"><span class="keyword">SELECT</span> <span class="keyword">DISTINCT</span> columns</span><br><span class="line"><span class="keyword">FROM</span> table_name</span><br><span class="line"><span class="keyword">WHERE</span> where_conditions;</span><br></pre></td></tr></table></figure>
-<p><strong>例：</strong>查询所有的员工来自那些城市（不能重复显示地名且NULL不显示）。</p>
-<figure class="highlight sql"><table><tr><td class="code"><pre><span class="line"><span class="keyword">SELECT</span> <span class="keyword">DISTINCT</span> city </span><br><span class="line"><span class="keyword">FROM</span> emp</span><br><span class="line"><span class="keyword">WHERE</span> city <span class="keyword">IS</span> <span class="keyword">NOT</span> <span class="keyword">NULL</span>;</span><br></pre></td></tr></table></figure>
-<p>　　MySQL中处理NULL必须使用 IS NULL 和 IS NOT NULL 运算符。<br>　　MySQL使用 SQL SELECT 命令及 WHERE 子句来读取数据表中的数据,但是当提供的查询条件字段为 NULL 时，该命令可能就无法正常工作。为了处理这种情况，MySQL提供了三大运算符:<br>● IS NULL: 当列的值是 NULL,此运算符返回 true。<br>● IS NOT NULL: 当列的值不为 NULL, 运算符返回 true。<br>● &lt;&#x3D;&gt;: 比较操作符（不同于 &#x3D; 运算符），当比较的的两个值相等或者都为 NULL 时返回 true。</p>
-<h2 id="NULL条件函数"><a href="#NULL条件函数" class="headerlink" title="NULL条件函数"></a>NULL条件函数</h2><p>　　IF()、IFNULL()、NULLIF()、ISNULL()函数的使用。<br>●IF()函数<br><code>IF(expr1,expr2,expr3)</code><br>如果expr1的值为true，则返回expr2的值，如果expr1的值为false，则返回expr3的值。</p>
-<figure class="highlight sql"><table><tr><td class="code"><pre><span class="line"><span class="keyword">SELECT</span> IF(<span class="literal">TRUE</span>,<span class="string">&#x27;A&#x27;</span>,<span class="string">&#x27;B&#x27;</span>);    <span class="comment">-- 输出结果：A</span></span><br><span class="line"><span class="keyword">SELECT</span> IF(<span class="literal">FALSE</span>,<span class="string">&#x27;A&#x27;</span>,<span class="string">&#x27;B&#x27;</span>);   <span class="comment">-- 输出结果：B</span></span><br></pre></td></tr></table></figure>
-<p>●IFNULL()函数<br><code>IFNULL(expr1,expr2)</code><br>如果expr1的值为null，则返回expr2的值，如果expr1的值不为null，则返回expr1的值。</p>
-<figure class="highlight sql"><table><tr><td class="code"><pre><span class="line"><span class="keyword">SELECT</span> IFNULL(<span class="keyword">NULL</span>,<span class="string">&#x27;A&#x27;</span>);    <span class="comment">-- 输出结果：A</span></span><br><span class="line"><span class="keyword">SELECT</span> IFNULL(<span class="string">&#x27;HELLO&#x27;</span>,<span class="string">&#x27;A&#x27;</span>); <span class="comment">-- 输出结果：HELLO</span></span><br></pre></td></tr></table></figure>
-<p>●NULLIF()函数<br><code>NULLIF(expr1,expr2)</code><br>如果expr1&#x3D;expr2成立，那么返回值为null，否则返回值为expr1的值。</p>
-<figure class="highlight sql"><table><tr><td class="code"><pre><span class="line"><span class="keyword">SELECT</span> <span class="built_in">NULLIF</span>(<span class="string">&#x27;A&#x27;</span>,<span class="string">&#x27;A&#x27;</span>);     <span class="comment">-- 输出结果：null</span></span><br><span class="line"><span class="keyword">SELECT</span> <span class="built_in">NULLIF</span>(<span class="string">&#x27;A&#x27;</span>,<span class="string">&#x27;B&#x27;</span>);     <span class="comment">-- 输出结果：A</span></span><br></pre></td></tr></table></figure>
-<p>●ISNULL()函数<br><code>ISNULL(expr)</code><br>如果expr的值为null，则返回1，如果expr1的值不为null，则返回0。</p>
-<figure class="highlight sql"><table><tr><td class="code"><pre><span class="line"><span class="keyword">SELECT</span> ISNULL(<span class="keyword">NULL</span>);        <span class="comment">-- 输出结果：1</span></span><br><span class="line"><span class="keyword">SELECT</span> ISNULL(<span class="string">&#x27;HELLO&#x27;</span>);     <span class="comment">-- 输出结果：0</span></span><br></pre></td></tr></table></figure>
-<h2 id="排序"><a href="#排序" class="headerlink" title="排序"></a>排序</h2><p>　　按关键字排序查询数据时使用<code>ORDER BY</code>语句来实现排序。语法如下：</p>
-<figure class="highlight sql"><table><tr><td class="code"><pre><span class="line"><span class="keyword">SELECT</span> column1, column2,…</span><br><span class="line"><span class="keyword">FROM</span> table_name </span><br><span class="line"><span class="keyword">ORDER</span> <span class="keyword">BY</span> column1, column2,…<span class="keyword">ASC</span><span class="operator">|</span><span class="keyword">DESC</span>;</span><br></pre></td></tr></table></figure>
-<p>●排序可针对一个或多个字段<br>●ASC：升序，默认排序方式<br>●DESC：降序</p>
-<p><strong>例：</strong>查询产品表所有信息，根据库存由小到大排列。</p>
-<figure class="highlight sql"><table><tr><td class="code"><pre><span class="line"><span class="keyword">SELECT</span> productID,pName,price,pes</span><br><span class="line"><span class="keyword">FROM</span> product</span><br><span class="line"><span class="keyword">ORDER</span> <span class="keyword">BY</span> pes <span class="keyword">ASC</span>;</span><br></pre></td></tr></table></figure>
-<h2 id="分组统计"><a href="#分组统计" class="headerlink" title="分组统计"></a>分组统计</h2><p>　　查询数据结果同时包括普通字段和聚合函数需进行分组统计，这时使用<code>GROUP BY</code>语句对结果进行分组。语法如下：</p>
-<figure class="highlight sql"><table><tr><td class="code"><pre><span class="line"><span class="keyword">SELECT</span> column_name, aggregate_function(column_name)</span><br><span class="line"><span class="keyword">FROM</span> table_name </span><br><span class="line"><span class="keyword">WHERE</span> column_name operator <span class="keyword">value</span></span><br><span class="line"><span class="keyword">GROUP</span> <span class="keyword">BY</span> column_name;</span><br></pre></td></tr></table></figure>
-<p>●通常结合聚合函数一起使用<br>●以按一个或多个字段对结果进行分组</p>
-<p><strong>例：</strong>查询员工表每个专业的员工总人数，显示专业名称和总人数。</p>
-<figure class="highlight sql"><table><tr><td class="code"><pre><span class="line"><span class="keyword">SELECT</span> major,<span class="built_in">COUNT</span>(<span class="operator">*</span>)</span><br><span class="line"><span class="keyword">FROM</span> emp</span><br><span class="line"><span class="keyword">GROUP</span> <span class="keyword">BY</span> major</span><br></pre></td></tr></table></figure>
-<p>　　HAVING子句的使用。在SELECT语句中使用HAVING子句来指定一组行或聚合的过滤条件。HAVING子句通常与GROUP BY子句一起使用，以根据指定的条件过滤分组。如果省略GROUP BY子句，则HAVING子句的行为与WHERE子句类似。<br>　　注意：HAVING子句将过滤条件应用于每组分行，而WHERE子句将过滤条件应用于每个单独的行。</p>
-<p><strong>例：</strong>查询除北京外的每个城市的客户总人数，只显示1人以上的城市名称和总人数。</p>
-<figure class="highlight sql"><table><tr><td class="code"><pre><span class="line"><span class="keyword">SELECT</span> cAddress,<span class="built_in">COUNT</span>(<span class="operator">*</span>) <span class="keyword">AS</span> TotalNumber</span><br><span class="line"><span class="keyword">FROM</span> customer</span><br><span class="line"><span class="keyword">WHERE</span> cAddress<span class="operator">&lt;&gt;</span><span class="string">&#x27;北京&#x27;</span></span><br><span class="line"><span class="keyword">GROUP</span> <span class="keyword">BY</span> cAddress</span><br><span class="line"><span class="keyword">HAVING</span> TotalNumber<span class="operator">&gt;</span><span class="number">1</span></span><br></pre></td></tr></table></figure>
-<h2 id="多表查询"><a href="#多表查询" class="headerlink" title="多表查询"></a>多表查询</h2><p>　　多表查询常使用内连接即查询操作列出与连接条件匹配的数据行。语法如下：</p>
-<figure class="highlight sql"><table><tr><td class="code"><pre><span class="line"><span class="comment">-- 法1</span></span><br><span class="line"><span class="keyword">SELECT</span> <span class="keyword">column</span> name(s) </span><br><span class="line"><span class="keyword">FROM</span> table1 <span class="keyword">INNER</span> <span class="keyword">JOIN</span> table2 <span class="keyword">ON</span> table1.column_name <span class="operator">=</span> table2.column_name;</span><br><span class="line"></span><br><span class="line"><span class="comment">-- 法2</span></span><br><span class="line"><span class="keyword">SELECT</span> T1.column1, T2.column2,…</span><br><span class="line"><span class="keyword">FROM</span> table_name1 <span class="keyword">AS</span> T1,table_name2 <span class="keyword">AS</span> T2,…</span><br><span class="line"><span class="keyword">WHERE</span> T1.column_keyname<span class="operator">=</span>T2.column_keyname</span><br></pre></td></tr></table></figure>
-<p><strong>例：</strong>查询IOT2020班和IOT2022班的软件方向的班级名称和学生姓名。</p>
-<figure class="highlight sql"><table><tr><td class="code"><pre><span class="line"><span class="keyword">SELECT</span> c.bjname,s.stuName</span><br><span class="line"><span class="keyword">FROM</span> classes c,student s</span><br><span class="line"><span class="keyword">WHERE</span> c.bjid<span class="operator">=</span>s.bjid <span class="keyword">AND</span> c.bjname <span class="keyword">IN</span> (<span class="string">&#x27;IOT2020&#x27;</span>,<span class="string">&#x27;IOT2022&#x27;</span>) <span class="keyword">AND</span> s.stuMajor<span class="operator">=</span><span class="string">&#x27;软件&#x27;</span>;</span><br></pre></td></tr></table></figure>
-<h1 id="SQL查询方法"><a href="#SQL查询方法" class="headerlink" title="SQL查询方法"></a>SQL查询方法</h1><p>①搭建查询结构：<code>SELECT ... FROM ... WHERE ...</code><br>②找出需要查询的表名写在FROM后<br>③建立关系即将各表外键进行内连接<br>④将需求筛选条件写在WHERE后<br>⑤将需求显示的要素写在SELECT后</p>
+<p>　　通常将shell分为两类：命令行与图形界面。命令行壳层提供一个命令行界面（CLI）；而图形壳层提供一个图形用户界面（GUI）。<br><img src="https://s3.bmp.ovh/imgs/2024/01/26/b91b5c427a937cb0.png" alt="Shell层次图"><br>　　在Linux中Shell是一个用C语言编写的程序,它是用户使用Linux的桥梁。Shell既是一种命令语言，又是一种程序设计语言。Shell作为一种应用程序提供了一个界面，用户可以通过这个界面访问操作系统内核的服务。</p>
+<h1 id="历史"><a href="#历史" class="headerlink" title="历史"></a>历史</h1><p>　　壳层（shell）这个说法起源于路易斯·普赞(Louis Pouzin)，在1964年至1965年间首次提出，随后在Multics（MULTiplexed Information and Computing System）项目中首次被实现出来。<br>　　Unix上的第一个Unix壳层（Unix shell）是肯·汤普逊（Ken Thompson）以Multics上的shell为范本，所写出的Thompson shell。<br>　　微软Windows操作系统也提供了命令行壳层的功能。如Windows 95 &#x2F; 98下的command.com、Windows NT内核下的cmd.exe以及PowerShell；而图形界面壳层即为explorer.exe。</p>
 <hr>
 <p><strong>版权声明</strong></p>
 <p><img src="/images/cc.png"></p>
 <p><a href="https://scholargeek.github.io/">Scholar’s Blog</a> by <a href="https://scholargeek.github.io/About/">scholargeek</a> is licensed under a <a href="http://creativecommons.org/licenses/by-nc-nd/4.0/">Creative Commons BY-NC-ND 4.0 International License</a>.<br>由<a href="https://scholargeek.github.io/About/">董仕麟</a>创作并维护的<a href="https://scholargeek.github.io/">scholargeek</a>博客采用<a href="http://creativecommons.org/licenses/by-nc-nd/4.0/">创作共用保留署名-非商业-禁止演绎4.0国际许可证</a>。</p>
 <p>本文首发于<a href="https://scholargeek.github.io/">Scholar’s Blog</a>博客，版权所有，侵权必究。</p>
-<p>本文永久链接：<a href="https://scholargeek.github.io/2023/02/03/MySQL2/">https://scholargeek.github.io/2023/02/03/MySQL2/</a></p>
+<p>本文永久链接：<a href="https://scholargeek.github.io/2018/08/28/Shell/">https://scholargeek.github.io/2018/08/28/Shell/</a></p>
 ]]></content>
       <categories>
         <category>编程</category>
       </categories>
       <tags>
-        <tag>MySQL</tag>
+        <tag>Shell</tag>
       </tags>
   </entry>
   <entry>
@@ -3297,28 +3319,6 @@ num_140=2
       </categories>
       <tags>
         <tag>MySQL</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Shell简介</title>
-    <url>/2018/08/28/Shell/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h1 id="壳层简介"><a href="#壳层简介" class="headerlink" title="壳层简介"></a>壳层简介</h1><p>　　Shell（壳层）在计算机科学中指“为用户提供用户界面”的软件，通常指的是命令行界面的解析器。一般来说是指操作系统中提供访问内核所提供之服务的程序。Shell也用于泛指所有为用户提供操作界面的程序，也就是程序和用户交互的层面。</p>
-<span id="more"></span>
-
-<p>　　通常将shell分为两类：命令行与图形界面。命令行壳层提供一个命令行界面（CLI）；而图形壳层提供一个图形用户界面（GUI）。<br><img src="https://s3.bmp.ovh/imgs/2024/01/26/b91b5c427a937cb0.png" alt="Shell层次图"><br>　　在Linux中Shell是一个用C语言编写的程序,它是用户使用Linux的桥梁。Shell既是一种命令语言，又是一种程序设计语言。Shell作为一种应用程序提供了一个界面，用户可以通过这个界面访问操作系统内核的服务。</p>
-<h1 id="历史"><a href="#历史" class="headerlink" title="历史"></a>历史</h1><p>　　壳层（shell）这个说法起源于路易斯·普赞(Louis Pouzin)，在1964年至1965年间首次提出，随后在Multics（MULTiplexed Information and Computing System）项目中首次被实现出来。<br>　　Unix上的第一个Unix壳层（Unix shell）是肯·汤普逊（Ken Thompson）以Multics上的shell为范本，所写出的Thompson shell。<br>　　微软Windows操作系统也提供了命令行壳层的功能。如Windows 95 &#x2F; 98下的command.com、Windows NT内核下的cmd.exe以及PowerShell；而图形界面壳层即为explorer.exe。</p>
-<hr>
-<p><strong>版权声明</strong></p>
-<p><img src="/images/cc.png"></p>
-<p><a href="https://scholargeek.github.io/">Scholar’s Blog</a> by <a href="https://scholargeek.github.io/About/">scholargeek</a> is licensed under a <a href="http://creativecommons.org/licenses/by-nc-nd/4.0/">Creative Commons BY-NC-ND 4.0 International License</a>.<br>由<a href="https://scholargeek.github.io/About/">董仕麟</a>创作并维护的<a href="https://scholargeek.github.io/">scholargeek</a>博客采用<a href="http://creativecommons.org/licenses/by-nc-nd/4.0/">创作共用保留署名-非商业-禁止演绎4.0国际许可证</a>。</p>
-<p>本文首发于<a href="https://scholargeek.github.io/">Scholar’s Blog</a>博客，版权所有，侵权必究。</p>
-<p>本文永久链接：<a href="https://scholargeek.github.io/2018/08/28/Shell/">https://scholargeek.github.io/2018/08/28/Shell/</a></p>
-]]></content>
-      <categories>
-        <category>编程</category>
-      </categories>
-      <tags>
-        <tag>Shell</tag>
       </tags>
   </entry>
   <entry>
@@ -3397,7 +3397,7 @@ num_140=2
  </p>
 <h2 id="三、将博文部署至远端"><a href="#三、将博文部署至远端" class="headerlink" title="三、将博文部署至远端"></a>三、将博文部署至远端</h2><p>在已注册好的Github中创建仓库项目，设置域名为：<br>如图：<img src="/images/pasted-22.png"> </p>
 <p>选择Create repository继续<br>在Powershell下输入:<br>cnpm install –save hexo-deployer-git    &#x2F;&#x2F;安装git插件<br>安装成功后截图如下：<br> <img src="/images/pasted-23.png"> </p>
-<p>然后ls查看文件，使用编辑器对_config.yml文件进行编辑<br>添加如下内容：<br>type:git<br>  repo:<a href="https://github.com/scholargeek/scholargeek-.github.io.git">https://github.com/scholargeek/scholargeek-.github.io.git</a><br>  branch:master<br>保存即可。<br>接着在Powershell下输入：<br>git config –global user.email “<a href="mailto:&#121;&#x6f;&#117;&#64;&#101;&#x78;&#97;&#x6d;&#112;&#x6c;&#x65;&#46;&#x63;&#x6f;&#x6d;">&#121;&#x6f;&#117;&#64;&#101;&#x78;&#97;&#x6d;&#112;&#x6c;&#x65;&#46;&#x63;&#x6f;&#x6d;</a>“<br>git config –global user.name “Your Name”<br>注：<br>将<a href="mailto:&#121;&#111;&#x75;&#64;&#x65;&#x78;&#x61;&#x6d;&#x70;&#x6c;&#101;&#46;&#99;&#x6f;&#x6d;">&#121;&#111;&#x75;&#64;&#x65;&#x78;&#x61;&#x6d;&#x70;&#x6c;&#101;&#46;&#99;&#x6f;&#x6d;</a>替换为在GitHub上注册的邮箱<br>将Your Name替换为GitHub上注册的用户名</p>
+<p>然后ls查看文件，使用编辑器对_config.yml文件进行编辑<br>添加如下内容：<br>type:git<br>  repo:<a href="https://github.com/scholargeek/scholargeek-.github.io.git">https://github.com/scholargeek/scholargeek-.github.io.git</a><br>  branch:master<br>保存即可。<br>接着在Powershell下输入：<br>git config –global user.email “<a href="mailto:&#121;&#x6f;&#117;&#64;&#101;&#x78;&#x61;&#x6d;&#112;&#x6c;&#101;&#x2e;&#x63;&#x6f;&#109;">&#121;&#x6f;&#117;&#64;&#101;&#x78;&#x61;&#x6d;&#112;&#x6c;&#101;&#x2e;&#x63;&#x6f;&#109;</a>“<br>git config –global user.name “Your Name”<br>注：<br>将<a href="mailto:&#x79;&#111;&#x75;&#x40;&#101;&#x78;&#97;&#109;&#x70;&#x6c;&#x65;&#46;&#99;&#x6f;&#109;">&#x79;&#111;&#x75;&#x40;&#101;&#x78;&#97;&#109;&#x70;&#x6c;&#x65;&#46;&#99;&#x6f;&#109;</a>替换为在GitHub上注册的邮箱<br>将Your Name替换为GitHub上注册的用户名</p>
 <p>最后可以在Powershell下输入hexo d 就可以将博客上传至github服务器上。<br>回到Github的仓库管理页，刷新即可查看上传的文件。<br>验证网络服务可以直接在游览器中输入<a href="https://scholargeek.github.io/">https://scholargeek.github.io/</a> 查看博客网页。</p>
 <h2 id="四、下载主题"><a href="#四、下载主题" class="headerlink" title="四、下载主题"></a>四、下载主题</h2><p>在Powershell下输入git clone <a href="https://github.com/litten/hexo-theme-yilia.git">https://github.com/litten/hexo-theme-yilia.git</a> themes&#x2F;yilia<br>即可将yilia主题下载至D:\Program file\blog\themes\yilia文件夹下。<br>编辑_config.yml文件，设置主题theme: landscape，将landscape替换为yilia，即可更换主题。</p>
 <p>如果下载主题时出现以下错误：<br> <img src="/images/pasted-24.png"><br>则需设置缓存区的大小<br>在Powershell下输入：git config –global http.postBuffer 524288000<br>再次输入：<br>git clone <a href="https://github.com/litten/hexo-theme-yilia.git">https://github.com/litten/hexo-theme-yilia.git</a> themes&#x2F;yilia即可</p>
@@ -3459,26 +3459,6 @@ num_140=2
       </tags>
   </entry>
   <entry>
-    <title>考研日志一</title>
-    <url>/2021/12/28/%E8%80%83%E7%A0%94%E5%BF%97%E4%B8%80/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p>记得我大一时励志一定要考研，但在学校蹉跎岁月，很长时间都无法准备。考研这个想法长时间停留在我的脑海中，我不知道自己是否有实力和毅力面对这场人生大考，但我仍想尝试。毕竟考研如同小马过河，在没有尝试过之前没人知道水深水浅。其实在大学的最后一年中，我也观察了许多考研人的努力；有浅尝辄止的，有反复无常的，也有全力以赴的；我最多算浅尝辄止的，面对困难和机遇我愧对大一时的自己。记得我跨入大学校门的那一天，我曾经发下的誓言，我背负的耻辱，我无颜面对曾经的自己。在即将毕业的这段时间，我十分痛苦纠结，没什么准备的参加了20考研专业课考试，题会的不多，我已然抱着看题目的心态面对这场考试。之后无奈走入工作岗位，但我仍然心系考研，看着一年又一年的考研人入场，不断壮大的考研人数，我知道以后的考研只会更难。<br>    2020年考研人数为341万；2021年考研人数为377万；2022年考研人数为457万；······</p>
-<span id="more"></span>
-<p>我在国家银行的工作随着不断学习也越发得心应手，但对未来的焦虑也与日俱增。我迫切的想提升学历，于是重新开始制定考研的计划，在单位的宿舍中我不断的搜索资料，希望能找到合适的院校，最后将目标定在了西南的一所知名院校。后来搬回到家中我买了考研所需的资料，在工作之余尽量复习，虽然我制定了计划，但复习进度不如人意。我时而积极时而颓丧，工作和考研不断调和，我不知道该专心工作还是该专心考研，无论我怎么做都像在逃避什么。如果我专心工作那么考研该怎么办？若我专心考研那么我工作该怎么办？我反复纠结，拿不定主意，最后将焦虑诉说给父母，这就把选择权交了出去，最后听了我妈的建议为考研放弃工作，全心全意备战考研。其实我已经开始习惯了工作的状态，当我交出辞职报告时还是有些纠结，但木已成舟时我忽然轻松了不少，只是略微有些留恋。故事到了这应该即刻出现夜以继日、废寝忘食的学习画面，但实际从工作状态切换到完全学习的状态的确不易。<br><img src="https://s3.bmp.ovh/imgs/2023/01/25/3b976ba2b4e38616.png" alt="2022考研计划"><br>在家复习的那段时光，让我认清自己，承认自己是迟钝的、无知的、无畏的。我曾励志考研，现在机会就摆在面前，我却犹豫。复习初始的状态当然很好，但随着时间的流逝我就陷入了焦虑和自责中。我开始在复习时间走神，回忆，被动的回忆，不由自主的回忆。可能我才认识到过去的半年是我人生最重要的时刻，从开始到未来。我可能才意识到，我的内心世界是如此活跃，但身体上却感到很疲倦，不想动弹。回想从前的工作，如同被驯化的工具，我已然内心抗拒。离职后我的情绪在变化，觉得自己在逼自己，但我已然也必然走出了关键性的一步，无论是否坚定，但这一切是真实的。<br>现实的我已然坠落，我要向上攀爬，无论面对什么，都要有自我。或许我怀念轻松的时光，但为了梦想而且还要挣脱现实，又怎能轻松。况且从来的轻松只是暂时的，又不可预知。为了心甘情愿的走过这漫漫人生路，为了更加美好的一切。不必自责，不必怀念，不必幻想，因为人只活在当下。唯有把握现在，才能塑造将来。我想既已如此，只有现在的我可以再次证明，证明我仍是可塑的，我要做我心中的那个人，不负此生。虽然生命中总有许多缺憾，但我仍相信事在人为，做我要做的。心中有力量，就无惧挑战；倘若成功，必是美好。<br>    你是谁？是你本身的想法决定的，而非做了什么决定了你是谁。<br>在复习期间母亲身体抱恙，虽然我没有表现出什么，但我心里却十分担心，希望她一切都好。说回我自己，考前一个月我已经无法安然入睡，甚至有了抑郁的情绪，纷乱的思绪使我痛苦，我知道自己复习的成果无法达到预期。在考试当天压抑的情绪使我出现了胸痛的情况，我忍着疼痛完成了考试，虽然我预料到考试成绩不会理想，可能无法接受这种结果，最终抑郁。在我人生最难熬的时候，父母给了我最大的支持，使我的精神状态渐渐恢复到正常。反复思量后我决定再战，我不信我考不上，或许就是这种不服输的勇气让我开始了2022年的复习之旅。但只有勇气是不够的，我还需要毅力，希望我能给自己一个满意的交代。</p>
-<hr>
-<p><strong>版权声明</strong></p>
-<p><img src="/images/cc.png"></p>
-<p><a href="https://scholargeek.github.io/">Scholar’s Blog</a> by <a href="https://scholargeek.github.io/About/">scholargeek</a> is licensed under a <a href="http://creativecommons.org/licenses/by-nc-nd/4.0/">Creative Commons BY-NC-ND 4.0 International License</a>.<br>由<a href="https://scholargeek.github.io/About/">董仕麟</a>创作并维护的<a href="https://scholargeek.github.io/">scholargeek</a>博客采用<a href="http://creativecommons.org/licenses/by-nc-nd/4.0/">创作共用保留署名-非商业-禁止演绎4.0国际许可证</a>。</p>
-<p>本文首发于<a href="https://scholargeek.github.io/">Scholar’s Blog</a>博客，版权所有，侵权必究。</p>
-<p>本文永久链接：<a href="https://scholargeek.github.io/2021/12/28/%E8%80%83%E7%A0%94%E5%BF%97%E4%B8%80/">https://scholargeek.github.io/2021/12/28/%E8%80%83%E7%A0%94%E5%BF%97%E4%B8%80/</a></p>
-]]></content>
-      <categories>
-        <category>日志</category>
-      </categories>
-      <tags>
-        <tag>PostgraduateEntranceExamination</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>考研日志二</title>
     <url>/2022/12/28/%E8%80%83%E7%A0%94%E5%BF%97%E4%BA%8C/</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p>由于考研失利，我的心境从低落恢复到正常，花费了几个月时间。这段时间是我人生最灰暗的时光，服用了药物后才渐渐好转。我在脑海中无数次构想考研的过程与结果，期望我能总结经验，争取上岸。当我再次选定考研目标院校时，非常无奈的选择了西北的学校，我定了个较低的目标；但却非常纠结，因为这和我当初励志离开西北的想法不同，但现在却为了上岸妥协了初衷，我无颜面对当初的自己。在无数个日夜中我不断纠结，看着时光流逝感到无奈，深感对自我掌控力的不足。<br>与过去复习过程类似，有种搬苞谷的感觉，怀疑不断打击着自信，直到把理想摧垮。后来逐渐发现考研需要的不仅是理想，考研需要的更是信念。唯有坚定的信念才能抵御困难的打击，只有不屈的意志才能克服险隘的阻挡。</p>
@@ -3492,6 +3472,26 @@ num_140=2
 <p><a href="https://scholargeek.github.io/">Scholar’s Blog</a> by <a href="https://scholargeek.github.io/About/">scholargeek</a> is licensed under a <a href="http://creativecommons.org/licenses/by-nc-nd/4.0/">Creative Commons BY-NC-ND 4.0 International License</a>.<br>由<a href="https://scholargeek.github.io/About/">董仕麟</a>创作并维护的<a href="https://scholargeek.github.io/">scholargeek</a>博客采用<a href="http://creativecommons.org/licenses/by-nc-nd/4.0/">创作共用保留署名-非商业-禁止演绎4.0国际许可证</a>。</p>
 <p>本文首发于<a href="https://scholargeek.github.io/">Scholar’s Blog</a>博客，版权所有，侵权必究。</p>
 <p>本文永久链接：<a href="https://scholargeek.github.io/2022/12/28/%E8%80%83%E7%A0%94%E5%BF%97%E4%BA%8C/">https://scholargeek.github.io/2022/12/28/%E8%80%83%E7%A0%94%E5%BF%97%E4%BA%8C/</a></p>
+]]></content>
+      <categories>
+        <category>日志</category>
+      </categories>
+      <tags>
+        <tag>PostgraduateEntranceExamination</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>考研日志一</title>
+    <url>/2021/12/28/%E8%80%83%E7%A0%94%E5%BF%97%E4%B8%80/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p>记得我大一时励志一定要考研，但在学校蹉跎岁月，很长时间都无法准备。考研这个想法长时间停留在我的脑海中，我不知道自己是否有实力和毅力面对这场人生大考，但我仍想尝试。毕竟考研如同小马过河，在没有尝试过之前没人知道水深水浅。其实在大学的最后一年中，我也观察了许多考研人的努力；有浅尝辄止的，有反复无常的，也有全力以赴的；我最多算浅尝辄止的，面对困难和机遇我愧对大一时的自己。记得我跨入大学校门的那一天，我曾经发下的誓言，我背负的耻辱，我无颜面对曾经的自己。在即将毕业的这段时间，我十分痛苦纠结，没什么准备的参加了20考研专业课考试，题会的不多，我已然抱着看题目的心态面对这场考试。之后无奈走入工作岗位，但我仍然心系考研，看着一年又一年的考研人入场，不断壮大的考研人数，我知道以后的考研只会更难。<br>    2020年考研人数为341万；2021年考研人数为377万；2022年考研人数为457万；······</p>
+<span id="more"></span>
+<p>我在国家银行的工作随着不断学习也越发得心应手，但对未来的焦虑也与日俱增。我迫切的想提升学历，于是重新开始制定考研的计划，在单位的宿舍中我不断的搜索资料，希望能找到合适的院校，最后将目标定在了西南的一所知名院校。后来搬回到家中我买了考研所需的资料，在工作之余尽量复习，虽然我制定了计划，但复习进度不如人意。我时而积极时而颓丧，工作和考研不断调和，我不知道该专心工作还是该专心考研，无论我怎么做都像在逃避什么。如果我专心工作那么考研该怎么办？若我专心考研那么我工作该怎么办？我反复纠结，拿不定主意，最后将焦虑诉说给父母，这就把选择权交了出去，最后听了我妈的建议为考研放弃工作，全心全意备战考研。其实我已经开始习惯了工作的状态，当我交出辞职报告时还是有些纠结，但木已成舟时我忽然轻松了不少，只是略微有些留恋。故事到了这应该即刻出现夜以继日、废寝忘食的学习画面，但实际从工作状态切换到完全学习的状态的确不易。<br><img src="https://s3.bmp.ovh/imgs/2023/01/25/3b976ba2b4e38616.png" alt="2022考研计划"><br>在家复习的那段时光，让我认清自己，承认自己是迟钝的、无知的、无畏的。我曾励志考研，现在机会就摆在面前，我却犹豫。复习初始的状态当然很好，但随着时间的流逝我就陷入了焦虑和自责中。我开始在复习时间走神，回忆，被动的回忆，不由自主的回忆。可能我才认识到过去的半年是我人生最重要的时刻，从开始到未来。我可能才意识到，我的内心世界是如此活跃，但身体上却感到很疲倦，不想动弹。回想从前的工作，如同被驯化的工具，我已然内心抗拒。离职后我的情绪在变化，觉得自己在逼自己，但我已然也必然走出了关键性的一步，无论是否坚定，但这一切是真实的。<br>现实的我已然坠落，我要向上攀爬，无论面对什么，都要有自我。或许我怀念轻松的时光，但为了梦想而且还要挣脱现实，又怎能轻松。况且从来的轻松只是暂时的，又不可预知。为了心甘情愿的走过这漫漫人生路，为了更加美好的一切。不必自责，不必怀念，不必幻想，因为人只活在当下。唯有把握现在，才能塑造将来。我想既已如此，只有现在的我可以再次证明，证明我仍是可塑的，我要做我心中的那个人，不负此生。虽然生命中总有许多缺憾，但我仍相信事在人为，做我要做的。心中有力量，就无惧挑战；倘若成功，必是美好。<br>    你是谁？是你本身的想法决定的，而非做了什么决定了你是谁。<br>在复习期间母亲身体抱恙，虽然我没有表现出什么，但我心里却十分担心，希望她一切都好。说回我自己，考前一个月我已经无法安然入睡，甚至有了抑郁的情绪，纷乱的思绪使我痛苦，我知道自己复习的成果无法达到预期。在考试当天压抑的情绪使我出现了胸痛的情况，我忍着疼痛完成了考试，虽然我预料到考试成绩不会理想，可能无法接受这种结果，最终抑郁。在我人生最难熬的时候，父母给了我最大的支持，使我的精神状态渐渐恢复到正常。反复思量后我决定再战，我不信我考不上，或许就是这种不服输的勇气让我开始了2022年的复习之旅。但只有勇气是不够的，我还需要毅力，希望我能给自己一个满意的交代。</p>
+<hr>
+<p><strong>版权声明</strong></p>
+<p><img src="/images/cc.png"></p>
+<p><a href="https://scholargeek.github.io/">Scholar’s Blog</a> by <a href="https://scholargeek.github.io/About/">scholargeek</a> is licensed under a <a href="http://creativecommons.org/licenses/by-nc-nd/4.0/">Creative Commons BY-NC-ND 4.0 International License</a>.<br>由<a href="https://scholargeek.github.io/About/">董仕麟</a>创作并维护的<a href="https://scholargeek.github.io/">scholargeek</a>博客采用<a href="http://creativecommons.org/licenses/by-nc-nd/4.0/">创作共用保留署名-非商业-禁止演绎4.0国际许可证</a>。</p>
+<p>本文首发于<a href="https://scholargeek.github.io/">Scholar’s Blog</a>博客，版权所有，侵权必究。</p>
+<p>本文永久链接：<a href="https://scholargeek.github.io/2021/12/28/%E8%80%83%E7%A0%94%E5%BF%97%E4%B8%80/">https://scholargeek.github.io/2021/12/28/%E8%80%83%E7%A0%94%E5%BF%97%E4%B8%80/</a></p>
 ]]></content>
       <categories>
         <category>日志</category>

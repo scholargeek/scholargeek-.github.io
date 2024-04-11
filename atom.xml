@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
   <title>Scholar&#39;s Blog</title>
-  <icon>https://www.gravatar.com/avatar/c28633bfe3524c232375644cf1713a37</icon>
-  <subtitle>欢迎来到我的博客！</subtitle>
+  <icon>https://www.gravatar.com/avatar/602ef83f0ffd972c903f2586d1314d92</icon>
+  <subtitle>DO WHAT WE WANT</subtitle>
   <link href="https://scholargeek.github.io/atom.xml" rel="self"/>
   
   <link href="https://scholargeek.github.io/"/>
@@ -11,7 +11,7 @@
   
   <author>
     <name>董仕麟</name>
-    <email>atopi@qq.com</email>
+    <email>scholargeek@foxmail.com</email>
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
