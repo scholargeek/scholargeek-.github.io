@@ -1427,103 +1427,6 @@
       </tags>
   </entry>
   <entry>
-    <title>C语言学习3</title>
-    <url>/2018/02/06/C%E8%AF%AD%E8%A8%80%E5%AD%A6%E4%B9%A03/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h1 id="基本语句"><a href="#基本语句" class="headerlink" title="基本语句"></a>基本语句</h1><span id="more"></span>
-<h2 id="单个字符的输入与输出"><a href="#单个字符的输入与输出" class="headerlink" title="单个字符的输入与输出"></a>单个字符的输入与输出</h2><h3 id="字符输出函数putchar"><a href="#字符输出函数putchar" class="headerlink" title="字符输出函数putchar()"></a>字符输出函数putchar()</h3><p>putchar() 函数的作用是向终端输入一个字符。</p>
-<h3 id="字符输入函数getchar"><a href="#字符输入函数getchar" class="headerlink" title="字符输入函数getchar()"></a>字符输入函数getchar()</h3><p>getchar()函数的作用是从终端输入一个字符。<br>getchar()函数没有参数，其函数值为从输入设备得到的字符。</p>
-<h2 id="数据格式的输入与输出"><a href="#数据格式的输入与输出" class="headerlink" title="数据格式的输入与输出"></a>数据格式的输入与输出</h2><h3 id="格式化输出函数"><a href="#格式化输出函数" class="headerlink" title="格式化输出函数"></a>格式化输出函数</h3><p>printf()函数是C语言提供的标准输出函数，它的作用是向终端(或系统隐含指定的输出设备)按指定格式输出若干个数据。</p>
-<figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="built_in">printf</span>(格式控制,输出列表);</span><br></pre></td></tr></table></figure>
-<p>①”格式控制”：用双引号括起来的字符串是”格式控制”字符串，它包含以下两种信息。<br>●格式转换说明，由”%”和格式字符组成<br>●需要原样输出的字符也写在格式控制内<br>②”输出列表”：需要输出的一些数据，可以是常量、变量或表达式。输出列表中各输出项用逗号隔开。</p>
-<p>可在“%”与格式字符之间输入”宽度说明”，左对齐符号”-“,前导符号”0”等。</p>
-<table>
-<thead>
-<tr>
-<th>格式字符</th>
-<th>说明</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>d</td>
-<td>用来对十进制进行输入输出</td>
-</tr>
-<tr>
-<td>o</td>
-<td>以八进制数形式输出整数</td>
-</tr>
-<tr>
-<td>x</td>
-<td>以十六进制数形式输出整数</td>
-</tr>
-<tr>
-<td>u</td>
-<td>用来输出unsigned型数据，即输出无符号的十进制数</td>
-</tr>
-<tr>
-<td>c</td>
-<td>用来输出一个字符</td>
-</tr>
-<tr>
-<td>s</td>
-<td>用来输出一个字符串</td>
-</tr>
-<tr>
-<td>f</td>
-<td>用来输出实数(单、双精度)，以小数形式输出，完全输出整数部分</td>
-</tr>
-<tr>
-<td>e</td>
-<td>以指数形式输出实数</td>
-</tr>
-<tr>
-<td>g</td>
-<td>自动以最短表达形式输出实数</td>
-</tr>
-</tbody></table>
-<p>●格式控制串中，格式说明与输出项从左到右，在类型上必须一一对应匹配。<br>●在格式控制串中，格式说明与输出项个数要相等。<br>●在格式控制串中，可以包含任意的合法字符(包括转义字符),在输出它们时将原样输出。<br>●如果输出%，则应在格式控制串用两个连续的百分号“%%”表示。</p>
-<p>printf() 格式控制符形式 %[flag][width][.precision]type<br>type:输出类型 如 %d %f %c %lf<br>width:最小输出宽度 至少占几个字符的位置[整体]<br>precision:输出小数精度。(当小数部分位数大于它时,会按四舍五入原则丢掉多于的数字；当小于它时则在其后补0)<br>用于整数时，precision表示最小输出宽度，与width不同 整数宽度将会在最左边补0<br>用于字符时，precision表示最大输出宽度，截取多于宽度的字符。<br>flag:标志字符</p>
-<table>
-<thead>
-<tr>
-<th>字符</th>
-<th>含义</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>-</td>
-<td>表示左对齐，如果没有，默认右对齐</td>
-</tr>
-<tr>
-<td>+</td>
-<td>表示输出符号(正负号)，若没有默认仅负数时输出符号</td>
-</tr>
-<tr>
-<td>空格</td>
-<td>值为正加空格，值为负默认负号</td>
-</tr>
-<tr>
-<td>#</td>
-<td>表示八、十六进制前缀(八进制前缀为0，十六进制前缀为0x),无论实数、有无小数皆在后面加小数点。</td>
-</tr>
-</tbody></table>
-<h3 id="格式化输入函数"><a href="#格式化输入函数" class="headerlink" title="格式化输入函数"></a>格式化输入函数</h3><figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="built_in">scanf</span>(格式控制，地址表列);</span><br></pre></td></tr></table></figure>
-<p>其中scanf是函数名，”格式控制”的含义与printf()中相同。<br>“地址表列”，由若干变量地址组成，既可以是变量地址，也可以是字符串的首地址。<br>scanf()函数中的格式说明也是以%开始，以一个格式字符结束，中间可以加入附加字符。<br>●对unsigned型变量，可以用%d %o %x 格式输入<br>●在scanf()函数中格式字符前可以用一个整数指定输入数据所占宽度，但对输入实型数不能指定其小数位宽度。<br>●在格式控制串、格式说明的个数应该与输入项的个数相等，且要类型匹配。<br>●scanf()函数中的输入项只能是地址表达式，而不能是变量名或其它内容。<br>●如果在”格式控制”字串中除了格式说明以外还有其它字符，则在输入数据时应输入与这些字符相同的字符。<br>●在用”%c”格式输入字符时，空格字符和转义字符都可以作为有效字符输入。<br>●在输入数据时，若实际输入数据少于输入项个数，scanf()函数会等待输入，直到满足条件或遇到非法字符才结束，若实际输入数据多于输入项个数，多于数据将留在缓冲区备用，作为下一次输入操作的数据。<br>●在输入数据时，遇到以下情况时认为输入结束：空格、回车、跳格(Tab)</p>
-<p>scanf() 读取字符串时遇空格则结束，不会读取空格后的字符串。<br>scanf() 格式控制符形式: %{*}{width}type<br>type:表示读取数据的类型，如:%d %s %[a-z] %[<code>^\n</code>] 等<br>width表示 最大读取宽度(可有可无)<br>*表示丢弃读取到的数据(可有可无)</p>
-<hr>
-<p><strong>版权声明</strong></p>
-<p><img src="/images/cc.png"></p>
-<p><a href="https://scholargeek.github.io/">Scholar’s Blog</a> by <a href="https://scholargeek.github.io/About/">scholargeek</a> is licensed under a <a href="http://creativecommons.org/licenses/by-nc-nd/4.0/">Creative Commons BY-NC-ND 4.0 International License</a>.<br>由<a href="https://scholargeek.github.io/About/">董仕麟</a>创作并维护的<a href="https://scholargeek.github.io/">scholargeek</a>博客采用<a href="http://creativecommons.org/licenses/by-nc-nd/4.0/">创作共用保留署名-非商业-禁止演绎4.0国际许可证</a>。</p>
-<p>本文首发于<a href="https://scholargeek.github.io/">Scholar’s Blog</a>博客，版权所有，侵权必究。</p>
-<p>本文永久链接：<a href="https://scholargeek.github.io/2018/02/06/C%E8%AF%AD%E8%A8%80%E5%AD%A6%E4%B9%A03/">https://scholargeek.github.io/2018/02/06/C%E8%AF%AD%E8%A8%80%E5%AD%A6%E4%B9%A03/</a></p>
-]]></content>
-      <categories>
-        <category>编程</category>
-      </categories>
-      <tags>
-        <tag>C</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>C语言学习2</title>
     <url>/2018/02/05/C%E8%AF%AD%E8%A8%80%E5%AD%A6%E4%B9%A02/</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h1 id="运算符与表达式"><a href="#运算符与表达式" class="headerlink" title="运算符与表达式"></a>运算符与表达式</h1><span id="more"></span>
@@ -1624,6 +1527,103 @@
 <p><a href="https://scholargeek.github.io/">Scholar’s Blog</a> by <a href="https://scholargeek.github.io/About/">scholargeek</a> is licensed under a <a href="http://creativecommons.org/licenses/by-nc-nd/4.0/">Creative Commons BY-NC-ND 4.0 International License</a>.<br>由<a href="https://scholargeek.github.io/About/">董仕麟</a>创作并维护的<a href="https://scholargeek.github.io/">scholargeek</a>博客采用<a href="http://creativecommons.org/licenses/by-nc-nd/4.0/">创作共用保留署名-非商业-禁止演绎4.0国际许可证</a>。</p>
 <p>本文首发于<a href="https://scholargeek.github.io/">Scholar’s Blog</a>博客，版权所有，侵权必究。</p>
 <p>本文永久链接：<a href="https://scholargeek.github.io/2018/02/05/C%E8%AF%AD%E8%A8%80%E5%AD%A6%E4%B9%A02/">https://scholargeek.github.io/2018/02/05/C%E8%AF%AD%E8%A8%80%E5%AD%A6%E4%B9%A02/</a></p>
+]]></content>
+      <categories>
+        <category>编程</category>
+      </categories>
+      <tags>
+        <tag>C</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>C语言学习3</title>
+    <url>/2018/02/06/C%E8%AF%AD%E8%A8%80%E5%AD%A6%E4%B9%A03/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h1 id="基本语句"><a href="#基本语句" class="headerlink" title="基本语句"></a>基本语句</h1><span id="more"></span>
+<h2 id="单个字符的输入与输出"><a href="#单个字符的输入与输出" class="headerlink" title="单个字符的输入与输出"></a>单个字符的输入与输出</h2><h3 id="字符输出函数putchar"><a href="#字符输出函数putchar" class="headerlink" title="字符输出函数putchar()"></a>字符输出函数putchar()</h3><p>putchar() 函数的作用是向终端输入一个字符。</p>
+<h3 id="字符输入函数getchar"><a href="#字符输入函数getchar" class="headerlink" title="字符输入函数getchar()"></a>字符输入函数getchar()</h3><p>getchar()函数的作用是从终端输入一个字符。<br>getchar()函数没有参数，其函数值为从输入设备得到的字符。</p>
+<h2 id="数据格式的输入与输出"><a href="#数据格式的输入与输出" class="headerlink" title="数据格式的输入与输出"></a>数据格式的输入与输出</h2><h3 id="格式化输出函数"><a href="#格式化输出函数" class="headerlink" title="格式化输出函数"></a>格式化输出函数</h3><p>printf()函数是C语言提供的标准输出函数，它的作用是向终端(或系统隐含指定的输出设备)按指定格式输出若干个数据。</p>
+<figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="built_in">printf</span>(格式控制,输出列表);</span><br></pre></td></tr></table></figure>
+<p>①”格式控制”：用双引号括起来的字符串是”格式控制”字符串，它包含以下两种信息。<br>●格式转换说明，由”%”和格式字符组成<br>●需要原样输出的字符也写在格式控制内<br>②”输出列表”：需要输出的一些数据，可以是常量、变量或表达式。输出列表中各输出项用逗号隔开。</p>
+<p>可在“%”与格式字符之间输入”宽度说明”，左对齐符号”-“,前导符号”0”等。</p>
+<table>
+<thead>
+<tr>
+<th>格式字符</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>d</td>
+<td>用来对十进制进行输入输出</td>
+</tr>
+<tr>
+<td>o</td>
+<td>以八进制数形式输出整数</td>
+</tr>
+<tr>
+<td>x</td>
+<td>以十六进制数形式输出整数</td>
+</tr>
+<tr>
+<td>u</td>
+<td>用来输出unsigned型数据，即输出无符号的十进制数</td>
+</tr>
+<tr>
+<td>c</td>
+<td>用来输出一个字符</td>
+</tr>
+<tr>
+<td>s</td>
+<td>用来输出一个字符串</td>
+</tr>
+<tr>
+<td>f</td>
+<td>用来输出实数(单、双精度)，以小数形式输出，完全输出整数部分</td>
+</tr>
+<tr>
+<td>e</td>
+<td>以指数形式输出实数</td>
+</tr>
+<tr>
+<td>g</td>
+<td>自动以最短表达形式输出实数</td>
+</tr>
+</tbody></table>
+<p>●格式控制串中，格式说明与输出项从左到右，在类型上必须一一对应匹配。<br>●在格式控制串中，格式说明与输出项个数要相等。<br>●在格式控制串中，可以包含任意的合法字符(包括转义字符),在输出它们时将原样输出。<br>●如果输出%，则应在格式控制串用两个连续的百分号“%%”表示。</p>
+<p>printf() 格式控制符形式 %[flag][width][.precision]type<br>type:输出类型 如 %d %f %c %lf<br>width:最小输出宽度 至少占几个字符的位置[整体]<br>precision:输出小数精度。(当小数部分位数大于它时,会按四舍五入原则丢掉多于的数字；当小于它时则在其后补0)<br>用于整数时，precision表示最小输出宽度，与width不同 整数宽度将会在最左边补0<br>用于字符时，precision表示最大输出宽度，截取多于宽度的字符。<br>flag:标志字符</p>
+<table>
+<thead>
+<tr>
+<th>字符</th>
+<th>含义</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>-</td>
+<td>表示左对齐，如果没有，默认右对齐</td>
+</tr>
+<tr>
+<td>+</td>
+<td>表示输出符号(正负号)，若没有默认仅负数时输出符号</td>
+</tr>
+<tr>
+<td>空格</td>
+<td>值为正加空格，值为负默认负号</td>
+</tr>
+<tr>
+<td>#</td>
+<td>表示八、十六进制前缀(八进制前缀为0，十六进制前缀为0x),无论实数、有无小数皆在后面加小数点。</td>
+</tr>
+</tbody></table>
+<h3 id="格式化输入函数"><a href="#格式化输入函数" class="headerlink" title="格式化输入函数"></a>格式化输入函数</h3><figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="built_in">scanf</span>(格式控制，地址表列);</span><br></pre></td></tr></table></figure>
+<p>其中scanf是函数名，”格式控制”的含义与printf()中相同。<br>“地址表列”，由若干变量地址组成，既可以是变量地址，也可以是字符串的首地址。<br>scanf()函数中的格式说明也是以%开始，以一个格式字符结束，中间可以加入附加字符。<br>●对unsigned型变量，可以用%d %o %x 格式输入<br>●在scanf()函数中格式字符前可以用一个整数指定输入数据所占宽度，但对输入实型数不能指定其小数位宽度。<br>●在格式控制串、格式说明的个数应该与输入项的个数相等，且要类型匹配。<br>●scanf()函数中的输入项只能是地址表达式，而不能是变量名或其它内容。<br>●如果在”格式控制”字串中除了格式说明以外还有其它字符，则在输入数据时应输入与这些字符相同的字符。<br>●在用”%c”格式输入字符时，空格字符和转义字符都可以作为有效字符输入。<br>●在输入数据时，若实际输入数据少于输入项个数，scanf()函数会等待输入，直到满足条件或遇到非法字符才结束，若实际输入数据多于输入项个数，多于数据将留在缓冲区备用，作为下一次输入操作的数据。<br>●在输入数据时，遇到以下情况时认为输入结束：空格、回车、跳格(Tab)</p>
+<p>scanf() 读取字符串时遇空格则结束，不会读取空格后的字符串。<br>scanf() 格式控制符形式: %{*}{width}type<br>type:表示读取数据的类型，如:%d %s %[a-z] %[<code>^\n</code>] 等<br>width表示 最大读取宽度(可有可无)<br>*表示丢弃读取到的数据(可有可无)</p>
+<hr>
+<p><strong>版权声明</strong></p>
+<p><img src="/images/cc.png"></p>
+<p><a href="https://scholargeek.github.io/">Scholar’s Blog</a> by <a href="https://scholargeek.github.io/About/">scholargeek</a> is licensed under a <a href="http://creativecommons.org/licenses/by-nc-nd/4.0/">Creative Commons BY-NC-ND 4.0 International License</a>.<br>由<a href="https://scholargeek.github.io/About/">董仕麟</a>创作并维护的<a href="https://scholargeek.github.io/">scholargeek</a>博客采用<a href="http://creativecommons.org/licenses/by-nc-nd/4.0/">创作共用保留署名-非商业-禁止演绎4.0国际许可证</a>。</p>
+<p>本文首发于<a href="https://scholargeek.github.io/">Scholar’s Blog</a>博客，版权所有，侵权必究。</p>
+<p>本文永久链接：<a href="https://scholargeek.github.io/2018/02/06/C%E8%AF%AD%E8%A8%80%E5%AD%A6%E4%B9%A03/">https://scholargeek.github.io/2018/02/06/C%E8%AF%AD%E8%A8%80%E5%AD%A6%E4%B9%A03/</a></p>
 ]]></content>
       <categories>
         <category>编程</category>
@@ -2497,6 +2497,32 @@ num_140=2
       </tags>
   </entry>
   <entry>
+    <title>Hexo博客默认主题的修改与美化6</title>
+    <url>/2019/07/20/Hexo%E5%8D%9A%E5%AE%A2%E9%BB%98%E8%AE%A4%E4%B8%BB%E9%A2%98%E7%9A%84%E4%BF%AE%E6%94%B9%E4%B8%8E%E7%BE%8E%E5%8C%966/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h1 id="给博客添加RSS"><a href="#给博客添加RSS" class="headerlink" title="给博客添加RSS"></a>给博客添加RSS</h1><p>简易信息聚合（也叫聚合内容）是一种基于XML的标准，在互联网上被广泛采用的内容包装和投递协议。RSS(Really Simple Syndication)是一种描述和同步网站内容的格式，是使用最广泛的XML应用。<br>网络用户可以在客户端借助于支持RSS的聚合工具软件，在不打开网站内容页面的情况下阅读支持RSS输出的网站内容。<br>本文将详述如何给博客添加RSS功能。</p>
+<span id="more"></span>
+<p>1.安装Feed插件；使用Powershell进入\blog目录，输入：</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">npm install hexo-generator-feed</span><br></pre></td></tr></table></figure>
+<p>安装好feed插件，就可以生成RSS xml文件了。</p>
+<p>2.在根目录配置文件中添加功能；即在\blog_config.yml文件中添加如下内容：</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line"># Extensions</span><br><span class="line">plugins:</span><br><span class="line"> hexo-generator-feed</span><br><span class="line"></span><br><span class="line">#Feed Atom</span><br><span class="line">feed:</span><br><span class="line"> type: atom</span><br><span class="line"> path: atom.xml</span><br><span class="line"> limit: 20</span><br></pre></td></tr></table></figure>
+<p>保存文件即可。</p>
+<p>显示的效果即博客右上角出现了RSS订阅的按钮。</p>
+<hr>
+<p><strong>版权声明</strong></p>
+<p><img src="/images/cc.png"></p>
+<p><a href="https://scholargeek.github.io/">Scholar’s Blog</a> by <a href="https://scholargeek.github.io/About/">scholargeek</a> is licensed under a <a href="http://creativecommons.org/licenses/by-nc-nd/4.0/">Creative Commons BY-NC-ND 4.0 International License</a>.<br>由<a href="https://scholargeek.github.io/About/">董仕麟</a>创作并维护的<a href="https://scholargeek.github.io/">scholargeek</a>博客采用<a href="http://creativecommons.org/licenses/by-nc-nd/4.0/">创作共用保留署名-非商业-禁止演绎4.0国际许可证</a>。</p>
+<p>本文首发于<a href="https://scholargeek.github.io/">Scholar’s Blog</a>博客，版权所有，侵权必究。</p>
+<p>本文永久链接：<a href="https://scholargeek.github.io/2019/07/20/Hexo%E5%8D%9A%E5%AE%A2%E9%BB%98%E8%AE%A4%E4%B8%BB%E9%A2%98%E7%9A%84%E4%BF%AE%E6%94%B9%E4%B8%8E%E7%BE%8E%E5%8C%966/">https://scholargeek.github.io/2019/07/20/Hexo%E5%8D%9A%E5%AE%A2%E9%BB%98%E8%AE%A4%E4%B8%BB%E9%A2%98%E7%9A%84%E4%BF%AE%E6%94%B9%E4%B8%8E%E7%BE%8E%E5%8C%966/</a></p>
+]]></content>
+      <categories>
+        <category>教程</category>
+      </categories>
+      <tags>
+        <tag>Hexo</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Hexo博客默认主题的修改与美化5</title>
     <url>/2019/07/19/Hexo%E5%8D%9A%E5%AE%A2%E9%BB%98%E8%AE%A4%E4%B8%BB%E9%A2%98%E7%9A%84%E4%BF%AE%E6%94%B9%E4%B8%8E%E7%BE%8E%E5%8C%965/</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h1 id="使博文自带分享栏"><a href="#使博文自带分享栏" class="headerlink" title="使博文自带分享栏"></a>使博文自带分享栏</h1><p>许多网站内容都允许分享，本文将详述如何给每篇博文附带分享栏功能。</p>
@@ -2522,23 +2548,30 @@ num_140=2
       </tags>
   </entry>
   <entry>
-    <title>Hexo博客默认主题的修改与美化6</title>
-    <url>/2019/07/20/Hexo%E5%8D%9A%E5%AE%A2%E9%BB%98%E8%AE%A4%E4%B8%BB%E9%A2%98%E7%9A%84%E4%BF%AE%E6%94%B9%E4%B8%8E%E7%BE%8E%E5%8C%966/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h1 id="给博客添加RSS"><a href="#给博客添加RSS" class="headerlink" title="给博客添加RSS"></a>给博客添加RSS</h1><p>简易信息聚合（也叫聚合内容）是一种基于XML的标准，在互联网上被广泛采用的内容包装和投递协议。RSS(Really Simple Syndication)是一种描述和同步网站内容的格式，是使用最广泛的XML应用。<br>网络用户可以在客户端借助于支持RSS的聚合工具软件，在不打开网站内容页面的情况下阅读支持RSS输出的网站内容。<br>本文将详述如何给博客添加RSS功能。</p>
+    <title>Hexo博客默认主题的修改与美化7</title>
+    <url>/2019/07/21/Hexo%E5%8D%9A%E5%AE%A2%E9%BB%98%E8%AE%A4%E4%B8%BB%E9%A2%98%E7%9A%84%E4%BF%AE%E6%94%B9%E4%B8%8E%E7%BE%8E%E5%8C%967/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h1 id="Hexo博客Landscape主题的字体和JS库的优化"><a href="#Hexo博客Landscape主题的字体和JS库的优化" class="headerlink" title="Hexo博客Landscape主题的字体和JS库的优化"></a>Hexo博客Landscape主题的字体和JS库的优化</h1><p>本文将详述如何优化Hexo博客默认主题的jQuery库和字体</p>
 <span id="more"></span>
-<p>1.安装Feed插件；使用Powershell进入\blog目录，输入：</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">npm install hexo-generator-feed</span><br></pre></td></tr></table></figure>
-<p>安装好feed插件，就可以生成RSS xml文件了。</p>
-<p>2.在根目录配置文件中添加功能；即在\blog_config.yml文件中添加如下内容：</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line"># Extensions</span><br><span class="line">plugins:</span><br><span class="line"> hexo-generator-feed</span><br><span class="line"></span><br><span class="line">#Feed Atom</span><br><span class="line">feed:</span><br><span class="line"> type: atom</span><br><span class="line"> path: atom.xml</span><br><span class="line"> limit: 20</span><br></pre></td></tr></table></figure>
-<p>保存文件即可。</p>
-<p>显示的效果即博客右上角出现了RSS订阅的按钮。</p>
+<h2 id="jQuery库的优化"><a href="#jQuery库的优化" class="headerlink" title="jQuery库的优化"></a>jQuery库的优化</h2><p>目的：将jQuery替换成百度提供的服务，且在百度的服务暂时不可用时，能够以网站上自带的jQuery作为备份服务。<br>方法：<br>1.修改blog\themes\landscape\layout_partial&#x2F;after-footer.ejs文件，将17行的</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">&lt;script src=&quot;//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js&quot;&gt;&lt;/script&gt;</span><br></pre></td></tr></table></figure>
+<p>替换为：</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">&lt;script src=&quot;http://apps.bdimg.com/libs/jquery/2.0.3/jquery.min.js&quot;&gt;&lt;/script&gt;</span><br><span class="line"></span><br><span class="line">&lt;script type=&quot;text/javascript&quot;&gt;</span><br><span class="line"></span><br><span class="line">//&lt;![CDATA[</span><br><span class="line">if (typeof jQuery == &#x27;undefined&#x27;) &#123;</span><br><span class="line"> document.write(unescape(&quot;%3Cscript src=&#x27;/js/jquery-2.0.3.min.js&#x27; type=&#x27;text/javascript&#x27;%3E%3C/script%3E&quot;));</span><br><span class="line">&#125;</span><br><span class="line">// ]]&gt;</span><br><span class="line"></span><br><span class="line">&lt;/script&gt;</span><br></pre></td></tr></table></figure>
+<p>2.去jQuery官方下载合适版本的jQuery并将其放到themes&#x2F;landscape&#x2F;source&#x2F;js&#x2F;目录下，将其命名为jquery-2.0.3.min.js 最后将该文件开头处的 <del>&#x2F;&#x2F;@ sourceMappingURL&#x3D;jquery-2.0.3.min.map</del> 这一行代码删去，否则会导致博客无法生成。</p>
+<h2 id="字体优化"><a href="#字体优化" class="headerlink" title="字体优化"></a>字体优化</h2><p>目的：优化博客字体，使页面在多个平台上自动显示较合适的字体。<br>方法：1.修改themes&#x2F;landscape&#x2F;source&#x2F;css&#x2F;_variables.styl这一文件，将其中第22行</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">font-sans = &quot;Helvetica Neue&quot;, Helvetica, Arial, sans-serif</span><br></pre></td></tr></table></figure>
+<p>替换为：</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">font-sans = &quot;Helvetica Neue&quot;, &quot;Helvetica&quot;, &quot;Hiragino Sans GB&quot;, &quot;Microsoft YaHei&quot;, &quot;Source Han Sans CN&quot;, &quot;WenQuanYi Micro Hei&quot;, Arial, sans-serif</span><br></pre></td></tr></table></figure>
+<p>2.放弃Google的Source Code Pro等宽字体，修改themes&#x2F;landscape&#x2F;source&#x2F;css&#x2F;_variables.styl文件，将其中第24行</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">font-mono = &quot;Source Code Pro&quot;, Consolas, Monaco, Menlo, Consolas, monospace</span><br></pre></td></tr></table></figure>
+<p>替换为<br>    font-mono &#x3D; Consolas, Monaco, Menlo, monospace<br>3.最后删除引用Google字体的代码，编辑文件themes&#x2F;landscape&#x2F;layout&#x2F;_partial&#x2F;after-footer.ejs，将其中的</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">&lt;link href=&quot;http://fonts.googleapis.com/css?family=Source+Code+Pro&quot; rel=&quot;stylesheet&quot; type=&quot;text/css&quot;&gt;</span><br></pre></td></tr></table></figure>
+<p>删除即可。</p>
 <hr>
 <p><strong>版权声明</strong></p>
 <p><img src="/images/cc.png"></p>
 <p><a href="https://scholargeek.github.io/">Scholar’s Blog</a> by <a href="https://scholargeek.github.io/About/">scholargeek</a> is licensed under a <a href="http://creativecommons.org/licenses/by-nc-nd/4.0/">Creative Commons BY-NC-ND 4.0 International License</a>.<br>由<a href="https://scholargeek.github.io/About/">董仕麟</a>创作并维护的<a href="https://scholargeek.github.io/">scholargeek</a>博客采用<a href="http://creativecommons.org/licenses/by-nc-nd/4.0/">创作共用保留署名-非商业-禁止演绎4.0国际许可证</a>。</p>
 <p>本文首发于<a href="https://scholargeek.github.io/">Scholar’s Blog</a>博客，版权所有，侵权必究。</p>
-<p>本文永久链接：<a href="https://scholargeek.github.io/2019/07/20/Hexo%E5%8D%9A%E5%AE%A2%E9%BB%98%E8%AE%A4%E4%B8%BB%E9%A2%98%E7%9A%84%E4%BF%AE%E6%94%B9%E4%B8%8E%E7%BE%8E%E5%8C%966/">https://scholargeek.github.io/2019/07/20/Hexo%E5%8D%9A%E5%AE%A2%E9%BB%98%E8%AE%A4%E4%B8%BB%E9%A2%98%E7%9A%84%E4%BF%AE%E6%94%B9%E4%B8%8E%E7%BE%8E%E5%8C%966/</a></p>
+<p>本文永久链接：<a href="https://scholargeek.github.io/2019/07/21/Hexo%E5%8D%9A%E5%AE%A2%E9%BB%98%E8%AE%A4%E4%B8%BB%E9%A2%98%E7%9A%84%E4%BF%AE%E6%94%B9%E4%B8%8E%E7%BE%8E%E5%8C%967/">https://scholargeek.github.io/2019/07/21/Hexo%E5%8D%9A%E5%AE%A2%E9%BB%98%E8%AE%A4%E4%B8%BB%E9%A2%98%E7%9A%84%E4%BF%AE%E6%94%B9%E4%B8%8E%E7%BE%8E%E5%8C%967/</a></p>
 ]]></content>
       <categories>
         <category>教程</category>
@@ -2589,74 +2622,337 @@ num_140=2
       </tags>
   </entry>
   <entry>
-    <title>Hexo博客默认主题的修改与美化7</title>
-    <url>/2019/07/21/Hexo%E5%8D%9A%E5%AE%A2%E9%BB%98%E8%AE%A4%E4%B8%BB%E9%A2%98%E7%9A%84%E4%BF%AE%E6%94%B9%E4%B8%8E%E7%BE%8E%E5%8C%967/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h1 id="Hexo博客Landscape主题的字体和JS库的优化"><a href="#Hexo博客Landscape主题的字体和JS库的优化" class="headerlink" title="Hexo博客Landscape主题的字体和JS库的优化"></a>Hexo博客Landscape主题的字体和JS库的优化</h1><p>本文将详述如何优化Hexo博客默认主题的jQuery库和字体</p>
+    <title>JAVA学习</title>
+    <url>/2019/02/28/JAVA/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h1 id="JAVA简介"><a href="#JAVA简介" class="headerlink" title="JAVA简介"></a>JAVA简介</h1><p>　　Java是一种广泛使用的计算机编程语言，拥有跨平台、面向对象、泛型编程的特性，广泛应用于企业级Web应用开发和移动应用开发。<br>　　任职于Sun微系统的詹姆斯·高斯林等人于1990年代初开发Java语言的雏形，最初被命名为Oak，目标设置在家用电器等小型系统的编程语言，应用在电视机、电话、闹钟、烤面包机等家用电器的控制和通信。由于这些智能化家电的市场需求没有预期的高，Sun微系统放弃了该项计划。随着1990年代互联网的发展，Sun微系统看见Oak在互联网上应用的前景，于是改造了Oak，于1995年5月以Java的名称正式发布。Java伴随着互联网的迅猛发展而发展，逐渐成为重要的网络编程语言。</p>
 <span id="more"></span>
-<h2 id="jQuery库的优化"><a href="#jQuery库的优化" class="headerlink" title="jQuery库的优化"></a>jQuery库的优化</h2><p>目的：将jQuery替换成百度提供的服务，且在百度的服务暂时不可用时，能够以网站上自带的jQuery作为备份服务。<br>方法：<br>1.修改blog\themes\landscape\layout_partial&#x2F;after-footer.ejs文件，将17行的</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">&lt;script src=&quot;//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js&quot;&gt;&lt;/script&gt;</span><br></pre></td></tr></table></figure>
-<p>替换为：</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">&lt;script src=&quot;http://apps.bdimg.com/libs/jquery/2.0.3/jquery.min.js&quot;&gt;&lt;/script&gt;</span><br><span class="line"></span><br><span class="line">&lt;script type=&quot;text/javascript&quot;&gt;</span><br><span class="line"></span><br><span class="line">//&lt;![CDATA[</span><br><span class="line">if (typeof jQuery == &#x27;undefined&#x27;) &#123;</span><br><span class="line"> document.write(unescape(&quot;%3Cscript src=&#x27;/js/jquery-2.0.3.min.js&#x27; type=&#x27;text/javascript&#x27;%3E%3C/script%3E&quot;));</span><br><span class="line">&#125;</span><br><span class="line">// ]]&gt;</span><br><span class="line"></span><br><span class="line">&lt;/script&gt;</span><br></pre></td></tr></table></figure>
-<p>2.去jQuery官方下载合适版本的jQuery并将其放到themes&#x2F;landscape&#x2F;source&#x2F;js&#x2F;目录下，将其命名为jquery-2.0.3.min.js 最后将该文件开头处的 <del>&#x2F;&#x2F;@ sourceMappingURL&#x3D;jquery-2.0.3.min.map</del> 这一行代码删去，否则会导致博客无法生成。</p>
-<h2 id="字体优化"><a href="#字体优化" class="headerlink" title="字体优化"></a>字体优化</h2><p>目的：优化博客字体，使页面在多个平台上自动显示较合适的字体。<br>方法：1.修改themes&#x2F;landscape&#x2F;source&#x2F;css&#x2F;_variables.styl这一文件，将其中第22行</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">font-sans = &quot;Helvetica Neue&quot;, Helvetica, Arial, sans-serif</span><br></pre></td></tr></table></figure>
-<p>替换为：</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">font-sans = &quot;Helvetica Neue&quot;, &quot;Helvetica&quot;, &quot;Hiragino Sans GB&quot;, &quot;Microsoft YaHei&quot;, &quot;Source Han Sans CN&quot;, &quot;WenQuanYi Micro Hei&quot;, Arial, sans-serif</span><br></pre></td></tr></table></figure>
-<p>2.放弃Google的Source Code Pro等宽字体，修改themes&#x2F;landscape&#x2F;source&#x2F;css&#x2F;_variables.styl文件，将其中第24行</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">font-mono = &quot;Source Code Pro&quot;, Consolas, Monaco, Menlo, Consolas, monospace</span><br></pre></td></tr></table></figure>
-<p>替换为<br>    font-mono &#x3D; Consolas, Monaco, Menlo, monospace<br>3.最后删除引用Google字体的代码，编辑文件themes&#x2F;landscape&#x2F;layout&#x2F;_partial&#x2F;after-footer.ejs，将其中的</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">&lt;link href=&quot;http://fonts.googleapis.com/css?family=Source+Code+Pro&quot; rel=&quot;stylesheet&quot; type=&quot;text/css&quot;&gt;</span><br></pre></td></tr></table></figure>
-<p>删除即可。</p>
+<p>　　Java编程语言的风格十分接近C++语言。继承了C++语言面向对象技术的核心，舍弃了容易引起错误的指针，以引用取代；移除了C++中的运算符重载和多重继承特性，用接口取代；增加垃圾回收器功能。在Java SE 1.5版本中引入了泛型编程、类型安全的枚举、不定长参数和自动装&#x2F;拆箱特性。Sun微系统对Java语言的解释是：“Java编程语言是个简单、面向对象、分布式、解释性、健壮、安全、与系统无关、可移植、高性能、多线程和动态的语言”。Java不同于一般的编译语言或解释型语言。它首先将源代码编译成字节码，再依赖各种不同平台上的虚拟机来解释执行字节码，从而具有“一次编写，到处运行”的跨平台特性。在早期JVM中，这在一定程度上降低了Java程序的运行效率。但在J2SE1.4.2发布后，Java的执行速度有了大幅提升。与传统类型不同，Sun微系统在推出Java时就将其作为开放的技术。全球的Java开发公司被要求所设计的Java软件必须兼容。“Java语言靠群体的力量而非公司的力量”是Sun微系统的口号之一，并获得了广大软件开发商的认同。这与微软公司所倡导的注重精英和封闭式的模式完全不同，此外，微软公司后来推出了与之竞争的.NET平台以及模仿Java的C#语言。后来Sun微系统被甲骨文公司并购，Java也随之成为甲骨文公司的产品。目前，移动操作系统Android大部分的代码采用Java编程语言编程。</p>
+<h2 id="基本信息"><a href="#基本信息" class="headerlink" title="基本信息"></a>基本信息</h2><p><img src="https://s3.bmp.ovh/imgs/2024/04/13/1f145e2cfcd2fe1c.png" alt="Java_logo"></p>
+<p><img src="https://s3.bmp.ovh/imgs/2024/04/13/23e840de9958cd13.jpg" alt="James_Gosling"></p>
+<p>设计者:詹姆斯·高斯林、太阳计算机系统公司<br>发行时间:1995年<br>类型系统:静态、安全、强类型、标明类型<br>许可证:GNU通用公共许可协议、JCP<br>文件扩展名:.java、.class、.jar<br>官方网站:<a href="https://www.java.com/">https://www.java.com/</a></p>
+<h2 id="历史"><a href="#历史" class="headerlink" title="历史"></a>历史</h2><h3 id="开放源代码项目"><a href="#开放源代码项目" class="headerlink" title="开放源代码项目"></a>开放源代码项目</h3><p>　　2006年Sun微系统在JavaOne公布Java 开放源代码项目，并推出OpenJDK计划。Java虚拟机、Java编译器和Java类库以GNU通用公共许可证公开。</p>
+<h3 id="版本历史"><a href="#版本历史" class="headerlink" title="版本历史"></a>版本历史</h3><p>●1995年5月23日，Java语言诞生<br>●1996年1月，第一个JDK-JDK1.0诞生<br>●1996年4月，10个最主要的操作系统供应商申明将在其产品中嵌入JAVA技术<br>●1996年9月，约8.3万个网页应用了JAVA技术来制作<br>●1997年2月18日，JDK1.1发布<br>●1997年4月2日，JavaOne会议召开，参与者逾一万人，创当时全球同类会议规模之纪录<br>●1997年9月，JavaDeveloperConnection社区成员超过十万<br>●1998年2月，JDK1.1被下载超过2,000,000次<br>●1998年12月8日，JAVA2企业平台J2EE发布<br>●1999年6月，Sun微系统发布Java的三个版本：标准版（J2SE）、企业版（J2EE）和微型版（J2ME）<br>●2000年5月8日，JDK1.3发布<br>●2000年5月29日，JDK1.4发布<br>●2001年6月5日，NOKIA宣布，到2003年将出售1亿部支持Java的手机<br>●2001年9月24日，J2EE1.3发布<br>●2002年2月26日，J2SE1.4发布，自此Java的计算能力有了大幅提升<br>●2004年9月30日18:00PM，J2SE1.5发布，成为Java语言发展史上的又一里程碑。为了表示该版本的重要性，J2SE1.5更名为Java SE 5.0<br>●2005年6月，JavaOne大会召开，Sun微系统公开Java SE 6。此时，Java的各种版本已经更名，以取消其中的数字“2”：J2EE更名为Java EE，J2SE更名为Java SE，J2ME更名为Java ME<br>●2006年12月，Sun微系统发布JRE6.0<br>●2009年12月，Sun微系统发布Java EE 6<br>●2010年11月，由于Oracle公司对于Java社群的不友善，因此Apache扬言将退出JCP<br>●2011年7月28日，Oracle公司发布Java SE 7<br>●2014年3月18日，Oracle公司发布Java SE 8<br>●2017年9月21日，Oracle公司发布Java SE 9<br>●2018年3月21日，Oracle公司发布Java SE 10<br>●2018年9月25日，Oracle公司发布Java SE 11 (LTS)<br>●2019年3月，Oracle公司发布Java SE 12<br>●2019年9月，Oracle公司发布Java SE 13<br>●2020年3月，Oracle公司发布Java SE 14<br>●2020年9月，Oracle公司发布Java SE 15<br>●2021年3月，Oracle公司发布Java SE 16<br>●2021年9月，Oracle公司发布Java SE 17<br>●2022年3月，Oracle公司发布Java SE 18<br>●2022年9月，Oracle公司发布Java SE 19<br>●2023年3月，Oracle公司发布Java SE 20</p>
+<h3 id="版本使用"><a href="#版本使用" class="headerlink" title="版本使用"></a>版本使用</h3><p>目前Java提供以下三个版本：<br>●Java Platform, Enterprise Edition（Java EE：Java平台企业版）[常用于Web方向的网站开发]<br>●Java Platform, Standard Edition（Java SE：Java平台标准版）[用于桌面应用的开发，是其他版本的基础]<br>●Java Platform, Micro Edition（Java ME：Java平台微型版）[面向嵌入式等设备应用的开发]</p>
+<h2 id="语言特性"><a href="#语言特性" class="headerlink" title="语言特性"></a>语言特性</h2><p>Java可以实现以下五个目的：<br>●应当使用面向对象程序设计方法学<br>●应当允许同一程序在不同的计算机平台执行<br>●应当包括内置的对计算机网络的支持<br>●应当被设计成安全地执行远端代码<br>●应当易于使用，并借鉴以前那些面向对象语言（如C++）的长处。</p>
+<h3 id="面向对象"><a href="#面向对象" class="headerlink" title="面向对象"></a>面向对象</h3><p>　　Java的特点之一就是面向对象，是程序设计方法的一种。“面向对象程序设计语言”的核心之一就是开发者在设计软件的时候可以使用自定义的类型和关联操作。代码和数据的实际集合体叫做“对象”。一个对象可以想象成绑定了很多“行为（代码）”和“状态（数据）”的物体。对于数据结构的改变需要和代码进行通信然后操作，反之亦然。面向对象设计让大型软件工程的计划和设计变得更容易管理，能增强工程的健康度，减少失败工程的数量。</p>
+<h3 id="跨平台性"><a href="#跨平台性" class="headerlink" title="跨平台性"></a>跨平台性</h3><p>　　跨平台性是Java主要的特性之一，跨平台使得用Java语言编写的程序可以在编译后不用经过任何更改，就能在任何硬件设备条件下运行。这个特性经常被称为“一次编译，到处运行”。</p>
+<h3 id="自动垃圾回收-Garbage-Collection"><a href="#自动垃圾回收-Garbage-Collection" class="headerlink" title="自动垃圾回收(Garbage Collection)"></a>自动垃圾回收(Garbage Collection)</h3><p>　　C++语言被用户诟病的原因之一是大多数C++编译器不支持垃圾收集机制。通常使用C++编程的时候，程序员于程序中初始化对象时，会在主机存储器堆栈上分配一块存储器与地址，当不需要此对象时，进行析构或者删除的时候再释放分配的存储器地址。如果对象是在堆栈上分配的，而程序员又忘记进行删除，那么就会造成存储器泄漏（Memory Leak）。长此以往，程序运行的时候可能会生成很多不清除的垃圾，浪费了不必要的存储器空间。而且如果同一存储器地址被删除两次的话，程序会变得不稳定，甚至崩溃。因此有经验的C++程序员都会在删除之后将指针重置为NULL，然后在删除之前先判断指针是否为NULL。C++中也可以使用“智能指针”（Smart Pointer）或者使用C++托管扩展编译器的方法来实现自动化存储器释放，智能指针可以在标准类库中找到，而C++托管扩展被微软的Visual C++ 7.0及以上版本所支持。智能指针的优点是不需引入缓慢的垃圾收集机制，而且可以不考虑线程安全的问题，但是缺点是如果不善使用智能指针的话，性能有可能不如垃圾收集机制，而且不断地分配和释放存储器可能造成存储器碎片，需要手动对堆进行压缩。除此之外，由于智能指针是一个基于模板的功能，所以没有经验的程序员在需要使用多态特性进行自动清理时也可能束手无策。<br>　　Java语言则不同，上述的情况被自动垃圾收集功能自动处理。对象的建立和放置都是在存储器堆栈上面进行的。当一个对象没有任何引用的时候，Java的自动垃圾收集机制就发挥作用，自动删除这个对象所占用的空间，释放存储器以避免存储器泄漏。注意程序员不需要修改finalize方法，自动垃圾收集也会发生作用。但是存储器泄漏并不是就此避免了，当程序员疏忽大意地忘记解除一个对象不应该有的引用时，存储器泄漏仍然不可避免。<br>　　不同厂商、不同版本的JVM中的存储器垃圾回收机制并不完全一样，通常越新版本的存储器回收机制越快，IBM、BEA、Sun微系统等等开发JVM的公司都曾宣称过自己制造出了世界上最快的JVM，JVM性能的世界纪录也在不断的被打破并提高。IBM有一篇有关Java存储器回收机制比不激活垃圾收集机制的C++存储器处理快数倍的技术文章，而著名的Java技术书籍《Java编程思想》（Thinking in Java）也有一段论述Java存储器及性能达到甚至超过C++的章节。</p>
+<h2 id="运行机制"><a href="#运行机制" class="headerlink" title="运行机制"></a>运行机制</h2><h3 id="运行流程"><a href="#运行流程" class="headerlink" title="运行流程"></a>运行流程</h3><p>　　Java是编译型语言与解释型语言的结合体。Java程序运行时，必须经过编译和运行两个步骤。首先对后缀名为.java的源文件进行编译，生成后缀名为.class的字节码文件。然后java虚拟机对字节码文件进行解释执行，并将结果显示出来。<br>　　编译运行过程如下：<br>①编写Hello World.java文件。</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">HelloWorld</span> &#123;</span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title function_">main</span><span class="params">(String[] args)</span> &#123;</span><br><span class="line">        System.out.println(<span class="string">&quot;Hello World&quot;</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>②使用“javac Hello World.java”命令运行Java编译器编译HelloWorld.java文件，编译结束后生成一个名为HelloWorld.class的字节码文件。<br>③使用“java HelloWorld”命令运行Java虚拟机，Java虚拟机首先将编译好的字节码文件加载到内存，这个过程称为类加载，由类加载器完成。然后Java虚拟机针对加载到内存中的Java类进行解释执行，输出运行结果。</p>
+<p><img src="https://s3.bmp.ovh/imgs/2024/04/13/01c5cff4191ff4bb.png" alt="JAVA运行机制"><br>　　整个过程Java程序是由虚拟机负责解释执行的，而并非操作系统。这样就可以实现Java程序的跨平台，即在不同的操作系统上安装不同版本的Java虚拟机就可以运行相同的Java程序编译好的字节码文件。</p>
+<h3 id="JVM-Java-Virtual-Machine"><a href="#JVM-Java-Virtual-Machine" class="headerlink" title="JVM(Java Virtual Machine)"></a>JVM(Java Virtual Machine)</h3><p>1.JVM即Java虚拟机，是Java字节码执行的引擎，为java程序的执行提供必要的支持，能优化java字节码，使之转换成效率更高的机器指令。程序员编写的程序最终都要在JVM上执行，JVM中类的装载是由类加载器（ClassLoader）和它的子类来实现的。<br>2.ClassLoader是java运行时一个重要的系统组件，负责在运行时查找和装入类文件的类。<br>3.JVM屏蔽了与具体操作系统平台相关的信息，从而实现了java程序只需生成在JVM上运行的字节码文件(class文件)，就可以在多种平台上不加修改地运行。不同平台对应着不同的JVM，在执行字节码时，JVM负责将每一条要执行的字节码送给解释器，解释器再将其翻译成特定平台环境的机器指令并执行。java语言最重要的特点就是跨平台运行，使用JVM就是为了支持与操作系统无关，实现跨平台运行。</p>
+<h3 id="ClassLoader"><a href="#ClassLoader" class="headerlink" title="ClassLoader"></a>ClassLoader</h3><p>1.是JVM实现的一部分，包括bootstrapclassloader（启动类加载器）<br>2.ClassLoader在JVM运行的时候加载java核心的API，通过java程序实现两个ClassLoader:<br>①ExtClassLoader，它的作用是用来加载java的扩展API，也就是lib\ext类；<br>②AppClassLoader，用来加载用户机器上CLASSPATH设置目录中的Class.<br>3.ClassLoader加载流程：当运行一个程序的时候，JVM启动，运行bootstrapclassloader，该ClassLoader加载java核心API，然后调用ExtClassLoader加载扩展API，最后AppClassLoader加载CLASSPATH目录下定义的Class.</p>
+<h3 id="JRE-Java-Runtime-Environment"><a href="#JRE-Java-Runtime-Environment" class="headerlink" title="JRE(Java Runtime Environment)"></a>JRE(Java Runtime Environment)</h3><p>JRE即java运行时环境，它是java程序运行所必须的环境集合，主要由java虚拟机、java平台核心类和若干支持文件组成。其不包含开发工具、编译器、调试器以及其他工具。<br>　　在执行java程序的时候，操作系统会按照下面顺序寻找JRE环境。<br>①先查找当前目录下有没有JRE<br>②再查找父目录下有没有JRE<br>③接着在环境变量PATH制定的路径中查找JRE<br>④注册表查看CurrentVersion的键值指向哪个JRE<br>　　JRE自带的基础类库主要在JRE\LIB\rt.jar文件中。在程序运行时，JRE由ClassLoader(类加载器)负责查找和加载程序引用到的基类库和其他类库。基础类库，Classloader会自动到rt.jar的位置；其他的类库，ClassLoader在环境变量CLASSPATH制定的路径中搜索。</p>
+<h3 id="JDK-Java-Development-Kit"><a href="#JDK-Java-Development-Kit" class="headerlink" title="JDK(Java Development Kit)"></a>JDK(Java Development Kit)</h3><p>JDK即java开发工具包。JDK是java的核心，它包括java运行环境、一系列java工具和java基础的类库（rt.jar）。JDK包含JRE的全部内容外，还包含开发者用以编译、调试和运行java程序的工具。</p>
+<h3 id="JDK，JRE和JVM之间的关系"><a href="#JDK，JRE和JVM之间的关系" class="headerlink" title="JDK，JRE和JVM之间的关系"></a>JDK，JRE和JVM之间的关系</h3><p>JDK包含了JRE和JVM，JRE包含了JVM。JDK是开发Java程序必备的工具，而JRE则是Java程序运行的必备环境。<br><img src="https://s3.bmp.ovh/imgs/2024/04/13/5c5a1870d15ff647.png" alt="JDK,JRE,JVM之间的关系"></p>
+<h2 id="基本语法"><a href="#基本语法" class="headerlink" title="基本语法"></a>基本语法</h2><p>●大小写敏感：Java是大小写敏感的，这就意味着标识符<code>Hello</code>与<code>hello</code>是不同的。<br>●类名：对于所有的类来说，类名的首字母应该大写。如果类名由若干单词组成，那么每个单词的首字母应该大写，例如<code>MyFirstJavaClass</code>。<br>●方法名：所有的方法名都应该以小写字母开头。如果方法名含有若干单词，则后面的每个单词首字母大写，例如<code>myFirstJavaMethod</code>。<br>●源文件名：源文件名必须和文件内名字唯一且公开(由public 关键词修饰)的类名相同。当保存文件的时候，你应该使用该类名作为文件名保存（切记Java是大小写敏感的），文件名的后缀为<code>.java</code>。（如果文件名和类名不相同则会导致编译错误）。<br>●主方法入口：所有的Java程序由<code>public static void main(String[] args)</code>方法开始执行。</p>
+<h2 id="Java关键字"><a href="#Java关键字" class="headerlink" title="Java关键字"></a>Java关键字</h2><p>这些关键字不能用于常量、变量、和任何标识符的名称。</p>
+<table>
+<thead>
+<tr>
+<th>类别</th>
+<th>关键字</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>访问控制</td>
+<td>private</td>
+<td>私有的</td>
+</tr>
+<tr>
+<td>protected</td>
+<td>受保护的</td>
+<td></td>
+</tr>
+<tr>
+<td>public</td>
+<td>公共的</td>
+<td></td>
+</tr>
+<tr>
+<td>类、方法和变量修饰符</td>
+<td>abstract</td>
+<td>声明抽象</td>
+</tr>
+<tr>
+<td>class</td>
+<td>类</td>
+<td></td>
+</tr>
+<tr>
+<td>extends</td>
+<td>扩充,继承</td>
+<td></td>
+</tr>
+<tr>
+<td>final</td>
+<td>最终值,不可改变的</td>
+<td></td>
+</tr>
+<tr>
+<td>implements</td>
+<td>实现（接口）</td>
+<td></td>
+</tr>
+<tr>
+<td>interface</td>
+<td>接口</td>
+<td></td>
+</tr>
+<tr>
+<td>native</td>
+<td>本地，原生方法（非Java实现）</td>
+<td></td>
+</tr>
+<tr>
+<td>new</td>
+<td>新,创建</td>
+<td></td>
+</tr>
+<tr>
+<td>static</td>
+<td>静态</td>
+<td></td>
+</tr>
+<tr>
+<td>strictfp</td>
+<td>严格,精准</td>
+<td></td>
+</tr>
+<tr>
+<td>synchronized</td>
+<td>线程,同步</td>
+<td></td>
+</tr>
+<tr>
+<td>transient</td>
+<td>短暂</td>
+<td></td>
+</tr>
+<tr>
+<td>volatile</td>
+<td>易失</td>
+<td></td>
+</tr>
+<tr>
+<td>程序控制语句</td>
+<td>break</td>
+<td>跳出循环</td>
+</tr>
+<tr>
+<td>case</td>
+<td>定义一个值以供switch选择</td>
+<td></td>
+</tr>
+<tr>
+<td>continue</td>
+<td>继续</td>
+<td></td>
+</tr>
+<tr>
+<td>default</td>
+<td>默认</td>
+<td></td>
+</tr>
+<tr>
+<td>do</td>
+<td>运行</td>
+<td></td>
+</tr>
+<tr>
+<td>else</td>
+<td>否则</td>
+<td></td>
+</tr>
+<tr>
+<td>for</td>
+<td>循环</td>
+<td></td>
+</tr>
+<tr>
+<td>if</td>
+<td>如果</td>
+<td></td>
+</tr>
+<tr>
+<td>instanceof</td>
+<td>实例</td>
+<td></td>
+</tr>
+<tr>
+<td>return</td>
+<td>返回</td>
+<td></td>
+</tr>
+<tr>
+<td>switch</td>
+<td>根据值选择执行</td>
+<td></td>
+</tr>
+<tr>
+<td>while</td>
+<td>循环</td>
+<td></td>
+</tr>
+<tr>
+<td>错误处理</td>
+<td>assert</td>
+<td>断言表达式是否为真</td>
+</tr>
+<tr>
+<td>catch</td>
+<td>捕捉异常</td>
+<td></td>
+</tr>
+<tr>
+<td>finally</td>
+<td>有没有异常都执行</td>
+<td></td>
+</tr>
+<tr>
+<td>throw</td>
+<td>抛出一个异常对象</td>
+<td></td>
+</tr>
+<tr>
+<td>throws</td>
+<td>声明一个异常可能被抛出</td>
+<td></td>
+</tr>
+<tr>
+<td>try</td>
+<td>捕获异常</td>
+<td></td>
+</tr>
+<tr>
+<td>包相关</td>
+<td>import</td>
+<td>引入</td>
+</tr>
+<tr>
+<td>package</td>
+<td>包</td>
+<td></td>
+</tr>
+<tr>
+<td>基本类型</td>
+<td>boolean</td>
+<td>布尔型</td>
+</tr>
+<tr>
+<td>byte</td>
+<td>字节型</td>
+<td></td>
+</tr>
+<tr>
+<td>char</td>
+<td>字符型</td>
+<td></td>
+</tr>
+<tr>
+<td>double</td>
+<td>双精度浮点</td>
+<td></td>
+</tr>
+<tr>
+<td>float</td>
+<td>单精度浮点</td>
+<td></td>
+</tr>
+<tr>
+<td>int</td>
+<td>整型</td>
+<td></td>
+</tr>
+<tr>
+<td>long</td>
+<td>长整型</td>
+<td></td>
+</tr>
+<tr>
+<td>short</td>
+<td>短整型</td>
+<td></td>
+</tr>
+<tr>
+<td>null</td>
+<td>空</td>
+<td></td>
+</tr>
+<tr>
+<td>变量引用</td>
+<td>super</td>
+<td>父类,超类</td>
+</tr>
+<tr>
+<td>this</td>
+<td>本类</td>
+<td></td>
+</tr>
+<tr>
+<td>void</td>
+<td>无返回值</td>
+<td></td>
+</tr>
+<tr>
+<td>保留关键字</td>
+<td>goto</td>
+<td>是关键字，但不能使用</td>
+</tr>
+<tr>
+<td>const</td>
+<td>是关键字，但不能使用</td>
+<td></td>
+</tr>
+</tbody></table>
 <hr>
 <p><strong>版权声明</strong></p>
 <p><img src="/images/cc.png"></p>
 <p><a href="https://scholargeek.github.io/">Scholar’s Blog</a> by <a href="https://scholargeek.github.io/About/">scholargeek</a> is licensed under a <a href="http://creativecommons.org/licenses/by-nc-nd/4.0/">Creative Commons BY-NC-ND 4.0 International License</a>.<br>由<a href="https://scholargeek.github.io/About/">董仕麟</a>创作并维护的<a href="https://scholargeek.github.io/">scholargeek</a>博客采用<a href="http://creativecommons.org/licenses/by-nc-nd/4.0/">创作共用保留署名-非商业-禁止演绎4.0国际许可证</a>。</p>
 <p>本文首发于<a href="https://scholargeek.github.io/">Scholar’s Blog</a>博客，版权所有，侵权必究。</p>
-<p>本文永久链接：<a href="https://scholargeek.github.io/2019/07/21/Hexo%E5%8D%9A%E5%AE%A2%E9%BB%98%E8%AE%A4%E4%B8%BB%E9%A2%98%E7%9A%84%E4%BF%AE%E6%94%B9%E4%B8%8E%E7%BE%8E%E5%8C%967/">https://scholargeek.github.io/2019/07/21/Hexo%E5%8D%9A%E5%AE%A2%E9%BB%98%E8%AE%A4%E4%B8%BB%E9%A2%98%E7%9A%84%E4%BF%AE%E6%94%B9%E4%B8%8E%E7%BE%8E%E5%8C%967/</a></p>
-]]></content>
-      <categories>
-        <category>教程</category>
-      </categories>
-      <tags>
-        <tag>Hexo</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Linux简介及应用</title>
-    <url>/2018/08/28/Linux/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h1 id="Linux简介"><a href="#Linux简介" class="headerlink" title="Linux简介"></a>Linux简介</h1><p>　　Linux是一种自由和开放源码的类UNIX操作系统。其操作系统的内核由林纳斯·托瓦兹(Linus Torvalds)在1991年10月5日首次发布，内核加上用户空间的应用程序即组成了Linux操作系统。Linux也是自由软件和开放源代码软件发展中最著名的例子。只要遵循GNU 通用公共许可证（GPL），任何个人和机构都可以自由地使用Linux的所有底层源代码，也可以自由地修改和再发布。除了一部分专家之外，大多数人都是直接使用Linux 发行版，而非自己选择每一样组件或自行设置。</p>
-<span id="more"></span>
-
-<p>　　Linux严格意义上是指操作系统的内核，因操作系统中包含了许多用户图形接口和其他实用工具。如今Linux常用来指基于Linux的完整操作系统，内核则改以Linux内核称之。由于这些支持用户空间的系统工具和库主要由理查德·斯托曼于1983年发起的GNU计划提供，自由软件基金会提议将其组合系统命名为GNU&#x2F;Linux，但Linux不属于GNU计划，这个名称并没有得到社群的一致认同。<br>　　Linux最初是作为支持英特尔x86架构的个人电脑中一个自由操作系统。目前Linux已经被移植到更多的计算机硬件平台，远远超出其他任何操作系统。Linux可以运行在服务器和其他大型平台之上，如大型计算机和超级计算机。世界上500个最快的超级计算机已100％运行Linux发行版或变种。Linux也广泛应用在嵌入式系统上，如手机（Mobile Phone）、平板电脑（Tablet）、路由器（Router）、电视（TV）和电子游戏机等。在移动设备上广泛使用的Android操作系统就是建立在Linux内核之上。<br>　　通常情况下，Linux被打包成供个人计算机和服务器使用的Linux发行版。一些流行的主流Linux发行版，包括Debian（及其派生版本Ubuntu、Linux Mint）、Fedora（及其相关版本Red Hat Enterprise Linux）和openSUSE等。Linux发行版包含Linux内核和支撑内核的实用程序和库，通常还带有大量可以满足各类需求的应用程序。个人计算机使用的Linux发行版通常包含X Window和一个相应的桌面环境，如GNOME或KDE。桌面Linux操作系统常用的应用程序，包括Firefox网页浏览器、LibreOffice办公软件、GIMP图像处理工具等。由于Linux是自由软件，任何人都可以创建一个符合自己需求的Linux发行版。</p>
-<h2 id="基本信息"><a href="#基本信息" class="headerlink" title="基本信息"></a>基本信息</h2><p><img src="https://s3.bmp.ovh/imgs/2024/01/23/951e240043419af2.png" alt="Tux"></p>
-<center>官方的吉祥物:Tux(于1996年由Larry Ewing创造)</center>
-
-<p><img src="https://s3.bmp.ovh/imgs/2024/01/23/8aa0fb1bfab7f61c.jpg" alt="Linus_Torvalds"></p>
-<center>开发者:林纳斯·托瓦兹</center>
-
-<p>编程语言:C语言、少量汇编语言、Rust语言(自6.1版开始)<br>操作系统家族:类Unix系统<br>源码模式:自由及开放源代码软件<br>首次发布版本:1991年的0.01版（代号“Freax”）<br>市场取向:桌面、服务器、嵌入式设备、移动设备<br>支持平台:Alpha, ARC, ARM, C6x, H8&#x2F;300, Hexagon, Itanium, m68k, Microblaze, MIPS, Nios II, OpenRISC,PA-RISC, PowerPC, RISC-V, s390, SuperH、SPARC, Unicore32、x86(含x86-64), Xtensa等<br>内核类别:宏内核<br>默认用户界面:命令行、图形界面（X窗口系统，Wayland）等<br>官方网站:<a href="https://www.kernel.org/">https://www.kernel.org/</a></p>
-<h1 id="历史"><a href="#历史" class="headerlink" title="历史"></a>历史</h1><h2 id="UNIX渊源"><a href="#UNIX渊源" class="headerlink" title="UNIX渊源"></a>UNIX渊源</h2><pre><code>UNIX操作系统是美国AT&amp;T公司贝尔实验室于1969年完成的操作系统。最早由肯·汤普逊（Ken Thompson），丹尼斯·里奇（Dennis Ritchie），道格拉斯·麦克罗伊（Douglas McIlroy），和乔伊·欧桑纳于1969年在AT&amp;T贝尔实验室开发。于1971年首次发布，最初是完全用汇编语言编写。在1973年用一个重要的开拓性的方法，Unix被丹尼斯·里奇用编程语言C（内核和I/O例外）重新编写。高级语言编写的操作系统具有更佳的兼容性，能更容易地移植到不同的计算机平台。
-</code></pre>
-<p>　　1983年，理查德·马修·斯托曼创立GNU计划。这个计划的目标是为了发展一个完全自由的类Unix操作系统。自1984年发起这个计划以来，在1985年，理查德·马修·斯托曼发起自由软件基金会并且在1989年撰写GPL。1990年代早期，GNU开始大量地产生或收集各种系统所必备的组件，如函式库、编译器、调试工具、文本编辑器，以及Unix的用户界面（Unix shell）；但是一些底层环境，如硬件驱动、守护进程、系统内核（kernel）仍然不完整和陷于停顿，GNU计划中是在Mach微内核的架构之上开发系统内核，也就是所谓的GNU Hurd，但是这个基于Mach的设计异常复杂，发展进度则相对缓慢。林纳斯·托瓦兹曾说过如果GNU内核在1991年时可以用，他不会自己去写一个。</p>
-<h2 id="创立"><a href="#创立" class="headerlink" title="创立"></a>创立</h2><p>　　1991年，林纳斯·托瓦兹在赫尔辛基大学上学时就对操作系统很好奇。他对MINIX只允许在教育上使用很不满（因在当时MINIX限制任何商业使用），于是他便开始写他自己的操作系统，这就是后来的Linux内核。<br>　　林纳斯·托瓦兹开始在MINIX上开发Linux内核，为MINIX写的软件也可以在Linux内核上使用。后来使用GNU软件代替MINIX的软件，因为使用从GNU系统来的源代码可以自由使用，这对Linux的发展有益。使用GNU GPL协议的源代码可以被其他项目所使用，只要这些项目使用同样的协议发布。为了让Linux可以在商业上使用，林纳斯·托瓦兹决定更改他原来的协议（原协议限制商业使用），以GNU GPL协议来代替。之后许多开发者致力融合GNU元素到Linux中，做出一个有完整功能的、自由的操作系统。</p>
-<h2 id="命名"><a href="#命名" class="headerlink" title="命名"></a>命名</h2><p>　　Linux的第一个版本在1991年9月被大学FTP server管理员Ari Lemmke发布在互联网上，最初Torvalds称这个内核的名称为”Freax”，意思是自由(“free”)和奇异(“freak”)的结合词，并且附上”X”这个常用的字母，以配合所谓的类Unix的系统。但是FTP服务器管理员嫌“Freax”的名称不好听，把内核的称呼改成“Linux”，当时仅有10000行代码，仍必须执行于Minix操作系统之上，并且必须使用硬盘引导；随后在10月份第二个版本（0.02版）发布，同时这位芬兰赫尔辛基的大学生在comp.os.minix上发布一则消息:<br>    Hello everybody out there using minix- I’m doing a (free) operation system (just a hobby, won’t be big and professional like gnu) for 386(486) AT clones.<br>　　Linux的标志和吉祥物是一只名字叫做Tux的企鹅。标志的由来是因为林纳斯在澳洲时曾被一座动物园里的小蓝企鹅咬了一口，便选择企鹅作为Linux的标志;但更容易被接受的说法是：企鹅代表南极，而南极又是全世界所共有的一块陆地，即代表Linux是所有人的Linux。</p>
-<h2 id="发展现状"><a href="#发展现状" class="headerlink" title="发展现状"></a>发展现状</h2><p>　　1994年3月，Linux1.0版正式发布，Marc Ewing成立Red Hat软件公司，成为最著名的Linux经销商之一。早期Linux的引导管理程序(boot loader)使用LILO(Linux Loader)，早期的LILO存在着一些缺陷，例如无法识别1024柱面以后的硬盘空间，后来的GRUB(GRand Unified Bootloader)克服这些缺点，具有“动态搜索内核文件”的功能，可以让用户在引导的时候，自行编辑引导设置系统文件，透过ext2或ext3文件系统中加载Linux Kernel（GRUB通过不同的文件系统驱动可以识别几乎所有Linux支持的文件系统，因此可以使用很多文件系统来格式化内核文件所在的扇区，并不局限于ext文件系统）。<br>　　目前由Linus Torvalds带领下，众多开发人员共同参与开发和维护Linux内核。理查德·斯托曼领导的自由软件基金会，继续提供大量支持Linux内核的GNU组件。一些个人和企业开发的第三方的非GNU组件也提供对Linux内核的支持，这些第三方组件包括大量的作品，有内核模块和用户应用程序和库等内容。Linux社区或企业都推出一些重要的Linux发行版，包括Linux内核、GNU组件、非GNU组件，以及其他形式的软件包管理系统软件。</p>
-<h2 id="Linux发行版发展图"><a href="#Linux发行版发展图" class="headerlink" title="Linux发行版发展图"></a>Linux发行版发展图</h2><p>　　<img src="https://s3.bmp.ovh/imgs/2024/01/23/5976ccb15be750d6.png" alt="Linux发行版发展图"></p>
-<h1 id="系统架构"><a href="#系统架构" class="headerlink" title="系统架构"></a>系统架构</h1><p>　　Linux内核支持各种硬件架构，为软件提供公共平台。基于Linux的系统是一个模块化的类Unix操作系统。Linux操作系统的大部分设计思想来源于20世纪70年代到80年代的Unix操作系统所建立的基本设计思想。Linux系统使用宏内核，由Linux内核负责处理进程控制、网络，以及外围设备和文件系统的访问。在系统运行的时候，设备驱动程序要么与内核直接集成，要么以加载模块形式添加。<br>　　Linux具有设备独立性，它内核具有高度适应能力，给系统提供更高级的功能。GNU用户界面组件是大多数Linux操作系统的重要组成部分，提供常用的C函数库，Shell，还有许多常见的Unix实用工具，可以完成许多基本的操作系统任务。大多数Linux系统使用的图形用户界面建立在X窗口系统之上，由X窗口(XWindow)系统通过软件工具及架构协议来建立操作系统所用的图形用户界面。</p>
-<h2 id="Linux操作系统包含的一些组件"><a href="#Linux操作系统包含的一些组件" class="headerlink" title="Linux操作系统包含的一些组件"></a>Linux操作系统包含的一些组件</h2><p>　　启动程序：例如GRUB或LILO。该程序在计算机开机启动的时候运行，并将Linux内核加载到内存中。<br>　　init程序：init是由Linux内核创建的第一个进程，称为根进程，所有的系统进程都是它的子进程，即所有的进程都是通过init启动。init启动的进程如系统服务和登录提示。<br>　　软件库包(含代码)：可以通过运行的进程在Linux系统上使用ELF格式来执行文件，负责管理库使用的动态链接器是“ld-linux.so”。Linux系统上最常用的软件库是GNU C库。<br>　　用户界面程序：如命令行Shell或窗口环境。</p>
-<h1 id="Linux的应用"><a href="#Linux的应用" class="headerlink" title="Linux的应用"></a>Linux的应用</h1><p>　　今天各种场合都有使用各种Linux发行版，从嵌入式设备到超级计算机（Super Computer），并且在服务器领域确定了地位，通常服务器使用LAMP组合。基于其低廉成本与高度可设置性，Linux常常被应用于嵌入式系统，例如机顶盒、移动电话及移动设备等。在移动电话上，基于Linux的Android已经成为IOS的主要竞争者；而在移动设备上，则成为Windows CE与Palm OS之外另一个选择。目前流行的TiVo数字摄影机使用了经过定制后的Linux。此外，有不少硬件式的网络防火墙及路由器，例如部分LinkSys的产品，其内部都是使用Linux来驱动、并采用了操作系统提供的防火墙及路由功能。</p>
-<hr>
-<p><strong>版权声明</strong></p>
-<p><img src="/images/cc.png"></p>
-<p><a href="https://scholargeek.github.io/">Scholar’s Blog</a> by <a href="https://scholargeek.github.io/About/">scholargeek</a> is licensed under a <a href="http://creativecommons.org/licenses/by-nc-nd/4.0/">Creative Commons BY-NC-ND 4.0 International License</a>.<br>由<a href="https://scholargeek.github.io/About/">董仕麟</a>创作并维护的<a href="https://scholargeek.github.io/">scholargeek</a>博客采用<a href="http://creativecommons.org/licenses/by-nc-nd/4.0/">创作共用保留署名-非商业-禁止演绎4.0国际许可证</a>。</p>
-<p>本文首发于<a href="https://scholargeek.github.io/">Scholar’s Blog</a>博客，版权所有，侵权必究。</p>
-<p>本文永久链接：<a href="https://scholargeek.github.io/2018/08/28/Linux/">https://scholargeek.github.io/2018/08/28/Linux/</a></p>
+<p>本文永久链接：<a href="https://scholargeek.github.io/2019/02/28/JAVA/">https://scholargeek.github.io/2019/02/28/JAVA/</a></p>
 ]]></content>
       <categories>
         <category>编程</category>
       </categories>
       <tags>
-        <tag>Linux</tag>
+        <tag>JAVA</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>JavaScript学习</title>
+    <url>/2023/03/06/JavaScript/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h1 id="JavaScript简介"><a href="#JavaScript简介" class="headerlink" title="JavaScript简介"></a>JavaScript简介</h1><p>　　JavaScript（缩写为JS）是一门基于原型和头等函数的多范式高级解释型编程语言，它支持面向对象程序设计、指令式编程和函数式编程。它提供方法来操控文本、数组、日期以及正则表达式等。不支持I&#x2F;O，比如网络、存储和图形等，但这些都可以由它的宿主环境提供支持。它由Ecma通过ECMAScript实现语言的标准化。目前，它被世界上的绝大多数网站所使用，也被世界主流浏览器（Chrome、Firefox、Safari和Opera）所支持。</p>
+<span id="more"></span>
+<p>　　JavaScript与Java在名字和语法上都很相似，但这两门编程语言从设计之初就有很大不同。JavaScript在语言设计上主要受到了Self（一种基于原型的编程语言）和Scheme（一门函数式编程语言）的影响，在语法结构上它和C语言很相似（如if条件语句、switch语句、while循环和do-while循环等）。对于客户端来说，JavaScript通常被实现为一门解释语言，但如今它已经可以被即时编译（JIT）。随着HTML5和CSS3语言标准的推行，它还可以用于游戏、桌面和移动应用程序的开发，以及在服务器端网络环境运行（如Node.js）。</p>
+<h2 id="基本信息"><a href="#基本信息" class="headerlink" title="基本信息"></a>基本信息</h2><p>编程范型:事件驱动、函数式、指令式<br>设计者:创造者布兰登·艾克及ECMAScript规范的其他关键贡献者<br>发行时间:1995年12月4日<br>类型系统:动态类型、鸭子类型<br>文件扩展名:.js、.cjs、.mjs<br>官方网站:<a href="https://www.ecma-international.org/publications-and-standards/standards/ecma-262">https://www.ecma-international.org/publications-and-standards/standards/ecma-262</a></p>
+<h2 id="历史"><a href="#历史" class="headerlink" title="历史"></a>历史</h2><h3 id="始于网景"><a href="#始于网景" class="headerlink" title="始于网景"></a>始于网景</h3><p>　　1993年，美国国家超级计算机应用中心(NCSA)发表了NCSA Mosaic，这是最早流行的图形接口网页浏览器，它在万维网的普及上发挥了重要作用。1994年，Mosaic的主要开发人员创立了Netscape公司，并雇用了许多原来的NCSA Mosaic开发者用来开发Netscape Navigator，该公司的目标是取代NCSA Mosaic成为世界第一的网页浏览器。在四个月内，已经占据了四分之三的浏览器市场，并成为1990年代互联网的主要浏览器。<br>　　在网络发展的这些年，网页只能是静态的，缺乏在浏览器中加载网页后的动态行为能力。公司的创始人马克·安德森认为HTML需要一种胶水语言，让网页设计师和兼职程序员可以很容易地使用它来组装图片和插件之类的组件，且代码可以直接编写在网页标记中。1995年，网景招募了布兰登·艾克，目标是把Scheme语言嵌入到Netscape Navigator浏览器中。但更早之前，网景已经跟昇阳合作，计划在Netscape Navigator中嵌入Java语言，这时网景内部产生激烈的争论，网景公司管理层很快决定，最佳的方案是由艾克设计一种新的语言，其语法类似于Java，而不像Scheme或其他现存的脚本语言。为了在其他竞争提案中捍卫JavaScript这个想法，公司需要有一个可以运作的原型。艾克在1995年5月仅花了十天时间就把原型设计出来了。最初命名为Mocha，1995年9月在Netscape Navigator 2.0的Beta版中改名为LiveScript，同年12月，Netscape Navigator 2.0 Beta 3中部署时被重命名为JavaScript。当时网景公司与昇阳电脑公司组成的开发联盟为了让这门语言搭上Java这个编程语言“热词”，因此将其临时改名为JavaScript，日后这成为大众对这门语言有诸多误解的原因之一。</p>
+<h3 id="微软采纳"><a href="#微软采纳" class="headerlink" title="微软采纳"></a>微软采纳</h3><p>　　微软公司于1995年首次推出Internet Explorer，引发了与Netscape的浏览器大战。微软对Netscape Navigator解释器进行了逆向工程，创建了JScript，以与处于市场领导地位的网景产品同台竞争。JScript也是一种JavaScript实现，这两个JavaScript语言版本在浏览器端共存意味着语言标准化的缺失。发展初期，JavaScript的标准并未确定，同期就有网景的JavaScript和微软的JScript。除此之外，微软也在网页技术上加入了不少专属对象，使不少网页使用非微软平台及浏览器无法正常显示。这导致在浏览器大战期间网页设计者通常会把“用Netscape可达到最佳效果”或“用IE可达到最佳效果”的标志放在主页。</p>
+<h3 id="标准化与增长"><a href="#标准化与增长" class="headerlink" title="标准化与增长"></a>标准化与增长</h3><p>　　1996年11月，网景正式向ECMA（欧洲计算机制造商协会）提交语言标准。1997年6月，ECMA以JavaScript语言为基础制定了ECMAScript标准规范ECMA-262。JavaScript成为了ECMAScript最著名的实现之一。除此之外，ActionScript和JScript也都是ECMAScript规范的实现语言。尽管JavaScript作为给非程序人员的脚本语言，而非作为给程序人员的编程语言来推广和宣传，但是JavaScript具有非常丰富的特性。<br>　　在21世纪初Internet Explorer占主导地位期间，客户端脚本停滞不前。这在2004年开始改变，当时Netscape的继任者Mozilla发布了Firefox浏览器。Firefox受到许多人的好评，从Internet Explorer获得了巨大的市场份额。2005年，Mozilla加入了ECMA International，并开始研究ECMAScript for XML（E4X）标准。这导致Mozilla与Macromedia（后来被Adobe Systems收购）合作，他们正在用基于ECMAScript 4草案的ActionScript 3语言实现E4X。目标是将ActionScript 3标准化为新的ECMAScript 4。为此，Adobe Systems将Tamarin实现作为开源项目发布。然而，Tamarin和ActionScript 3与既定的客户端脚本太不同，如果没有微软的合作，ECMAScript 4从未获取成果。与此同时，与ECMA工作无关的开源社区正在发生非常重要的发展。2005年，Jesse James Garrett发布了一份白皮书，其中他创造了Ajax一词，并描述了一套技术，其中JavaScript是骨干，用于创建可以在后台加载数据的Web应用程序，避免了重新加载整页的需要。这引发了JavaScript的复兴时期，由开源库和围绕它们形成的社区带头。创建了许多新库，包括jQuery、Prototype、Dojo Toolkit和MooTools。<br>　　谷歌于2008年首次推出Chrome浏览器，其V8 JavaScript引擎比竞争对手更快。关键的创新是及时编译（JIT），因此其他浏览器供应商需要为JIT彻底改革他们的引擎。<br>　　2008年7月，这些不同的团体聚集在一起，在奥斯陆举行会议。这导致在2009年初达成了最终协议，将所有相关工作结合起来，推动语言向前发展。使得2009年12月发布了ECMAScript 5标准。</p>
+<h3 id="走向成熟"><a href="#走向成熟" class="headerlink" title="走向成熟"></a>走向成熟</h3><p>　　关于该语言雄心勃勃的工作持续了数年，最终随着 2015 年ECMAScript 6的发布而正式形成了广泛的补充和改进。Ryan Dahl在 2009 年创建的Node.js引发了 Web 浏览器之外 JavaScript 使用的显着增加。Node 结合了V8引擎、事件循环和I&#x2F;O API，从而提供了独立的 JavaScript 运行时系统。截至 2018 年，Node 已被数百万开发人员使用，并且npm拥有世界上所有包管理器中最多的模块。<br>　　ECMAScript 草案规范目前在GitHub上公开维护，并通过定期的年度快照生成版本。对语言的潜在修订通过全面的提案流程进行审查。<br>　　当前的 JavaScript 生态系统拥有许多库和框架、已建立的编程实践以及在 Web 浏览器之外大量使用 JavaScript。另外，随着单页应用程序和其他大量使用 JavaScript 的网站的兴起，已经创建了多个转译器来帮助开发过程。</p>
+<h3 id="版本历史"><a href="#版本历史" class="headerlink" title="版本历史"></a>版本历史</h3><p><img src="https://s3.bmp.ovh/imgs/2024/04/18/3014076381f97729.png" alt="Javascript版本历史"><br>注：JavaScript最初开发于1996年，被使用于Netscape Navigator网页浏览器。同年微软在Internet Explorer发布了一个实现。由于商标问题，这项实现被命名为JScript。1997年，JavaScript已经被网景公司提交给ECMA制定为标准，称之为ECMAScript，标准编号ECMA-262。使用显式版本号声明对语言的引用，作为一项Mozilla的特性，已在较新版本中被移除（至少为Firefox 59）。Firefox 4是最后一个需要显式地在引用时声明明确版本号的版本(1.8.5)。</p>
+<h2 id="语言特性"><a href="#语言特性" class="headerlink" title="语言特性"></a>语言特性</h2><p>完整的JavaScript包括：<br>●ECMAScript: 描述了该语言的语法和基本对象<br>●文档对象模型(DOM): 描述处理网页内容的方法和接口<br>●浏览器对象模型(BOM): 描述与浏览器进行交互的方法和接口</p>
+<p>JavaScript的基本特点如下：<br>●是一种解释性脚本语言(代码不进行预编译)<br>●主要用来向HTML页面添加交互行为<br>●可以直接嵌入HTML页面，但写成单独的js文件有利于结构和行为的分离</p>
+<p>JavaScript常用来完成以下任务：<br>●嵌入动态文本于HTML页面<br>●对浏览器事件作出响应<br>●读写HTML元素<br>●在数据被提交到服务器之前验证数据<br>●检测访客的浏览器信息<br>●控制Cookie，包括创建和修改等</p>
+<p>　　不同于服务器端脚本语言（如PHP和ASP），JavaScript主要被作为客户端脚本语言在用户的浏览器上运行，不需要服务器的支持。所以在早期程序员比较青睐于JavaScript以减少对服务器的负担，而与此同时在安全性上出现了问题。随着服务器变得强大，现在的程序员更喜欢运行于服务端的脚本以保证安全，但JavaScript仍然以其跨平台、容易上手等优势大行其道。同时，有些特殊功能（如AJAX）必须依赖JavaScript在客户端提供支持。随着引擎（如V8）和框架（如Node.js）的发展，以及事件驱动和异步IO等特性，JavaScript也被逐渐用来编写服务器端程序。</p>
+<h3 id="简单示例"><a href="#简单示例" class="headerlink" title="简单示例"></a>简单示例</h3><p>在游览器上输出Hello World。</p>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line">&lt;!<span class="variable constant_">DOCTYPE</span> <span class="variable constant_">HTML</span>&gt;</span><br><span class="line"><span class="language-xml"><span class="tag">&lt;<span class="name">html</span>&gt;</span></span></span><br><span class="line"><span class="language-xml">    <span class="tag">&lt;<span class="name">head</span>&gt;</span></span></span><br><span class="line"><span class="language-xml">    <span class="tag">&lt;<span class="name">title</span>&gt;</span>简单的JavaScript Hello World<span class="tag">&lt;/<span class="name">title</span>&gt;</span></span></span><br><span class="line"><span class="language-xml">        <span class="tag">&lt;<span class="name">script</span>&gt;</span><span class="language-javascript"></span></span></span><br><span class="line"><span class="language-javascript"><span class="language-xml">            <span class="variable language_">document</span>.<span class="title function_">write</span>(<span class="string">&quot;Hello, world!&quot;</span>);   <span class="comment">// 直接插入网页中显示</span></span></span></span><br><span class="line"><span class="language-javascript"><span class="language-xml">            <span class="title function_">alert</span>(<span class="string">&quot;Hello, world!&quot;</span>);            <span class="comment">// 弹窗显示</span></span></span></span><br><span class="line"><span class="language-javascript"><span class="language-xml">            <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">&quot;Hello, world!&quot;</span>);      <span class="comment">// 在控制台(console)里显示，需要先开启开发工具控制台</span></span></span></span><br><span class="line"><span class="language-javascript"><span class="language-xml">        </span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span></span><br><span class="line"><span class="language-xml">    <span class="tag">&lt;/<span class="name">head</span>&gt;</span></span></span><br><span class="line"><span class="language-xml">    <span class="tag">&lt;<span class="name">body</span>&gt;</span></span></span><br><span class="line"><span class="language-xml">　　　　HTML内容……</span></span><br><span class="line"><span class="language-xml">    <span class="tag">&lt;/<span class="name">body</span>&gt;</span></span></span><br><span class="line"><span class="language-xml"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></span></span><br></pre></td></tr></table></figure>
+
+
+<hr>
+<p><strong>版权声明</strong></p>
+<p><img src="/images/cc.png"></p>
+<p><a href="https://scholargeek.github.io/">Scholar’s Blog</a> by <a href="https://scholargeek.github.io/About/">scholargeek</a> is licensed under a <a href="http://creativecommons.org/licenses/by-nc-nd/4.0/">Creative Commons BY-NC-ND 4.0 International License</a>.<br>由<a href="https://scholargeek.github.io/About/">董仕麟</a>创作并维护的<a href="https://scholargeek.github.io/">scholargeek</a>博客采用<a href="http://creativecommons.org/licenses/by-nc-nd/4.0/">创作共用保留署名-非商业-禁止演绎4.0国际许可证</a>。</p>
+<p>本文首发于<a href="https://scholargeek.github.io/">Scholar’s Blog</a>博客，版权所有，侵权必究。</p>
+<p>本文永久链接：<a href="https://scholargeek.github.io/2023/03/06/JavaScript/">https://scholargeek.github.io/2023/03/06/JavaScript/</a></p>
+]]></content>
+      <categories>
+        <category>编程</category>
+      </categories>
+      <tags>
+        <tag>JavaScript</tag>
       </tags>
   </entry>
   <entry>
@@ -2689,6 +2985,44 @@ num_140=2
 <p><a href="https://scholargeek.github.io/">Scholar’s Blog</a> by <a href="https://scholargeek.github.io/About/">scholargeek</a> is licensed under a <a href="http://creativecommons.org/licenses/by-nc-nd/4.0/">Creative Commons BY-NC-ND 4.0 International License</a>.<br>由<a href="https://scholargeek.github.io/About/">董仕麟</a>创作并维护的<a href="https://scholargeek.github.io/">scholargeek</a>博客采用<a href="http://creativecommons.org/licenses/by-nc-nd/4.0/">创作共用保留署名-非商业-禁止演绎4.0国际许可证</a>。</p>
 <p>本文首发于<a href="https://scholargeek.github.io/">Scholar’s Blog</a>博客，版权所有，侵权必究。</p>
 <p>本文永久链接：<a href="https://scholargeek.github.io/2018/08/30/Linux1/">https://scholargeek.github.io/2018/08/30/Linux1/</a></p>
+]]></content>
+      <categories>
+        <category>编程</category>
+      </categories>
+      <tags>
+        <tag>Linux</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Linux简介及应用</title>
+    <url>/2018/08/28/Linux/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h1 id="Linux简介"><a href="#Linux简介" class="headerlink" title="Linux简介"></a>Linux简介</h1><p>　　Linux是一种自由和开放源码的类UNIX操作系统。其操作系统的内核由林纳斯·托瓦兹(Linus Torvalds)在1991年10月5日首次发布，内核加上用户空间的应用程序即组成了Linux操作系统。Linux也是自由软件和开放源代码软件发展中最著名的例子。只要遵循GNU 通用公共许可证（GPL），任何个人和机构都可以自由地使用Linux的所有底层源代码，也可以自由地修改和再发布。除了一部分专家之外，大多数人都是直接使用Linux 发行版，而非自己选择每一样组件或自行设置。</p>
+<span id="more"></span>
+
+<p>　　Linux严格意义上是指操作系统的内核，因操作系统中包含了许多用户图形接口和其他实用工具。如今Linux常用来指基于Linux的完整操作系统，内核则改以Linux内核称之。由于这些支持用户空间的系统工具和库主要由理查德·斯托曼于1983年发起的GNU计划提供，自由软件基金会提议将其组合系统命名为GNU&#x2F;Linux，但Linux不属于GNU计划，这个名称并没有得到社群的一致认同。<br>　　Linux最初是作为支持英特尔x86架构的个人电脑中一个自由操作系统。目前Linux已经被移植到更多的计算机硬件平台，远远超出其他任何操作系统。Linux可以运行在服务器和其他大型平台之上，如大型计算机和超级计算机。世界上500个最快的超级计算机已100％运行Linux发行版或变种。Linux也广泛应用在嵌入式系统上，如手机（Mobile Phone）、平板电脑（Tablet）、路由器（Router）、电视（TV）和电子游戏机等。在移动设备上广泛使用的Android操作系统就是建立在Linux内核之上。<br>　　通常情况下，Linux被打包成供个人计算机和服务器使用的Linux发行版。一些流行的主流Linux发行版，包括Debian（及其派生版本Ubuntu、Linux Mint）、Fedora（及其相关版本Red Hat Enterprise Linux）和openSUSE等。Linux发行版包含Linux内核和支撑内核的实用程序和库，通常还带有大量可以满足各类需求的应用程序。个人计算机使用的Linux发行版通常包含X Window和一个相应的桌面环境，如GNOME或KDE。桌面Linux操作系统常用的应用程序，包括Firefox网页浏览器、LibreOffice办公软件、GIMP图像处理工具等。由于Linux是自由软件，任何人都可以创建一个符合自己需求的Linux发行版。</p>
+<h2 id="基本信息"><a href="#基本信息" class="headerlink" title="基本信息"></a>基本信息</h2><p><img src="https://s3.bmp.ovh/imgs/2024/01/23/951e240043419af2.png" alt="Tux"></p>
+<center>官方的吉祥物:Tux(于1996年由Larry Ewing创造)</center>
+
+<p><img src="https://s3.bmp.ovh/imgs/2024/01/23/8aa0fb1bfab7f61c.jpg" alt="Linus_Torvalds"></p>
+<center>开发者:林纳斯·托瓦兹</center>
+
+<p>编程语言:C语言、少量汇编语言、Rust语言(自6.1版开始)<br>操作系统家族:类Unix系统<br>源码模式:自由及开放源代码软件<br>首次发布版本:1991年的0.01版（代号“Freax”）<br>市场取向:桌面、服务器、嵌入式设备、移动设备<br>支持平台:Alpha, ARC, ARM, C6x, H8&#x2F;300, Hexagon, Itanium, m68k, Microblaze, MIPS, Nios II, OpenRISC,PA-RISC, PowerPC, RISC-V, s390, SuperH、SPARC, Unicore32、x86(含x86-64), Xtensa等<br>内核类别:宏内核<br>默认用户界面:命令行、图形界面（X窗口系统，Wayland）等<br>官方网站:<a href="https://www.kernel.org/">https://www.kernel.org/</a></p>
+<h1 id="历史"><a href="#历史" class="headerlink" title="历史"></a>历史</h1><h2 id="UNIX渊源"><a href="#UNIX渊源" class="headerlink" title="UNIX渊源"></a>UNIX渊源</h2><pre><code>UNIX操作系统是美国AT&amp;T公司贝尔实验室于1969年完成的操作系统。最早由肯·汤普逊（Ken Thompson），丹尼斯·里奇（Dennis Ritchie），道格拉斯·麦克罗伊（Douglas McIlroy），和乔伊·欧桑纳于1969年在AT&amp;T贝尔实验室开发。于1971年首次发布，最初是完全用汇编语言编写。在1973年用一个重要的开拓性的方法，Unix被丹尼斯·里奇用编程语言C（内核和I/O例外）重新编写。高级语言编写的操作系统具有更佳的兼容性，能更容易地移植到不同的计算机平台。
+</code></pre>
+<p>　　1983年，理查德·马修·斯托曼创立GNU计划。这个计划的目标是为了发展一个完全自由的类Unix操作系统。自1984年发起这个计划以来，在1985年，理查德·马修·斯托曼发起自由软件基金会并且在1989年撰写GPL。1990年代早期，GNU开始大量地产生或收集各种系统所必备的组件，如函式库、编译器、调试工具、文本编辑器，以及Unix的用户界面（Unix shell）；但是一些底层环境，如硬件驱动、守护进程、系统内核（kernel）仍然不完整和陷于停顿，GNU计划中是在Mach微内核的架构之上开发系统内核，也就是所谓的GNU Hurd，但是这个基于Mach的设计异常复杂，发展进度则相对缓慢。林纳斯·托瓦兹曾说过如果GNU内核在1991年时可以用，他不会自己去写一个。</p>
+<h2 id="创立"><a href="#创立" class="headerlink" title="创立"></a>创立</h2><p>　　1991年，林纳斯·托瓦兹在赫尔辛基大学上学时就对操作系统很好奇。他对MINIX只允许在教育上使用很不满（因在当时MINIX限制任何商业使用），于是他便开始写他自己的操作系统，这就是后来的Linux内核。<br>　　林纳斯·托瓦兹开始在MINIX上开发Linux内核，为MINIX写的软件也可以在Linux内核上使用。后来使用GNU软件代替MINIX的软件，因为使用从GNU系统来的源代码可以自由使用，这对Linux的发展有益。使用GNU GPL协议的源代码可以被其他项目所使用，只要这些项目使用同样的协议发布。为了让Linux可以在商业上使用，林纳斯·托瓦兹决定更改他原来的协议（原协议限制商业使用），以GNU GPL协议来代替。之后许多开发者致力融合GNU元素到Linux中，做出一个有完整功能的、自由的操作系统。</p>
+<h2 id="命名"><a href="#命名" class="headerlink" title="命名"></a>命名</h2><p>　　Linux的第一个版本在1991年9月被大学FTP server管理员Ari Lemmke发布在互联网上，最初Torvalds称这个内核的名称为”Freax”，意思是自由(“free”)和奇异(“freak”)的结合词，并且附上”X”这个常用的字母，以配合所谓的类Unix的系统。但是FTP服务器管理员嫌“Freax”的名称不好听，把内核的称呼改成“Linux”，当时仅有10000行代码，仍必须执行于Minix操作系统之上，并且必须使用硬盘引导；随后在10月份第二个版本（0.02版）发布，同时这位芬兰赫尔辛基的大学生在comp.os.minix上发布一则消息:<br>    Hello everybody out there using minix- I’m doing a (free) operation system (just a hobby, won’t be big and professional like gnu) for 386(486) AT clones.<br>　　Linux的标志和吉祥物是一只名字叫做Tux的企鹅。标志的由来是因为林纳斯在澳洲时曾被一座动物园里的小蓝企鹅咬了一口，便选择企鹅作为Linux的标志;但更容易被接受的说法是：企鹅代表南极，而南极又是全世界所共有的一块陆地，即代表Linux是所有人的Linux。</p>
+<h2 id="发展现状"><a href="#发展现状" class="headerlink" title="发展现状"></a>发展现状</h2><p>　　1994年3月，Linux1.0版正式发布，Marc Ewing成立Red Hat软件公司，成为最著名的Linux经销商之一。早期Linux的引导管理程序(boot loader)使用LILO(Linux Loader)，早期的LILO存在着一些缺陷，例如无法识别1024柱面以后的硬盘空间，后来的GRUB(GRand Unified Bootloader)克服这些缺点，具有“动态搜索内核文件”的功能，可以让用户在引导的时候，自行编辑引导设置系统文件，透过ext2或ext3文件系统中加载Linux Kernel（GRUB通过不同的文件系统驱动可以识别几乎所有Linux支持的文件系统，因此可以使用很多文件系统来格式化内核文件所在的扇区，并不局限于ext文件系统）。<br>　　目前由Linus Torvalds带领下，众多开发人员共同参与开发和维护Linux内核。理查德·斯托曼领导的自由软件基金会，继续提供大量支持Linux内核的GNU组件。一些个人和企业开发的第三方的非GNU组件也提供对Linux内核的支持，这些第三方组件包括大量的作品，有内核模块和用户应用程序和库等内容。Linux社区或企业都推出一些重要的Linux发行版，包括Linux内核、GNU组件、非GNU组件，以及其他形式的软件包管理系统软件。</p>
+<h2 id="Linux发行版发展图"><a href="#Linux发行版发展图" class="headerlink" title="Linux发行版发展图"></a>Linux发行版发展图</h2><p>　　<img src="https://s3.bmp.ovh/imgs/2024/01/23/5976ccb15be750d6.png" alt="Linux发行版发展图"></p>
+<h1 id="系统架构"><a href="#系统架构" class="headerlink" title="系统架构"></a>系统架构</h1><p>　　Linux内核支持各种硬件架构，为软件提供公共平台。基于Linux的系统是一个模块化的类Unix操作系统。Linux操作系统的大部分设计思想来源于20世纪70年代到80年代的Unix操作系统所建立的基本设计思想。Linux系统使用宏内核，由Linux内核负责处理进程控制、网络，以及外围设备和文件系统的访问。在系统运行的时候，设备驱动程序要么与内核直接集成，要么以加载模块形式添加。<br>　　Linux具有设备独立性，它内核具有高度适应能力，给系统提供更高级的功能。GNU用户界面组件是大多数Linux操作系统的重要组成部分，提供常用的C函数库，Shell，还有许多常见的Unix实用工具，可以完成许多基本的操作系统任务。大多数Linux系统使用的图形用户界面建立在X窗口系统之上，由X窗口(XWindow)系统通过软件工具及架构协议来建立操作系统所用的图形用户界面。</p>
+<h2 id="Linux操作系统包含的一些组件"><a href="#Linux操作系统包含的一些组件" class="headerlink" title="Linux操作系统包含的一些组件"></a>Linux操作系统包含的一些组件</h2><p>　　启动程序：例如GRUB或LILO。该程序在计算机开机启动的时候运行，并将Linux内核加载到内存中。<br>　　init程序：init是由Linux内核创建的第一个进程，称为根进程，所有的系统进程都是它的子进程，即所有的进程都是通过init启动。init启动的进程如系统服务和登录提示。<br>　　软件库包(含代码)：可以通过运行的进程在Linux系统上使用ELF格式来执行文件，负责管理库使用的动态链接器是“ld-linux.so”。Linux系统上最常用的软件库是GNU C库。<br>　　用户界面程序：如命令行Shell或窗口环境。</p>
+<h1 id="Linux的应用"><a href="#Linux的应用" class="headerlink" title="Linux的应用"></a>Linux的应用</h1><p>　　今天各种场合都有使用各种Linux发行版，从嵌入式设备到超级计算机（Super Computer），并且在服务器领域确定了地位，通常服务器使用LAMP组合。基于其低廉成本与高度可设置性，Linux常常被应用于嵌入式系统，例如机顶盒、移动电话及移动设备等。在移动电话上，基于Linux的Android已经成为IOS的主要竞争者；而在移动设备上，则成为Windows CE与Palm OS之外另一个选择。目前流行的TiVo数字摄影机使用了经过定制后的Linux。此外，有不少硬件式的网络防火墙及路由器，例如部分LinkSys的产品，其内部都是使用Linux来驱动、并采用了操作系统提供的防火墙及路由功能。</p>
+<hr>
+<p><strong>版权声明</strong></p>
+<p><img src="/images/cc.png"></p>
+<p><a href="https://scholargeek.github.io/">Scholar’s Blog</a> by <a href="https://scholargeek.github.io/About/">scholargeek</a> is licensed under a <a href="http://creativecommons.org/licenses/by-nc-nd/4.0/">Creative Commons BY-NC-ND 4.0 International License</a>.<br>由<a href="https://scholargeek.github.io/About/">董仕麟</a>创作并维护的<a href="https://scholargeek.github.io/">scholargeek</a>博客采用<a href="http://creativecommons.org/licenses/by-nc-nd/4.0/">创作共用保留署名-非商业-禁止演绎4.0国际许可证</a>。</p>
+<p>本文首发于<a href="https://scholargeek.github.io/">Scholar’s Blog</a>博客，版权所有，侵权必究。</p>
+<p>本文永久链接：<a href="https://scholargeek.github.io/2018/08/28/Linux/">https://scholargeek.github.io/2018/08/28/Linux/</a></p>
 ]]></content>
       <categories>
         <category>编程</category>
@@ -2813,36 +3147,6 @@ num_140=2
       </categories>
       <tags>
         <tag>Linux</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>数据库学习</title>
-    <url>/2022/12/30/MySQL/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h1 id="数据库基本概念与MySQL入门"><a href="#数据库基本概念与MySQL入门" class="headerlink" title="数据库基本概念与MySQL入门"></a>数据库基本概念与MySQL入门</h1><p>　　数据库可以看作电子化的文件柜——存储电子文件的处所。用户可以对文件中的资料执行新增、查询、更新、删除等操作。所谓“数据库”是以一定方式储存在一起、能予多个用户共享、具有尽可能小的冗余度、与应用程序彼此独立的数据集合。一个数据库由多个表空间(Tablespace)构成。</p>
-<span id="more"></span>
-
-<h2 id="数据库基本概念"><a href="#数据库基本概念" class="headerlink" title="数据库基本概念"></a>数据库基本概念</h2><p>　　数据库就是”数据“的仓库，一种用于存储信息和数据的软件，它由表、关系、及操作对象组成，数据放在表中。数据库服务器即安装了数据库软件的计算机，一般以主从式架构提供数据库服务。<br><img src="https://s3.bmp.ovh/imgs/2024/03/20/78e8b6092568654a.png" alt="数据库服务器功能"><br><strong>应用程序</strong><br>作用：响应操作并显示结果，向数据库请求数据。<br>要求：美观并且操作简单方便。<br><strong>数据库服务器</strong><br>作用：存储数据、检索数据、生成新的数据。<br>要求：统一、安全、性能等。</p>
-<h3 id="技术初衷"><a href="#技术初衷" class="headerlink" title="技术初衷"></a>技术初衷</h3><p>　　在操作系统出现之后，随着计算机应用范围的扩大、需要处理的数据迅速膨胀。最初，数据与程序一样，以简单的文件作为主要存储形式。以这种方式组织的数据在逻辑上更简单，但可扩展性差，访问这种数据的程序需要了解数据的具体组织格式。当系统数据量大或者用户访问量大时，应用程序还需要解决数据的完整性、一致性以及安全性等一系列的问题。因此，必须开发出一种系统软件，它应该能够像操作系统屏蔽了硬件访问复杂性那样，屏蔽数据访问的复杂性。由此产生了数据管理系统，即数据库。</p>
-<h3 id="数据库管理系统"><a href="#数据库管理系统" class="headerlink" title="数据库管理系统"></a>数据库管理系统</h3><p>　　数据库管理系统(Database Management System)，简称DBMS。是为管理数据库而设计的电脑软件系统，一般具有存储、截取、安全保障、备份等基础功能。数据库管理系统可以依据它所支持的数据库模型来作分类，例如关系式、XML；或依据所支持的电脑类型来作分类，例如服务器聚类、移动电话；或依据所用查询语言来作分类，例如SQL、XQuery；或依据性能冲量重点来作分类，例如最大规模、最高执行速度；亦或其他的分类方式。不论使用哪种分类方式，一些DBMS能够跨类别，例如，同时支持多种查询语言。</p>
-<h3 id="数据库的分类"><a href="#数据库的分类" class="headerlink" title="数据库的分类"></a>数据库的分类</h3><p>　　随着数据库技术与其他分支学科技术的结合，出现了多种新型数据库，例如：与分布处理技术结合产生的分布式数据库、与并行处理技术结合产生的并行数据库、与人工智能结合产生的演绎数据库、与多媒体技术结合产生的多媒体数据库。另外，数据库技术应用于特定的领域，出现了工程数据库、 地理数据库、统计数据库、空间数据库等特定领域数据库。<br>常见关系数据库:<br>MySQL   MariaDB   Percona Server   PostgreSQL   Microsoft Access   Microsoft SQL Server   Google Fusion Tables   FileMaker   Oracle数据库   Sybase   dBASE   Clipper   FoxPro   foshub<br>常见非关系型数据库(NoSQL):<br>BigTable(Google)   Cassandra   MongoDB   CouchDB   Redis   Apache Cassandra   Dynamo   LevelDB(Google)</p>
-<h3 id="SQL简介"><a href="#SQL简介" class="headerlink" title="SQL简介"></a>SQL简介</h3><p>　　SQL(Structured Query Language)结构化查询语言是一种特定目的编程语言，用于管理关系数据库管理系统（RDBMS），或在关系流数据管理系统(RDSMS)中进行流处理。SQL基于关系代数和元组关系演算，包括一个数据定义语言和数据操纵语言。SQL的范围包括数据插入、查询、更新和删除，数据库模式创建和修改，以及数据访问控制。</p>
-<h2 id="MySQL入门"><a href="#MySQL入门" class="headerlink" title="MySQL入门"></a>MySQL入门</h2><p>　　MySQL原本是一个开放源码的关系数据库管理系统，原开发者为瑞典的MySQL AB公司，该公司于2008年被昇阳微系统(Sun Microsystems)收购。2009年，甲骨文公司(Oracle)收购昇阳微系统公司，MySQL成为Oracle旗下产品。MySQL在过去由于性能高、成本低、可靠性好，已经成为最流行的开源数据库，因此被广泛地应用在Internet上的中小型网站中。随着MySQL的不断成熟，它也逐渐用于更多大规模网站和应用。非常流行的开源软件组合LAMP中的“M”指的就是MySQL。<br>官方网站:<a href="https://www.mysql.com/">https://www.mysql.com</a></p>
-<h3 id="MySQL管理"><a href="#MySQL管理" class="headerlink" title="MySQL管理"></a>MySQL管理</h3><p>●使用命令行工具管理MySQL数据库（命令mysql和mysqladmin），也可以从MySQL的网站下载图形管理工具MySQL Workbench。<br>●Navicat是一套专为MySQL设计的强大数据库管理及开发工具。它可以用于任何版本的MySQL数据库，并支持大部分MySQL的功能，包括触发器、索引、查看等。<br>●phpMyAdmin是由PHP写成的MySQL数据库系统管理程序，让管理者可用Web接口管理MySQL数据库。借由此Web接口可以成为一个简易方式输入繁杂SQL语法的较佳途径，尤其要处理大量资料的导入及导出更为方便。其中一个更大的优势在于由于phpMyAdmin跟其他PHP程序一样在网页服务器上执行，但是可以在任何地方使用这些程序产生的HTML页面，也就是于远程管理MySQL数据库。使用phpMyAdmin就可以方便的建立、修改、删除数据库及资料表。</p>
-<h3 id="基本语法"><a href="#基本语法" class="headerlink" title="基本语法"></a>基本语法</h3><figure class="highlight sql"><table><tr><td class="code"><pre><span class="line"><span class="comment">/*</span></span><br><span class="line"><span class="comment">-- 单行注释</span></span><br><span class="line"><span class="comment">*/</span></span><br><span class="line"><span class="comment">-- 创建XX数据库</span></span><br><span class="line"><span class="keyword">CREATE</span> DATABASE XX;</span><br><span class="line"><span class="comment">-- 删除XX数据库</span></span><br><span class="line"><span class="keyword">DROP</span> DATABASE XX;</span><br><span class="line"></span><br><span class="line"><span class="comment">/*</span></span><br><span class="line"><span class="comment">新建两张表</span></span><br><span class="line"><span class="comment">班级表 （班级编号 班级名称）</span></span><br><span class="line"><span class="comment">学生表 （学生编号 学生姓名 学生年龄 生日 身高 班级编号）</span></span><br><span class="line"><span class="comment">*/</span></span><br><span class="line"></span><br><span class="line"><span class="comment">-- PRIMARY KEY 主键</span></span><br><span class="line"><span class="comment">-- NOT NULL 数据必须插入，不能为空</span></span><br><span class="line"><span class="comment">-- COMMENT 注释</span></span><br><span class="line"><span class="comment">-- FOREIGN KEY 外键</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">CREATE</span> <span class="keyword">TABLE</span> classes</span><br><span class="line">(</span><br><span class="line">bjid <span class="type">INT</span> <span class="keyword">PRIMARY</span> KEY out_increment COMMENT<span class="string">&#x27;班级编号&#x27;</span>,</span><br><span class="line">bjname <span class="type">VARCHAR</span>(<span class="number">20</span>) <span class="keyword">NOT</span> <span class="keyword">NULL</span> COMMENT<span class="string">&#x27;班级名称&#x27;</span></span><br><span class="line">);</span><br><span class="line"></span><br><span class="line"><span class="keyword">CREATE</span> <span class="keyword">TABLE</span> student</span><br><span class="line">(</span><br><span class="line">stuid <span class="type">INT</span> <span class="keyword">PRIMARY</span> KEY auto_increment COMMENT<span class="string">&#x27;学生编号&#x27;</span>,</span><br><span class="line">stuname <span class="type">VARCHAR</span>(<span class="number">40</span>) <span class="keyword">NOT</span> <span class="keyword">NULL</span> COMMENT<span class="string">&#x27;学生姓名&#x27;</span>,</span><br><span class="line">age <span class="type">INT</span> <span class="keyword">DEFAULT</span> <span class="number">3</span> COMMENT<span class="string">&#x27;年龄&#x27;</span>,</span><br><span class="line">birthday <span class="type">DATE</span> <span class="keyword">NULL</span> COMMENT<span class="string">&#x27;生日&#x27;</span>,</span><br><span class="line">height <span class="type">FLOAT</span> COMMENT<span class="string">&#x27;身高&#x27;</span>,</span><br><span class="line">bjid <span class="type">INT</span> COMMENT<span class="string">&#x27;班级编号&#x27;</span>,</span><br><span class="line"><span class="keyword">FOREIGN</span> KEY (bjid) <span class="keyword">REFERENCES</span> classes(bjid)</span><br><span class="line">);</span><br></pre></td></tr></table></figure>
-
-
-<hr>
-<p><strong>版权声明</strong></p>
-<p><img src="/images/cc.png"></p>
-<p><a href="https://scholargeek.github.io/">Scholar’s Blog</a> by <a href="https://scholargeek.github.io/About/">scholargeek</a> is licensed under a <a href="http://creativecommons.org/licenses/by-nc-nd/4.0/">Creative Commons BY-NC-ND 4.0 International License</a>.<br>由<a href="https://scholargeek.github.io/About/">董仕麟</a>创作并维护的<a href="https://scholargeek.github.io/">scholargeek</a>博客采用<a href="http://creativecommons.org/licenses/by-nc-nd/4.0/">创作共用保留署名-非商业-禁止演绎4.0国际许可证</a>。</p>
-<p>本文首发于<a href="https://scholargeek.github.io/">Scholar’s Blog</a>博客，版权所有，侵权必究。</p>
-<p>本文永久链接：<a href="https://scholargeek.github.io/2022/12/30/MySQL/">https://scholargeek.github.io/2022/12/30/MySQL/</a></p>
-]]></content>
-      <categories>
-        <category>编程</category>
-      </categories>
-      <tags>
-        <tag>MySQL</tag>
       </tags>
   </entry>
   <entry>
@@ -3083,6 +3387,36 @@ num_140=2
       </tags>
   </entry>
   <entry>
+    <title>数据库学习</title>
+    <url>/2022/12/30/MySQL/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h1 id="数据库基本概念与MySQL入门"><a href="#数据库基本概念与MySQL入门" class="headerlink" title="数据库基本概念与MySQL入门"></a>数据库基本概念与MySQL入门</h1><p>　　数据库可以看作电子化的文件柜——存储电子文件的处所。用户可以对文件中的资料执行新增、查询、更新、删除等操作。所谓“数据库”是以一定方式储存在一起、能予多个用户共享、具有尽可能小的冗余度、与应用程序彼此独立的数据集合。一个数据库由多个表空间(Tablespace)构成。</p>
+<span id="more"></span>
+
+<h2 id="数据库基本概念"><a href="#数据库基本概念" class="headerlink" title="数据库基本概念"></a>数据库基本概念</h2><p>　　数据库就是”数据“的仓库，一种用于存储信息和数据的软件，它由表、关系、及操作对象组成，数据放在表中。数据库服务器即安装了数据库软件的计算机，一般以主从式架构提供数据库服务。<br><img src="https://s3.bmp.ovh/imgs/2024/03/20/78e8b6092568654a.png" alt="数据库服务器功能"><br><strong>应用程序</strong><br>作用：响应操作并显示结果，向数据库请求数据。<br>要求：美观并且操作简单方便。<br><strong>数据库服务器</strong><br>作用：存储数据、检索数据、生成新的数据。<br>要求：统一、安全、性能等。</p>
+<h3 id="技术初衷"><a href="#技术初衷" class="headerlink" title="技术初衷"></a>技术初衷</h3><p>　　在操作系统出现之后，随着计算机应用范围的扩大、需要处理的数据迅速膨胀。最初，数据与程序一样，以简单的文件作为主要存储形式。以这种方式组织的数据在逻辑上更简单，但可扩展性差，访问这种数据的程序需要了解数据的具体组织格式。当系统数据量大或者用户访问量大时，应用程序还需要解决数据的完整性、一致性以及安全性等一系列的问题。因此，必须开发出一种系统软件，它应该能够像操作系统屏蔽了硬件访问复杂性那样，屏蔽数据访问的复杂性。由此产生了数据管理系统，即数据库。</p>
+<h3 id="数据库管理系统"><a href="#数据库管理系统" class="headerlink" title="数据库管理系统"></a>数据库管理系统</h3><p>　　数据库管理系统(Database Management System)，简称DBMS。是为管理数据库而设计的电脑软件系统，一般具有存储、截取、安全保障、备份等基础功能。数据库管理系统可以依据它所支持的数据库模型来作分类，例如关系式、XML；或依据所支持的电脑类型来作分类，例如服务器聚类、移动电话；或依据所用查询语言来作分类，例如SQL、XQuery；或依据性能冲量重点来作分类，例如最大规模、最高执行速度；亦或其他的分类方式。不论使用哪种分类方式，一些DBMS能够跨类别，例如，同时支持多种查询语言。</p>
+<h3 id="数据库的分类"><a href="#数据库的分类" class="headerlink" title="数据库的分类"></a>数据库的分类</h3><p>　　随着数据库技术与其他分支学科技术的结合，出现了多种新型数据库，例如：与分布处理技术结合产生的分布式数据库、与并行处理技术结合产生的并行数据库、与人工智能结合产生的演绎数据库、与多媒体技术结合产生的多媒体数据库。另外，数据库技术应用于特定的领域，出现了工程数据库、 地理数据库、统计数据库、空间数据库等特定领域数据库。<br>常见关系数据库:<br>MySQL   MariaDB   Percona Server   PostgreSQL   Microsoft Access   Microsoft SQL Server   Google Fusion Tables   FileMaker   Oracle数据库   Sybase   dBASE   Clipper   FoxPro   foshub<br>常见非关系型数据库(NoSQL):<br>BigTable(Google)   Cassandra   MongoDB   CouchDB   Redis   Apache Cassandra   Dynamo   LevelDB(Google)</p>
+<h3 id="SQL简介"><a href="#SQL简介" class="headerlink" title="SQL简介"></a>SQL简介</h3><p>　　SQL(Structured Query Language)结构化查询语言是一种特定目的编程语言，用于管理关系数据库管理系统（RDBMS），或在关系流数据管理系统(RDSMS)中进行流处理。SQL基于关系代数和元组关系演算，包括一个数据定义语言和数据操纵语言。SQL的范围包括数据插入、查询、更新和删除，数据库模式创建和修改，以及数据访问控制。</p>
+<h2 id="MySQL入门"><a href="#MySQL入门" class="headerlink" title="MySQL入门"></a>MySQL入门</h2><p>　　MySQL原本是一个开放源码的关系数据库管理系统，原开发者为瑞典的MySQL AB公司，该公司于2008年被昇阳微系统(Sun Microsystems)收购。2009年，甲骨文公司(Oracle)收购昇阳微系统公司，MySQL成为Oracle旗下产品。MySQL在过去由于性能高、成本低、可靠性好，已经成为最流行的开源数据库，因此被广泛地应用在Internet上的中小型网站中。随着MySQL的不断成熟，它也逐渐用于更多大规模网站和应用。非常流行的开源软件组合LAMP中的“M”指的就是MySQL。<br>官方网站:<a href="https://www.mysql.com/">https://www.mysql.com</a></p>
+<h3 id="MySQL管理"><a href="#MySQL管理" class="headerlink" title="MySQL管理"></a>MySQL管理</h3><p>●使用命令行工具管理MySQL数据库（命令mysql和mysqladmin），也可以从MySQL的网站下载图形管理工具MySQL Workbench。<br>●Navicat是一套专为MySQL设计的强大数据库管理及开发工具。它可以用于任何版本的MySQL数据库，并支持大部分MySQL的功能，包括触发器、索引、查看等。<br>●phpMyAdmin是由PHP写成的MySQL数据库系统管理程序，让管理者可用Web接口管理MySQL数据库。借由此Web接口可以成为一个简易方式输入繁杂SQL语法的较佳途径，尤其要处理大量资料的导入及导出更为方便。其中一个更大的优势在于由于phpMyAdmin跟其他PHP程序一样在网页服务器上执行，但是可以在任何地方使用这些程序产生的HTML页面，也就是于远程管理MySQL数据库。使用phpMyAdmin就可以方便的建立、修改、删除数据库及资料表。</p>
+<h3 id="基本语法"><a href="#基本语法" class="headerlink" title="基本语法"></a>基本语法</h3><figure class="highlight sql"><table><tr><td class="code"><pre><span class="line"><span class="comment">/*</span></span><br><span class="line"><span class="comment">-- 单行注释</span></span><br><span class="line"><span class="comment">*/</span></span><br><span class="line"><span class="comment">-- 创建XX数据库</span></span><br><span class="line"><span class="keyword">CREATE</span> DATABASE XX;</span><br><span class="line"><span class="comment">-- 删除XX数据库</span></span><br><span class="line"><span class="keyword">DROP</span> DATABASE XX;</span><br><span class="line"></span><br><span class="line"><span class="comment">/*</span></span><br><span class="line"><span class="comment">新建两张表</span></span><br><span class="line"><span class="comment">班级表 （班级编号 班级名称）</span></span><br><span class="line"><span class="comment">学生表 （学生编号 学生姓名 学生年龄 生日 身高 班级编号）</span></span><br><span class="line"><span class="comment">*/</span></span><br><span class="line"></span><br><span class="line"><span class="comment">-- PRIMARY KEY 主键</span></span><br><span class="line"><span class="comment">-- NOT NULL 数据必须插入，不能为空</span></span><br><span class="line"><span class="comment">-- COMMENT 注释</span></span><br><span class="line"><span class="comment">-- FOREIGN KEY 外键</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">CREATE</span> <span class="keyword">TABLE</span> classes</span><br><span class="line">(</span><br><span class="line">bjid <span class="type">INT</span> <span class="keyword">PRIMARY</span> KEY out_increment COMMENT<span class="string">&#x27;班级编号&#x27;</span>,</span><br><span class="line">bjname <span class="type">VARCHAR</span>(<span class="number">20</span>) <span class="keyword">NOT</span> <span class="keyword">NULL</span> COMMENT<span class="string">&#x27;班级名称&#x27;</span></span><br><span class="line">);</span><br><span class="line"></span><br><span class="line"><span class="keyword">CREATE</span> <span class="keyword">TABLE</span> student</span><br><span class="line">(</span><br><span class="line">stuid <span class="type">INT</span> <span class="keyword">PRIMARY</span> KEY auto_increment COMMENT<span class="string">&#x27;学生编号&#x27;</span>,</span><br><span class="line">stuname <span class="type">VARCHAR</span>(<span class="number">40</span>) <span class="keyword">NOT</span> <span class="keyword">NULL</span> COMMENT<span class="string">&#x27;学生姓名&#x27;</span>,</span><br><span class="line">age <span class="type">INT</span> <span class="keyword">DEFAULT</span> <span class="number">3</span> COMMENT<span class="string">&#x27;年龄&#x27;</span>,</span><br><span class="line">birthday <span class="type">DATE</span> <span class="keyword">NULL</span> COMMENT<span class="string">&#x27;生日&#x27;</span>,</span><br><span class="line">height <span class="type">FLOAT</span> COMMENT<span class="string">&#x27;身高&#x27;</span>,</span><br><span class="line">bjid <span class="type">INT</span> COMMENT<span class="string">&#x27;班级编号&#x27;</span>,</span><br><span class="line"><span class="keyword">FOREIGN</span> KEY (bjid) <span class="keyword">REFERENCES</span> classes(bjid)</span><br><span class="line">);</span><br></pre></td></tr></table></figure>
+
+
+<hr>
+<p><strong>版权声明</strong></p>
+<p><img src="/images/cc.png"></p>
+<p><a href="https://scholargeek.github.io/">Scholar’s Blog</a> by <a href="https://scholargeek.github.io/About/">scholargeek</a> is licensed under a <a href="http://creativecommons.org/licenses/by-nc-nd/4.0/">Creative Commons BY-NC-ND 4.0 International License</a>.<br>由<a href="https://scholargeek.github.io/About/">董仕麟</a>创作并维护的<a href="https://scholargeek.github.io/">scholargeek</a>博客采用<a href="http://creativecommons.org/licenses/by-nc-nd/4.0/">创作共用保留署名-非商业-禁止演绎4.0国际许可证</a>。</p>
+<p>本文首发于<a href="https://scholargeek.github.io/">Scholar’s Blog</a>博客，版权所有，侵权必究。</p>
+<p>本文永久链接：<a href="https://scholargeek.github.io/2022/12/30/MySQL/">https://scholargeek.github.io/2022/12/30/MySQL/</a></p>
+]]></content>
+      <categories>
+        <category>编程</category>
+      </categories>
+      <tags>
+        <tag>MySQL</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>数据库学习2</title>
     <url>/2023/02/03/MySQL2/</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h1 id="MySQL进阶"><a href="#MySQL进阶" class="headerlink" title="MySQL进阶"></a>MySQL进阶</h1><p>　　本文将简述MySQL进阶查询基本语法，如 “AS用法”、“条件判断”、“限制结果条目”、“聚合函数”、“排序”、“分组统计”、“多表查询”。</p>
@@ -3272,28 +3606,6 @@ num_140=2
       </tags>
   </entry>
   <entry>
-    <title>Shell简介</title>
-    <url>/2018/08/28/Shell/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h1 id="壳层简介"><a href="#壳层简介" class="headerlink" title="壳层简介"></a>壳层简介</h1><p>　　Shell（壳层）在计算机科学中指“为用户提供用户界面”的软件，通常指的是命令行界面的解析器。一般来说是指操作系统中提供访问内核所提供之服务的程序。Shell也用于泛指所有为用户提供操作界面的程序，也就是程序和用户交互的层面。</p>
-<span id="more"></span>
-
-<p>　　通常将shell分为两类：命令行与图形界面。命令行壳层提供一个命令行界面（CLI）；而图形壳层提供一个图形用户界面（GUI）。<br><img src="https://s3.bmp.ovh/imgs/2024/01/26/b91b5c427a937cb0.png" alt="Shell层次图"><br>　　在Linux中Shell是一个用C语言编写的程序,它是用户使用Linux的桥梁。Shell既是一种命令语言，又是一种程序设计语言。Shell作为一种应用程序提供了一个界面，用户可以通过这个界面访问操作系统内核的服务。</p>
-<h1 id="历史"><a href="#历史" class="headerlink" title="历史"></a>历史</h1><p>　　壳层（shell）这个说法起源于路易斯·普赞(Louis Pouzin)，在1964年至1965年间首次提出，随后在Multics（MULTiplexed Information and Computing System）项目中首次被实现出来。<br>　　Unix上的第一个Unix壳层（Unix shell）是肯·汤普逊（Ken Thompson）以Multics上的shell为范本，所写出的Thompson shell。<br>　　微软Windows操作系统也提供了命令行壳层的功能。如Windows 95 &#x2F; 98下的command.com、Windows NT内核下的cmd.exe以及PowerShell；而图形界面壳层即为explorer.exe。</p>
-<hr>
-<p><strong>版权声明</strong></p>
-<p><img src="/images/cc.png"></p>
-<p><a href="https://scholargeek.github.io/">Scholar’s Blog</a> by <a href="https://scholargeek.github.io/About/">scholargeek</a> is licensed under a <a href="http://creativecommons.org/licenses/by-nc-nd/4.0/">Creative Commons BY-NC-ND 4.0 International License</a>.<br>由<a href="https://scholargeek.github.io/About/">董仕麟</a>创作并维护的<a href="https://scholargeek.github.io/">scholargeek</a>博客采用<a href="http://creativecommons.org/licenses/by-nc-nd/4.0/">创作共用保留署名-非商业-禁止演绎4.0国际许可证</a>。</p>
-<p>本文首发于<a href="https://scholargeek.github.io/">Scholar’s Blog</a>博客，版权所有，侵权必究。</p>
-<p>本文永久链接：<a href="https://scholargeek.github.io/2018/08/28/Shell/">https://scholargeek.github.io/2018/08/28/Shell/</a></p>
-]]></content>
-      <categories>
-        <category>编程</category>
-      </categories>
-      <tags>
-        <tag>Shell</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>数据库学习4</title>
     <url>/2023/02/07/MySQL4/</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h1 id="数据库设计"><a href="#数据库设计" class="headerlink" title="数据库设计"></a>数据库设计</h1><p>　　数据库设计指对于一个给定的应用环境，构造（设计）优化的数据库逻辑模式和物理结构，并据此建立数据库及其应用系统，使之能够有效地存储和管理数据，满足各种用户的应用需求，包括信息管理要求和数据操作要求。<br>　　数据库设计的目标：是为用户和各种应用系统提供一个信息基础设施和高效率的运行环境 。数据库设计的基本任务：是根据用户的信息需求、处理需求和数据库的支持环境(包括硬件、操作系统和DBMS)，设计出数据库模式(包括外模式、逻辑模式和内模式)及其典型的应用程序。</p>
@@ -3322,6 +3634,28 @@ num_140=2
       </tags>
   </entry>
   <entry>
+    <title>Shell简介</title>
+    <url>/2018/08/28/Shell/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h1 id="壳层简介"><a href="#壳层简介" class="headerlink" title="壳层简介"></a>壳层简介</h1><p>　　Shell（壳层）在计算机科学中指“为用户提供用户界面”的软件，通常指的是命令行界面的解析器。一般来说是指操作系统中提供访问内核所提供之服务的程序。Shell也用于泛指所有为用户提供操作界面的程序，也就是程序和用户交互的层面。</p>
+<span id="more"></span>
+
+<p>　　通常将shell分为两类：命令行与图形界面。命令行壳层提供一个命令行界面（CLI）；而图形壳层提供一个图形用户界面（GUI）。<br><img src="https://s3.bmp.ovh/imgs/2024/01/26/b91b5c427a937cb0.png" alt="Shell层次图"><br>　　在Linux中Shell是一个用C语言编写的程序,它是用户使用Linux的桥梁。Shell既是一种命令语言，又是一种程序设计语言。Shell作为一种应用程序提供了一个界面，用户可以通过这个界面访问操作系统内核的服务。</p>
+<h1 id="历史"><a href="#历史" class="headerlink" title="历史"></a>历史</h1><p>　　壳层（shell）这个说法起源于路易斯·普赞(Louis Pouzin)，在1964年至1965年间首次提出，随后在Multics（MULTiplexed Information and Computing System）项目中首次被实现出来。<br>　　Unix上的第一个Unix壳层（Unix shell）是肯·汤普逊（Ken Thompson）以Multics上的shell为范本，所写出的Thompson shell。<br>　　微软Windows操作系统也提供了命令行壳层的功能。如Windows 95 &#x2F; 98下的command.com、Windows NT内核下的cmd.exe以及PowerShell；而图形界面壳层即为explorer.exe。</p>
+<hr>
+<p><strong>版权声明</strong></p>
+<p><img src="/images/cc.png"></p>
+<p><a href="https://scholargeek.github.io/">Scholar’s Blog</a> by <a href="https://scholargeek.github.io/About/">scholargeek</a> is licensed under a <a href="http://creativecommons.org/licenses/by-nc-nd/4.0/">Creative Commons BY-NC-ND 4.0 International License</a>.<br>由<a href="https://scholargeek.github.io/About/">董仕麟</a>创作并维护的<a href="https://scholargeek.github.io/">scholargeek</a>博客采用<a href="http://creativecommons.org/licenses/by-nc-nd/4.0/">创作共用保留署名-非商业-禁止演绎4.0国际许可证</a>。</p>
+<p>本文首发于<a href="https://scholargeek.github.io/">Scholar’s Blog</a>博客，版权所有，侵权必究。</p>
+<p>本文永久链接：<a href="https://scholargeek.github.io/2018/08/28/Shell/">https://scholargeek.github.io/2018/08/28/Shell/</a></p>
+]]></content>
+      <categories>
+        <category>编程</category>
+      </categories>
+      <tags>
+        <tag>Shell</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Hello World</title>
     <url>/2018/08/28/hello-world/</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h2 id="快速入门-Quick-Start"><a href="#快速入门-Quick-Start" class="headerlink" title="快速入门[Quick Start]"></a>快速入门[Quick Start]</h2><h3 id="创建新帖子-Create-a-new-post"><a href="#创建新帖子-Create-a-new-post" class="headerlink" title="创建新帖子[Create a new post]"></a>创建新帖子[Create a new post]</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
@@ -3343,6 +3677,65 @@ num_140=2
 <p>本文首发于<a href="https://scholargeek.github.io/">Scholar’s Blog</a>博客，版权所有，侵权必究。</p>
 <p>本文永久链接：<a href="https://scholargeek.github.io/2018/08/28/hello-world/">https://scholargeek.github.io/2018/08/28/hello-world/</a></p>
 ]]></content>
+  </entry>
+  <entry>
+    <title>考研日志一</title>
+    <url>/2021/12/28/%E8%80%83%E7%A0%94%E5%BF%97%E4%B8%80/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p>记得我大一时励志一定要考研，但在学校蹉跎岁月，很长时间都无法准备。考研这个想法长时间停留在我的脑海中，我不知道自己是否有实力和毅力面对这场人生大考，但我仍想尝试。毕竟考研如同小马过河，在没有尝试过之前没人知道水深水浅。其实在大学的最后一年中，我也观察了许多考研人的努力；有浅尝辄止的，有反复无常的，也有全力以赴的；我最多算浅尝辄止的，面对困难和机遇我愧对大一时的自己。记得我跨入大学校门的那一天，我曾经发下的誓言，我背负的耻辱，我无颜面对曾经的自己。在即将毕业的这段时间，我十分痛苦纠结，没什么准备的参加了20考研专业课考试，题会的不多，我已然抱着看题目的心态面对这场考试。之后无奈走入工作岗位，但我仍然心系考研，看着一年又一年的考研人入场，不断壮大的考研人数，我知道以后的考研只会更难。<br>    2020年考研人数为341万；2021年考研人数为377万；2022年考研人数为457万；······</p>
+<span id="more"></span>
+<p>我在国家银行的工作随着不断学习也越发得心应手，但对未来的焦虑也与日俱增。我迫切的想提升学历，于是重新开始制定考研的计划，在单位的宿舍中我不断的搜索资料，希望能找到合适的院校，最后将目标定在了西南的一所知名院校。后来搬回到家中我买了考研所需的资料，在工作之余尽量复习，虽然我制定了计划，但复习进度不如人意。我时而积极时而颓丧，工作和考研不断调和，我不知道该专心工作还是该专心考研，无论我怎么做都像在逃避什么。如果我专心工作那么考研该怎么办？若我专心考研那么我工作该怎么办？我反复纠结，拿不定主意，最后将焦虑诉说给父母，这就把选择权交了出去，最后听了我妈的建议为考研放弃工作，全心全意备战考研。其实我已经开始习惯了工作的状态，当我交出辞职报告时还是有些纠结，但木已成舟时我忽然轻松了不少，只是略微有些留恋。故事到了这应该即刻出现夜以继日、废寝忘食的学习画面，但实际从工作状态切换到完全学习的状态的确不易。<br><img src="https://s3.bmp.ovh/imgs/2023/01/25/3b976ba2b4e38616.png" alt="2022考研计划"><br>在家复习的那段时光，让我认清自己，承认自己是迟钝的、无知的、无畏的。我曾励志考研，现在机会就摆在面前，我却犹豫。复习初始的状态当然很好，但随着时间的流逝我就陷入了焦虑和自责中。我开始在复习时间走神，回忆，被动的回忆，不由自主的回忆。可能我才认识到过去的半年是我人生最重要的时刻，从开始到未来。我可能才意识到，我的内心世界是如此活跃，但身体上却感到很疲倦，不想动弹。回想从前的工作，如同被驯化的工具，我已然内心抗拒。离职后我的情绪在变化，觉得自己在逼自己，但我已然也必然走出了关键性的一步，无论是否坚定，但这一切是真实的。<br>现实的我已然坠落，我要向上攀爬，无论面对什么，都要有自我。或许我怀念轻松的时光，但为了梦想而且还要挣脱现实，又怎能轻松。况且从来的轻松只是暂时的，又不可预知。为了心甘情愿的走过这漫漫人生路，为了更加美好的一切。不必自责，不必怀念，不必幻想，因为人只活在当下。唯有把握现在，才能塑造将来。我想既已如此，只有现在的我可以再次证明，证明我仍是可塑的，我要做我心中的那个人，不负此生。虽然生命中总有许多缺憾，但我仍相信事在人为，做我要做的。心中有力量，就无惧挑战；倘若成功，必是美好。<br>    你是谁？是你本身的想法决定的，而非做了什么决定了你是谁。<br>在复习期间母亲身体抱恙，虽然我没有表现出什么，但我心里却十分担心，希望她一切都好。说回我自己，考前一个月我已经无法安然入睡，甚至有了抑郁的情绪，纷乱的思绪使我痛苦，我知道自己复习的成果无法达到预期。在考试当天压抑的情绪使我出现了胸痛的情况，我忍着疼痛完成了考试，虽然我预料到考试成绩不会理想，可能无法接受这种结果，最终抑郁。在我人生最难熬的时候，父母给了我最大的支持，使我的精神状态渐渐恢复到正常。反复思量后我决定再战，我不信我考不上，或许就是这种不服输的勇气让我开始了2022年的复习之旅。但只有勇气是不够的，我还需要毅力，希望我能给自己一个满意的交代。</p>
+<hr>
+<p><strong>版权声明</strong></p>
+<p><img src="/images/cc.png"></p>
+<p><a href="https://scholargeek.github.io/">Scholar’s Blog</a> by <a href="https://scholargeek.github.io/About/">scholargeek</a> is licensed under a <a href="http://creativecommons.org/licenses/by-nc-nd/4.0/">Creative Commons BY-NC-ND 4.0 International License</a>.<br>由<a href="https://scholargeek.github.io/About/">董仕麟</a>创作并维护的<a href="https://scholargeek.github.io/">scholargeek</a>博客采用<a href="http://creativecommons.org/licenses/by-nc-nd/4.0/">创作共用保留署名-非商业-禁止演绎4.0国际许可证</a>。</p>
+<p>本文首发于<a href="https://scholargeek.github.io/">Scholar’s Blog</a>博客，版权所有，侵权必究。</p>
+<p>本文永久链接：<a href="https://scholargeek.github.io/2021/12/28/%E8%80%83%E7%A0%94%E5%BF%97%E4%B8%80/">https://scholargeek.github.io/2021/12/28/%E8%80%83%E7%A0%94%E5%BF%97%E4%B8%80/</a></p>
+]]></content>
+      <categories>
+        <category>日志</category>
+      </categories>
+      <tags>
+        <tag>PostgraduateEntranceExamination</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>我的第一篇博客文章——博客的搭建</title>
+    <url>/2019/07/12/%E6%88%91%E7%9A%84%E7%AC%AC%E4%B8%80%E7%AF%87%E5%8D%9A%E5%AE%A2%E6%96%87%E7%AB%A0/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h1 id="Scholar的博客搭建"><a href="#Scholar的博客搭建" class="headerlink" title="Scholar的博客搭建"></a>Scholar的博客搭建</h1><h2 id="Hello-world"><a href="#Hello-world" class="headerlink" title="Hello world !"></a>Hello world !</h2><p>由于互联网与计算机技术的迅猛发展使得个人博客的搭建门槛直线降低，方便易用的开发工具与框架代码使得一切如此简单。<br>本文将简述博客如何搭建</p>
+<span id="more"></span>
+
+<h2 id="一、环境的搭建"><a href="#一、环境的搭建" class="headerlink" title="一、环境的搭建"></a>一、环境的搭建</h2><p>使用的硬件环境为：64位电脑<br>使用的软件环境为：Windows10家庭中文版，node.js(基于 Chrome V8 引擎的 JavaScript 运行环境)、git与Hexo框架，来搭建属于自己的博客。<br>使用工具node.js的下载：<a href="https://nodejs.org/en/%EF%BC%88%E9%80%89%E6%8B%A9LTS%E7%89%88%E6%9C%AC%EF%BC%89">https://nodejs.org/en/（选择LTS版本）</a><br>默认安装即可，截图如下：<img src="/images/pasted-0.png"> </p>
+<p>一路Next，完全安装后，再使用Power shell验证安装是否成功。Win+R键入Power shell中，输入node -v回显版本号，输入npm -v回显版本号。截图如下：<img src="/images/pasted-1.png"><br>接着使用npm工具（Node.js 平台的默认包管理工具）下载淘宝维护的npm镜像即cnpm，在Power shell中，<br>输入npm install -g cnpm –registry&#x3D;<a href="https://registry.npm.taobao.org/">https://registry.npm.taobao.org</a><br>回车后即开始下载，完成后如图：<img src="/images/pasted-2.png"> </p>
+<p>接着验证cnpm是否存在，在Power shell中，输入cnpm -v将会回显路径等信息，截图如下：<br> <img src="/images/pasted-3.png"><br>如果存在，那么可以使用cnpm来下载Hexo框架，<br>即在Power shell中，输入cnpm install -g hexo-cli回车即开始下载，完成后截图如下：<br> <img src="/images/pasted-4.png"><br>接着验证Hexo框架是否存在，在Power shell中，输入hexo -v回车即可回显版本号。截图如下：<br> <img src="/images/pasted-5.png"><br>为了使用init初始化命令而不报错需要安装git（分布式版本控制系统），那么现在开始安装git吧！<br>首先进入git官网<a href="https://git-scm.com/">https://git-scm.com/</a><br>选择与自己电脑对应的版本，进行下载即可。<br>安装截图如下：<br><img src="/images/pasted-6.png"><br>选择NEXT<br><img src="/images/pasted-7.png"><br>自定义安装位置<br> <img src="/images/pasted-8.png"><br>选择关联文件<br> <img src="/images/pasted-9.png"><br>默认路径及选择是否不要创建开始菜单<br> <img src="/images/pasted-10.png"><br>默认选择vim作为git的编辑器<br> <img src="/images/pasted-11.png"><br>默认选择使用git命令的工具<br> <img src="/images/pasted-12.png"><br>默认使用OpenSSL来加密HTTP传输的信息<br> <img src="/images/pasted-13.png"><br>选择提交代码的风格为默认<br> <img src="/images/pasted-14.png"><br>使用minTTY为git的终端<br>一路NEXT直到Install<br> <img src="/images/pasted-15.png"><br>默认不开启实验功能，选择Install即可安装。<br> <img src="/images/pasted-16.png"><br>选择Finish即可完成安装<br>为了使得PowerShell可以使用git命令，需关闭Powershell并重启。<br>接着在自定义的目录中创建用于存储blog框架的文件夹(D:\Program file\blog)<br>然后在PowerShell中输入：<br>cd “D:\Program file\blog”  &#x2F;&#x2F;进入文件夹<br>hexo init   &#x2F;&#x2F;初始化博客框架<br>截图如下：<br> <img src="/images/pasted-17.png"><br>这样Hexo博客框架已经初始化完成。<br>输入ls查看目录下生成的文件，截图如下：<br> <img src="/images/pasted-18.png"><br>   输入hexo s即可启动博客框架，截图如下：<br> <img src="/images/pasted-19.png"><br>这样在本地就启动了hexo博客，在游览器地址栏中输入：<a href="http://localhost:4000/">http://localhost:4000</a> 即可打开自动生成的博客，如果要停止服务在Powershell中按Ctrl+C即可。<br>在本地游览器中的显示截图如下：<br> <img src="/images/pasted-20.png"><br>至此博客在本地已搭建完成，接着就是对博客的编辑。</p>
+<h2 id="二、博客的编辑"><a href="#二、博客的编辑" class="headerlink" title="二、博客的编辑"></a>二、博客的编辑</h2><p>在Powershell中输入：<br>hexo n “ My first blog post “<br>即在D:\Program file\blog\source_posts目录下创建了一个名为” My first blog post “的Markdown格式的文件，接着你可以手动打开这个文件，推荐使用Yu Writer对其进行编辑，当然Typora也是个不错的选择。</p>
+<p>使用hexo clean命令可以清除缓存文件<br>使用hexo g 命令可以生成静态网页文件<br>使用hexo s命令可以开启服务</p>
+<p>更新后的游览器截图如下：<br> <img src="/images/pasted-21.png"> 
+ </p>
+<h2 id="三、将博文部署至远端"><a href="#三、将博文部署至远端" class="headerlink" title="三、将博文部署至远端"></a>三、将博文部署至远端</h2><p>在已注册好的Github中创建仓库项目，设置域名为：<br>如图：<img src="/images/pasted-22.png"> </p>
+<p>选择Create repository继续<br>在Powershell下输入:<br>cnpm install –save hexo-deployer-git    &#x2F;&#x2F;安装git插件<br>安装成功后截图如下：<br> <img src="/images/pasted-23.png"> </p>
+<p>然后ls查看文件，使用编辑器对_config.yml文件进行编辑<br>添加如下内容：<br>type:git<br>  repo:<a href="https://github.com/scholargeek/scholargeek-.github.io.git">https://github.com/scholargeek/scholargeek-.github.io.git</a><br>  branch:master<br>保存即可。<br>接着在Powershell下输入：<br>git config –global user.email “<a href="mailto:&#x79;&#x6f;&#x75;&#x40;&#101;&#120;&#x61;&#109;&#112;&#x6c;&#x65;&#x2e;&#x63;&#111;&#109;">&#x79;&#x6f;&#x75;&#x40;&#101;&#120;&#x61;&#109;&#112;&#x6c;&#x65;&#x2e;&#x63;&#111;&#109;</a>“<br>git config –global user.name “Your Name”<br>注：<br>将<a href="mailto:&#x79;&#111;&#x75;&#64;&#101;&#120;&#x61;&#x6d;&#112;&#108;&#x65;&#x2e;&#x63;&#x6f;&#x6d;">&#x79;&#111;&#x75;&#64;&#101;&#120;&#x61;&#x6d;&#112;&#108;&#x65;&#x2e;&#x63;&#x6f;&#x6d;</a>替换为在GitHub上注册的邮箱<br>将Your Name替换为GitHub上注册的用户名</p>
+<p>最后可以在Powershell下输入hexo d 就可以将博客上传至github服务器上。<br>回到Github的仓库管理页，刷新即可查看上传的文件。<br>验证网络服务可以直接在游览器中输入<a href="https://scholargeek.github.io/">https://scholargeek.github.io/</a> 查看博客网页。</p>
+<h2 id="四、下载主题"><a href="#四、下载主题" class="headerlink" title="四、下载主题"></a>四、下载主题</h2><p>在Powershell下输入git clone <a href="https://github.com/litten/hexo-theme-yilia.git">https://github.com/litten/hexo-theme-yilia.git</a> themes&#x2F;yilia<br>即可将yilia主题下载至D:\Program file\blog\themes\yilia文件夹下。<br>编辑_config.yml文件，设置主题theme: landscape，将landscape替换为yilia，即可更换主题。</p>
+<p>如果下载主题时出现以下错误：<br> <img src="/images/pasted-24.png"><br>则需设置缓存区的大小<br>在Powershell下输入：git config –global http.postBuffer 524288000<br>再次输入：<br>git clone <a href="https://github.com/litten/hexo-theme-yilia.git">https://github.com/litten/hexo-theme-yilia.git</a> themes&#x2F;yilia即可</p>
+<p>其他主题推荐：<br>git clone -b master <a href="https://github.com/Molunerfinn/hexo-theme-melody">https://github.com/Molunerfinn/hexo-theme-melody</a> themes&#x2F;melody</p>
+<p>注：使用下载的命令需进入blog目录执行</p>
+<h2 id="五、编辑及修改主题"><a href="#五、编辑及修改主题" class="headerlink" title="五、编辑及修改主题"></a>五、编辑及修改主题</h2><p>可以在 D:\Program file\blog_config.yml 中修改大部分的配置，参数如下：<br>#Site<br>title: Scholar’s Blog               &#x2F;&#x2F;网站标题<br>subtitle: Welcome to my blog!     &#x2F;&#x2F;网站副标题<br>description: Geek Style           &#x2F;&#x2F;网站的描述<br>keywords:<br>author: DSL                  &#x2F;&#x2F;作者<br>language: zh-cn             &#x2F;&#x2F;使用的语言<br>timezone: Asia&#x2F;Shanghai     &#x2F;&#x2F;网站的时区<br>#Extensions<br>##Plugins: <a href="https://hexo.io/plugins/">https://hexo.io/plugins/</a><br>##Themes: <a href="https://hexo.io/themes/">https://hexo.io/themes/</a><br>theme: landscape      &#x2F;&#x2F;使用的主题为默认的landscape，可将landscape修改为yilia，<br>&#x2F;&#x2F;保存即完成主题的更换</p>
+<h2 id="六、使用Hexo-Admin插件让编辑博客更简单"><a href="#六、使用Hexo-Admin插件让编辑博客更简单" class="headerlink" title="六、使用Hexo Admin插件让编辑博客更简单"></a>六、使用Hexo Admin插件让编辑博客更简单</h2><p>在Powershell下进入blog目录下输入：npm install –save hexo-admin<br>安装完成后启动服务，在浏览器地址栏中输入网址:localhost:4000&#x2F;admin，即可对所有的博客进行管理何编辑。<br>为了能为添加图片，首先配置好D:\Program file\blog_config.yml文件，将post_asset_folder:false中false替换为为true，再在Powershell下进入blog目录下输入：<br>npm install hexo-asset-image –save     &#x2F;&#x2F;安装image工具<br>安装完成截图如下：<br><img src="/images/pasted-25.png"></p>
+<p>这样就可以使用</p>
+<p>在Powershell中常用的命令：<br>hexo clean  &#x2F;&#x2F;清除缓存与静态网页<br>hexo g     &#x2F;&#x2F;生成静态网页<br>hexo s     &#x2F;&#x2F;开启本地预览服务<br>hexo d    &#x2F;&#x2F;推送到远端的网络服务器中</p>
+<hr>
+<p><strong>版权声明</strong></p>
+<p><img src="/images/cc.png"></p>
+<p><a href="https://scholargeek.github.io/">Scholar’s Blog</a> by <a href="https://scholargeek.github.io/About/">scholargeek</a> is licensed under a <a href="http://creativecommons.org/licenses/by-nc-nd/4.0/">Creative Commons BY-NC-ND 4.0 International License</a>.<br>由<a href="https://scholargeek.github.io/About/">董仕麟</a>创作并维护的<a href="https://scholargeek.github.io/">scholargeek</a>博客采用<a href="http://creativecommons.org/licenses/by-nc-nd/4.0/">创作共用保留署名-非商业-禁止演绎4.0国际许可证</a>。</p>
+<p>本文首发于<a href="https://scholargeek.github.io/">Scholar’s Blog</a>博客，版权所有，侵权必究。</p>
+<p>本文永久链接：<a href="https://scholargeek.github.io/2019/07/12/%E6%88%91%E7%9A%84%E7%AC%AC%E4%B8%80%E7%AF%87%E5%8D%9A%E5%AE%A2%E6%96%87%E7%AB%A0/">https://scholargeek.github.io/2019/07/12/%E6%88%91%E7%9A%84%E7%AC%AC%E4%B8%80%E7%AF%87%E5%8D%9A%E5%AE%A2%E6%96%87%E7%AB%A0/</a></p>
+]]></content>
+      <categories>
+        <category>教程</category>
+      </categories>
+      <tags>
+        <tag>Hexo</tag>
+      </tags>
   </entry>
   <entry>
     <title>日志一</title>
@@ -3383,42 +3776,25 @@ num_140=2
       </categories>
   </entry>
   <entry>
-    <title>我的第一篇博客文章——博客的搭建</title>
-    <url>/2019/07/12/%E6%88%91%E7%9A%84%E7%AC%AC%E4%B8%80%E7%AF%87%E5%8D%9A%E5%AE%A2%E6%96%87%E7%AB%A0/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h1 id="Scholar的博客搭建"><a href="#Scholar的博客搭建" class="headerlink" title="Scholar的博客搭建"></a>Scholar的博客搭建</h1><h2 id="Hello-world"><a href="#Hello-world" class="headerlink" title="Hello world !"></a>Hello world !</h2><p>由于互联网与计算机技术的迅猛发展使得个人博客的搭建门槛直线降低，方便易用的开发工具与框架代码使得一切如此简单。<br>本文将简述博客如何搭建</p>
+    <title>考研日志二</title>
+    <url>/2022/12/28/%E8%80%83%E7%A0%94%E5%BF%97%E4%BA%8C/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p>由于考研失利，我的心境从低落恢复到正常，花费了几个月时间。这段时间是我人生最灰暗的时光，服用了药物后才渐渐好转。我在脑海中无数次构想考研的过程与结果，期望我能总结经验，争取上岸。当我再次选定考研目标院校时，非常无奈的选择了西北的学校，我定了个较低的目标；但却非常纠结，因为这和我当初励志离开西北的想法不同，但现在却为了上岸妥协了初衷，我无颜面对当初的自己。在无数个日夜中我不断纠结，看着时光流逝感到无奈，深感对自我掌控力的不足。<br>与过去复习过程类似，有种搬苞谷的感觉，怀疑不断打击着自信，直到把理想摧垮。后来逐渐发现考研需要的不仅是理想，考研需要的更是信念。唯有坚定的信念才能抵御困难的打击，只有不屈的意志才能克服险隘的阻挡。</p>
+<pre><code>下定决心，排除万难。
+</code></pre>
 <span id="more"></span>
-
-<h2 id="一、环境的搭建"><a href="#一、环境的搭建" class="headerlink" title="一、环境的搭建"></a>一、环境的搭建</h2><p>使用的硬件环境为：64位电脑<br>使用的软件环境为：Windows10家庭中文版，node.js(基于 Chrome V8 引擎的 JavaScript 运行环境)、git与Hexo框架，来搭建属于自己的博客。<br>使用工具node.js的下载：<a href="https://nodejs.org/en/%EF%BC%88%E9%80%89%E6%8B%A9LTS%E7%89%88%E6%9C%AC%EF%BC%89">https://nodejs.org/en/（选择LTS版本）</a><br>默认安装即可，截图如下：<img src="/images/pasted-0.png"> </p>
-<p>一路Next，完全安装后，再使用Power shell验证安装是否成功。Win+R键入Power shell中，输入node -v回显版本号，输入npm -v回显版本号。截图如下：<img src="/images/pasted-1.png"><br>接着使用npm工具（Node.js 平台的默认包管理工具）下载淘宝维护的npm镜像即cnpm，在Power shell中，<br>输入npm install -g cnpm –registry&#x3D;<a href="https://registry.npm.taobao.org/">https://registry.npm.taobao.org</a><br>回车后即开始下载，完成后如图：<img src="/images/pasted-2.png"> </p>
-<p>接着验证cnpm是否存在，在Power shell中，输入cnpm -v将会回显路径等信息，截图如下：<br> <img src="/images/pasted-3.png"><br>如果存在，那么可以使用cnpm来下载Hexo框架，<br>即在Power shell中，输入cnpm install -g hexo-cli回车即开始下载，完成后截图如下：<br> <img src="/images/pasted-4.png"><br>接着验证Hexo框架是否存在，在Power shell中，输入hexo -v回车即可回显版本号。截图如下：<br> <img src="/images/pasted-5.png"><br>为了使用init初始化命令而不报错需要安装git（分布式版本控制系统），那么现在开始安装git吧！<br>首先进入git官网<a href="https://git-scm.com/">https://git-scm.com/</a><br>选择与自己电脑对应的版本，进行下载即可。<br>安装截图如下：<br><img src="/images/pasted-6.png"><br>选择NEXT<br><img src="/images/pasted-7.png"><br>自定义安装位置<br> <img src="/images/pasted-8.png"><br>选择关联文件<br> <img src="/images/pasted-9.png"><br>默认路径及选择是否不要创建开始菜单<br> <img src="/images/pasted-10.png"><br>默认选择vim作为git的编辑器<br> <img src="/images/pasted-11.png"><br>默认选择使用git命令的工具<br> <img src="/images/pasted-12.png"><br>默认使用OpenSSL来加密HTTP传输的信息<br> <img src="/images/pasted-13.png"><br>选择提交代码的风格为默认<br> <img src="/images/pasted-14.png"><br>使用minTTY为git的终端<br>一路NEXT直到Install<br> <img src="/images/pasted-15.png"><br>默认不开启实验功能，选择Install即可安装。<br> <img src="/images/pasted-16.png"><br>选择Finish即可完成安装<br>为了使得PowerShell可以使用git命令，需关闭Powershell并重启。<br>接着在自定义的目录中创建用于存储blog框架的文件夹(D:\Program file\blog)<br>然后在PowerShell中输入：<br>cd “D:\Program file\blog”  &#x2F;&#x2F;进入文件夹<br>hexo init   &#x2F;&#x2F;初始化博客框架<br>截图如下：<br> <img src="/images/pasted-17.png"><br>这样Hexo博客框架已经初始化完成。<br>输入ls查看目录下生成的文件，截图如下：<br> <img src="/images/pasted-18.png"><br>   输入hexo s即可启动博客框架，截图如下：<br> <img src="/images/pasted-19.png"><br>这样在本地就启动了hexo博客，在游览器地址栏中输入：<a href="http://localhost:4000/">http://localhost:4000</a> 即可打开自动生成的博客，如果要停止服务在Powershell中按Ctrl+C即可。<br>在本地游览器中的显示截图如下：<br> <img src="/images/pasted-20.png"><br>至此博客在本地已搭建完成，接着就是对博客的编辑。</p>
-<h2 id="二、博客的编辑"><a href="#二、博客的编辑" class="headerlink" title="二、博客的编辑"></a>二、博客的编辑</h2><p>在Powershell中输入：<br>hexo n “ My first blog post “<br>即在D:\Program file\blog\source_posts目录下创建了一个名为” My first blog post “的Markdown格式的文件，接着你可以手动打开这个文件，推荐使用Yu Writer对其进行编辑，当然Typora也是个不错的选择。</p>
-<p>使用hexo clean命令可以清除缓存文件<br>使用hexo g 命令可以生成静态网页文件<br>使用hexo s命令可以开启服务</p>
-<p>更新后的游览器截图如下：<br> <img src="/images/pasted-21.png"> 
- </p>
-<h2 id="三、将博文部署至远端"><a href="#三、将博文部署至远端" class="headerlink" title="三、将博文部署至远端"></a>三、将博文部署至远端</h2><p>在已注册好的Github中创建仓库项目，设置域名为：<br>如图：<img src="/images/pasted-22.png"> </p>
-<p>选择Create repository继续<br>在Powershell下输入:<br>cnpm install –save hexo-deployer-git    &#x2F;&#x2F;安装git插件<br>安装成功后截图如下：<br> <img src="/images/pasted-23.png"> </p>
-<p>然后ls查看文件，使用编辑器对_config.yml文件进行编辑<br>添加如下内容：<br>type:git<br>  repo:<a href="https://github.com/scholargeek/scholargeek-.github.io.git">https://github.com/scholargeek/scholargeek-.github.io.git</a><br>  branch:master<br>保存即可。<br>接着在Powershell下输入：<br>git config –global user.email “<a href="mailto:&#121;&#x6f;&#117;&#64;&#101;&#x78;&#x61;&#x6d;&#112;&#x6c;&#101;&#x2e;&#x63;&#x6f;&#109;">&#121;&#x6f;&#117;&#64;&#101;&#x78;&#x61;&#x6d;&#112;&#x6c;&#101;&#x2e;&#x63;&#x6f;&#109;</a>“<br>git config –global user.name “Your Name”<br>注：<br>将<a href="mailto:&#x79;&#111;&#x75;&#x40;&#101;&#x78;&#97;&#109;&#x70;&#x6c;&#x65;&#46;&#99;&#x6f;&#109;">&#x79;&#111;&#x75;&#x40;&#101;&#x78;&#97;&#109;&#x70;&#x6c;&#x65;&#46;&#99;&#x6f;&#109;</a>替换为在GitHub上注册的邮箱<br>将Your Name替换为GitHub上注册的用户名</p>
-<p>最后可以在Powershell下输入hexo d 就可以将博客上传至github服务器上。<br>回到Github的仓库管理页，刷新即可查看上传的文件。<br>验证网络服务可以直接在游览器中输入<a href="https://scholargeek.github.io/">https://scholargeek.github.io/</a> 查看博客网页。</p>
-<h2 id="四、下载主题"><a href="#四、下载主题" class="headerlink" title="四、下载主题"></a>四、下载主题</h2><p>在Powershell下输入git clone <a href="https://github.com/litten/hexo-theme-yilia.git">https://github.com/litten/hexo-theme-yilia.git</a> themes&#x2F;yilia<br>即可将yilia主题下载至D:\Program file\blog\themes\yilia文件夹下。<br>编辑_config.yml文件，设置主题theme: landscape，将landscape替换为yilia，即可更换主题。</p>
-<p>如果下载主题时出现以下错误：<br> <img src="/images/pasted-24.png"><br>则需设置缓存区的大小<br>在Powershell下输入：git config –global http.postBuffer 524288000<br>再次输入：<br>git clone <a href="https://github.com/litten/hexo-theme-yilia.git">https://github.com/litten/hexo-theme-yilia.git</a> themes&#x2F;yilia即可</p>
-<p>其他主题推荐：<br>git clone -b master <a href="https://github.com/Molunerfinn/hexo-theme-melody">https://github.com/Molunerfinn/hexo-theme-melody</a> themes&#x2F;melody</p>
-<p>注：使用下载的命令需进入blog目录执行</p>
-<h2 id="五、编辑及修改主题"><a href="#五、编辑及修改主题" class="headerlink" title="五、编辑及修改主题"></a>五、编辑及修改主题</h2><p>可以在 D:\Program file\blog_config.yml 中修改大部分的配置，参数如下：<br>#Site<br>title: Scholar’s Blog               &#x2F;&#x2F;网站标题<br>subtitle: Welcome to my blog!     &#x2F;&#x2F;网站副标题<br>description: Geek Style           &#x2F;&#x2F;网站的描述<br>keywords:<br>author: DSL                  &#x2F;&#x2F;作者<br>language: zh-cn             &#x2F;&#x2F;使用的语言<br>timezone: Asia&#x2F;Shanghai     &#x2F;&#x2F;网站的时区<br>#Extensions<br>##Plugins: <a href="https://hexo.io/plugins/">https://hexo.io/plugins/</a><br>##Themes: <a href="https://hexo.io/themes/">https://hexo.io/themes/</a><br>theme: landscape      &#x2F;&#x2F;使用的主题为默认的landscape，可将landscape修改为yilia，<br>&#x2F;&#x2F;保存即完成主题的更换</p>
-<h2 id="六、使用Hexo-Admin插件让编辑博客更简单"><a href="#六、使用Hexo-Admin插件让编辑博客更简单" class="headerlink" title="六、使用Hexo Admin插件让编辑博客更简单"></a>六、使用Hexo Admin插件让编辑博客更简单</h2><p>在Powershell下进入blog目录下输入：npm install –save hexo-admin<br>安装完成后启动服务，在浏览器地址栏中输入网址:localhost:4000&#x2F;admin，即可对所有的博客进行管理何编辑。<br>为了能为添加图片，首先配置好D:\Program file\blog_config.yml文件，将post_asset_folder:false中false替换为为true，再在Powershell下进入blog目录下输入：<br>npm install hexo-asset-image –save     &#x2F;&#x2F;安装image工具<br>安装完成截图如下：<br><img src="/images/pasted-25.png"></p>
-<p>这样就可以使用</p>
-<p>在Powershell中常用的命令：<br>hexo clean  &#x2F;&#x2F;清除缓存与静态网页<br>hexo g     &#x2F;&#x2F;生成静态网页<br>hexo s     &#x2F;&#x2F;开启本地预览服务<br>hexo d    &#x2F;&#x2F;推送到远端的网络服务器中</p>
+<p>我为何考研？这个问题我曾思考了许久，因为我想弥补高考的失败，因为我想提高专业能力，因为我想有更广阔的未来。总之，我想无论成败我都要去考，不遗余力的考，不顾一切的考。<br>时间来到2022年12月，由于新冠疫情的影响，石城已封闭了3个月，现在逐渐解封，但却造成许多人患上了新冠奥密克戎。我正好在考前一天发烧，无奈地考虑到即使去了考场也无法完成考试，便放弃了，当了逃兵。到这里我心心念念的考研就告一段落了，我想我还没有一次全力以赴的参考，这就是我的遗憾吧。当有人问起我这些年的考研成绩，我只能说我正在准备中，希望我在新的一年中全力以赴，争取给自己一个满意的结果。</p>
 <hr>
 <p><strong>版权声明</strong></p>
 <p><img src="/images/cc.png"></p>
 <p><a href="https://scholargeek.github.io/">Scholar’s Blog</a> by <a href="https://scholargeek.github.io/About/">scholargeek</a> is licensed under a <a href="http://creativecommons.org/licenses/by-nc-nd/4.0/">Creative Commons BY-NC-ND 4.0 International License</a>.<br>由<a href="https://scholargeek.github.io/About/">董仕麟</a>创作并维护的<a href="https://scholargeek.github.io/">scholargeek</a>博客采用<a href="http://creativecommons.org/licenses/by-nc-nd/4.0/">创作共用保留署名-非商业-禁止演绎4.0国际许可证</a>。</p>
 <p>本文首发于<a href="https://scholargeek.github.io/">Scholar’s Blog</a>博客，版权所有，侵权必究。</p>
-<p>本文永久链接：<a href="https://scholargeek.github.io/2019/07/12/%E6%88%91%E7%9A%84%E7%AC%AC%E4%B8%80%E7%AF%87%E5%8D%9A%E5%AE%A2%E6%96%87%E7%AB%A0/">https://scholargeek.github.io/2019/07/12/%E6%88%91%E7%9A%84%E7%AC%AC%E4%B8%80%E7%AF%87%E5%8D%9A%E5%AE%A2%E6%96%87%E7%AB%A0/</a></p>
+<p>本文永久链接：<a href="https://scholargeek.github.io/2022/12/28/%E8%80%83%E7%A0%94%E5%BF%97%E4%BA%8C/">https://scholargeek.github.io/2022/12/28/%E8%80%83%E7%A0%94%E5%BF%97%E4%BA%8C/</a></p>
 ]]></content>
       <categories>
-        <category>教程</category>
+        <category>日志</category>
       </categories>
       <tags>
-        <tag>Hexo</tag>
+        <tag>PostgraduateEntranceExamination</tag>
       </tags>
   </entry>
   <entry>
@@ -3456,48 +3832,6 @@ num_140=2
       </categories>
       <tags>
         <tag>DataStructure</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>考研日志二</title>
-    <url>/2022/12/28/%E8%80%83%E7%A0%94%E5%BF%97%E4%BA%8C/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p>由于考研失利，我的心境从低落恢复到正常，花费了几个月时间。这段时间是我人生最灰暗的时光，服用了药物后才渐渐好转。我在脑海中无数次构想考研的过程与结果，期望我能总结经验，争取上岸。当我再次选定考研目标院校时，非常无奈的选择了西北的学校，我定了个较低的目标；但却非常纠结，因为这和我当初励志离开西北的想法不同，但现在却为了上岸妥协了初衷，我无颜面对当初的自己。在无数个日夜中我不断纠结，看着时光流逝感到无奈，深感对自我掌控力的不足。<br>与过去复习过程类似，有种搬苞谷的感觉，怀疑不断打击着自信，直到把理想摧垮。后来逐渐发现考研需要的不仅是理想，考研需要的更是信念。唯有坚定的信念才能抵御困难的打击，只有不屈的意志才能克服险隘的阻挡。</p>
-<pre><code>下定决心，排除万难。
-</code></pre>
-<span id="more"></span>
-<p>我为何考研？这个问题我曾思考了许久，因为我想弥补高考的失败，因为我想提高专业能力，因为我想有更广阔的未来。总之，我想无论成败我都要去考，不遗余力的考，不顾一切的考。<br>时间来到2022年12月，由于新冠疫情的影响，石城已封闭了3个月，现在逐渐解封，但却造成许多人患上了新冠奥密克戎。我正好在考前一天发烧，无奈地考虑到即使去了考场也无法完成考试，便放弃了，当了逃兵。到这里我心心念念的考研就告一段落了，我想我还没有一次全力以赴的参考，这就是我的遗憾吧。当有人问起我这些年的考研成绩，我只能说我正在准备中，希望我在新的一年中全力以赴，争取给自己一个满意的结果。</p>
-<hr>
-<p><strong>版权声明</strong></p>
-<p><img src="/images/cc.png"></p>
-<p><a href="https://scholargeek.github.io/">Scholar’s Blog</a> by <a href="https://scholargeek.github.io/About/">scholargeek</a> is licensed under a <a href="http://creativecommons.org/licenses/by-nc-nd/4.0/">Creative Commons BY-NC-ND 4.0 International License</a>.<br>由<a href="https://scholargeek.github.io/About/">董仕麟</a>创作并维护的<a href="https://scholargeek.github.io/">scholargeek</a>博客采用<a href="http://creativecommons.org/licenses/by-nc-nd/4.0/">创作共用保留署名-非商业-禁止演绎4.0国际许可证</a>。</p>
-<p>本文首发于<a href="https://scholargeek.github.io/">Scholar’s Blog</a>博客，版权所有，侵权必究。</p>
-<p>本文永久链接：<a href="https://scholargeek.github.io/2022/12/28/%E8%80%83%E7%A0%94%E5%BF%97%E4%BA%8C/">https://scholargeek.github.io/2022/12/28/%E8%80%83%E7%A0%94%E5%BF%97%E4%BA%8C/</a></p>
-]]></content>
-      <categories>
-        <category>日志</category>
-      </categories>
-      <tags>
-        <tag>PostgraduateEntranceExamination</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>考研日志一</title>
-    <url>/2021/12/28/%E8%80%83%E7%A0%94%E5%BF%97%E4%B8%80/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p>记得我大一时励志一定要考研，但在学校蹉跎岁月，很长时间都无法准备。考研这个想法长时间停留在我的脑海中，我不知道自己是否有实力和毅力面对这场人生大考，但我仍想尝试。毕竟考研如同小马过河，在没有尝试过之前没人知道水深水浅。其实在大学的最后一年中，我也观察了许多考研人的努力；有浅尝辄止的，有反复无常的，也有全力以赴的；我最多算浅尝辄止的，面对困难和机遇我愧对大一时的自己。记得我跨入大学校门的那一天，我曾经发下的誓言，我背负的耻辱，我无颜面对曾经的自己。在即将毕业的这段时间，我十分痛苦纠结，没什么准备的参加了20考研专业课考试，题会的不多，我已然抱着看题目的心态面对这场考试。之后无奈走入工作岗位，但我仍然心系考研，看着一年又一年的考研人入场，不断壮大的考研人数，我知道以后的考研只会更难。<br>    2020年考研人数为341万；2021年考研人数为377万；2022年考研人数为457万；······</p>
-<span id="more"></span>
-<p>我在国家银行的工作随着不断学习也越发得心应手，但对未来的焦虑也与日俱增。我迫切的想提升学历，于是重新开始制定考研的计划，在单位的宿舍中我不断的搜索资料，希望能找到合适的院校，最后将目标定在了西南的一所知名院校。后来搬回到家中我买了考研所需的资料，在工作之余尽量复习，虽然我制定了计划，但复习进度不如人意。我时而积极时而颓丧，工作和考研不断调和，我不知道该专心工作还是该专心考研，无论我怎么做都像在逃避什么。如果我专心工作那么考研该怎么办？若我专心考研那么我工作该怎么办？我反复纠结，拿不定主意，最后将焦虑诉说给父母，这就把选择权交了出去，最后听了我妈的建议为考研放弃工作，全心全意备战考研。其实我已经开始习惯了工作的状态，当我交出辞职报告时还是有些纠结，但木已成舟时我忽然轻松了不少，只是略微有些留恋。故事到了这应该即刻出现夜以继日、废寝忘食的学习画面，但实际从工作状态切换到完全学习的状态的确不易。<br><img src="https://s3.bmp.ovh/imgs/2023/01/25/3b976ba2b4e38616.png" alt="2022考研计划"><br>在家复习的那段时光，让我认清自己，承认自己是迟钝的、无知的、无畏的。我曾励志考研，现在机会就摆在面前，我却犹豫。复习初始的状态当然很好，但随着时间的流逝我就陷入了焦虑和自责中。我开始在复习时间走神，回忆，被动的回忆，不由自主的回忆。可能我才认识到过去的半年是我人生最重要的时刻，从开始到未来。我可能才意识到，我的内心世界是如此活跃，但身体上却感到很疲倦，不想动弹。回想从前的工作，如同被驯化的工具，我已然内心抗拒。离职后我的情绪在变化，觉得自己在逼自己，但我已然也必然走出了关键性的一步，无论是否坚定，但这一切是真实的。<br>现实的我已然坠落，我要向上攀爬，无论面对什么，都要有自我。或许我怀念轻松的时光，但为了梦想而且还要挣脱现实，又怎能轻松。况且从来的轻松只是暂时的，又不可预知。为了心甘情愿的走过这漫漫人生路，为了更加美好的一切。不必自责，不必怀念，不必幻想，因为人只活在当下。唯有把握现在，才能塑造将来。我想既已如此，只有现在的我可以再次证明，证明我仍是可塑的，我要做我心中的那个人，不负此生。虽然生命中总有许多缺憾，但我仍相信事在人为，做我要做的。心中有力量，就无惧挑战；倘若成功，必是美好。<br>    你是谁？是你本身的想法决定的，而非做了什么决定了你是谁。<br>在复习期间母亲身体抱恙，虽然我没有表现出什么，但我心里却十分担心，希望她一切都好。说回我自己，考前一个月我已经无法安然入睡，甚至有了抑郁的情绪，纷乱的思绪使我痛苦，我知道自己复习的成果无法达到预期。在考试当天压抑的情绪使我出现了胸痛的情况，我忍着疼痛完成了考试，虽然我预料到考试成绩不会理想，可能无法接受这种结果，最终抑郁。在我人生最难熬的时候，父母给了我最大的支持，使我的精神状态渐渐恢复到正常。反复思量后我决定再战，我不信我考不上，或许就是这种不服输的勇气让我开始了2022年的复习之旅。但只有勇气是不够的，我还需要毅力，希望我能给自己一个满意的交代。</p>
-<hr>
-<p><strong>版权声明</strong></p>
-<p><img src="/images/cc.png"></p>
-<p><a href="https://scholargeek.github.io/">Scholar’s Blog</a> by <a href="https://scholargeek.github.io/About/">scholargeek</a> is licensed under a <a href="http://creativecommons.org/licenses/by-nc-nd/4.0/">Creative Commons BY-NC-ND 4.0 International License</a>.<br>由<a href="https://scholargeek.github.io/About/">董仕麟</a>创作并维护的<a href="https://scholargeek.github.io/">scholargeek</a>博客采用<a href="http://creativecommons.org/licenses/by-nc-nd/4.0/">创作共用保留署名-非商业-禁止演绎4.0国际许可证</a>。</p>
-<p>本文首发于<a href="https://scholargeek.github.io/">Scholar’s Blog</a>博客，版权所有，侵权必究。</p>
-<p>本文永久链接：<a href="https://scholargeek.github.io/2021/12/28/%E8%80%83%E7%A0%94%E5%BF%97%E4%B8%80/">https://scholargeek.github.io/2021/12/28/%E8%80%83%E7%A0%94%E5%BF%97%E4%B8%80/</a></p>
-]]></content>
-      <categories>
-        <category>日志</category>
-      </categories>
-      <tags>
-        <tag>PostgraduateEntranceExamination</tag>
       </tags>
   </entry>
 </search>

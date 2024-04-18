@@ -1,0 +1,723 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+
+  
+  <title>JAVA学习 | Scholar&#39;s Blog</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="极客风格">
+<meta property="og:type" content="article">
+<meta property="og:title" content="JAVA学习">
+<meta property="og:url" content="https://scholargeek.github.io/2019/02/28/JAVA/index.html">
+<meta property="og:site_name" content="Scholar&#39;s Blog">
+<meta property="og:description" content="极客风格">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://s3.bmp.ovh/imgs/2024/04/13/1f145e2cfcd2fe1c.png">
+<meta property="og:image" content="https://s3.bmp.ovh/imgs/2024/04/13/23e840de9958cd13.jpg">
+<meta property="og:image" content="https://s3.bmp.ovh/imgs/2024/04/13/01c5cff4191ff4bb.png">
+<meta property="og:image" content="https://s3.bmp.ovh/imgs/2024/04/13/5c5a1870d15ff647.png">
+<meta property="og:image" content="https://scholargeek.github.io/images/cc.png">
+<meta property="article:published_time" content="2019-02-28T04:06:06.000Z">
+<meta property="article:modified_time" content="2019-02-28T04:28:08.000Z">
+<meta property="article:author" content="董仕麟">
+<meta property="article:tag" content="JAVA">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://s3.bmp.ovh/imgs/2024/04/13/1f145e2cfcd2fe1c.png">
+  
+    <link rel="alternate" href="/atom.xml" title="Scholar&#39;s Blog" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.ico">
+  
+  
+    
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/typeface-source-code-pro@0.0.71/index.min.css">
+
+  
+  
+<link rel="stylesheet" href="/css/style.css">
+
+  
+
+  
+
+  
+    
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.min.css">
+
+  
+<meta name="generator" content="Hexo 7.1.1"></head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">Scholar&#39;s Blog</a>
+      </h1>
+      
+        <h2 id="subtitle-wrap">
+          <a href="/" id="subtitle">DO WHAT WE WANT</a>
+        </h2>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">主页</a>
+        
+          <a class="main-nav-link" href="/Introduction">简介</a>
+        
+          <a class="main-nav-link" href="/About">关于</a>
+        
+          <a class="main-nav-link" href="/Learn">学习</a>
+        
+          <a class="main-nav-link" href="/archives">档案</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-github-link" class="nav-icon" href="https://github.com/scholargeek" title="Github" target="_blank"></a>
+        
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS 订阅"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="搜索"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="搜索"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="https://scholargeek.github.io"></form>
+      </div>
+    </div>
+  </div>
+  <script>
+    
+    var d = new Date();
+    var m = d.getMinutes();
+    var num = Math.ceil((m + 1) / (60 / 6));
+    document.getElementById("banner").style.backgroundImage = "url(/css/images/banner" + num + ".jpg)";
+    
+</script>
+</header>
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aplayer@1.7.0/dist/APlayer.min.css">
+<script src="https://cdn.jsdelivr.net/npm/aplayer@1.7.0/dist/APlayer.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/meting@1.1.0/dist/Meting.min.js"></script>
+
+      <div class="outer">
+        <section id="main"><article id="post-JAVA" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    
+<a href="/2019/02/28/JAVA/" class="article-date">
+  <time class="dt-published" datetime="2019-02-28T04:06:06.000Z" itemprop="datePublished">2019-02-28</time>
+</a>
+
+
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/Programming/">编程</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="p-name article-title" itemprop="headline name">
+      JAVA学习
+    </h1>
+  
+
+      </header>
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+	  
+		<!-- Table of Contents -->
+        
+            <div id="toc" class="toc-article">
+              <strong class="toc-title">文章目录</strong>
+              <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#JAVA%E7%AE%80%E4%BB%8B"><span class="toc-number">1.</span> <span class="toc-text">JAVA简介</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%9F%BA%E6%9C%AC%E4%BF%A1%E6%81%AF"><span class="toc-number">1.1.</span> <span class="toc-text">基本信息</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%8E%86%E5%8F%B2"><span class="toc-number">1.2.</span> <span class="toc-text">历史</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%BC%80%E6%94%BE%E6%BA%90%E4%BB%A3%E7%A0%81%E9%A1%B9%E7%9B%AE"><span class="toc-number">1.2.1.</span> <span class="toc-text">开放源代码项目</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%89%88%E6%9C%AC%E5%8E%86%E5%8F%B2"><span class="toc-number">1.2.2.</span> <span class="toc-text">版本历史</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%89%88%E6%9C%AC%E4%BD%BF%E7%94%A8"><span class="toc-number">1.2.3.</span> <span class="toc-text">版本使用</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%AF%AD%E8%A8%80%E7%89%B9%E6%80%A7"><span class="toc-number">1.3.</span> <span class="toc-text">语言特性</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1"><span class="toc-number">1.3.1.</span> <span class="toc-text">面向对象</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%B7%A8%E5%B9%B3%E5%8F%B0%E6%80%A7"><span class="toc-number">1.3.2.</span> <span class="toc-text">跨平台性</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%87%AA%E5%8A%A8%E5%9E%83%E5%9C%BE%E5%9B%9E%E6%94%B6-Garbage-Collection"><span class="toc-number">1.3.3.</span> <span class="toc-text">自动垃圾回收(Garbage Collection)</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%BF%90%E8%A1%8C%E6%9C%BA%E5%88%B6"><span class="toc-number">1.4.</span> <span class="toc-text">运行机制</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%BF%90%E8%A1%8C%E6%B5%81%E7%A8%8B"><span class="toc-number">1.4.1.</span> <span class="toc-text">运行流程</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#JVM-Java-Virtual-Machine"><span class="toc-number">1.4.2.</span> <span class="toc-text">JVM(Java Virtual Machine)</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#ClassLoader"><span class="toc-number">1.4.3.</span> <span class="toc-text">ClassLoader</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#JRE-Java-Runtime-Environment"><span class="toc-number">1.4.4.</span> <span class="toc-text">JRE(Java Runtime Environment)</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#JDK-Java-Development-Kit"><span class="toc-number">1.4.5.</span> <span class="toc-text">JDK(Java Development Kit)</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#JDK%EF%BC%8CJRE%E5%92%8CJVM%E4%B9%8B%E9%97%B4%E7%9A%84%E5%85%B3%E7%B3%BB"><span class="toc-number">1.4.6.</span> <span class="toc-text">JDK，JRE和JVM之间的关系</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%9F%BA%E6%9C%AC%E8%AF%AD%E6%B3%95"><span class="toc-number">1.5.</span> <span class="toc-text">基本语法</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Java%E5%85%B3%E9%94%AE%E5%AD%97"><span class="toc-number">1.6.</span> <span class="toc-text">Java关键字</span></a></li></ol></li></ol>
+            </div>
+        
+        <h1 id="JAVA简介"><a href="#JAVA简介" class="headerlink" title="JAVA简介"></a>JAVA简介</h1><p>　　Java是一种广泛使用的计算机编程语言，拥有跨平台、面向对象、泛型编程的特性，广泛应用于企业级Web应用开发和移动应用开发。<br>　　任职于Sun微系统的詹姆斯·高斯林等人于1990年代初开发Java语言的雏形，最初被命名为Oak，目标设置在家用电器等小型系统的编程语言，应用在电视机、电话、闹钟、烤面包机等家用电器的控制和通信。由于这些智能化家电的市场需求没有预期的高，Sun微系统放弃了该项计划。随着1990年代互联网的发展，Sun微系统看见Oak在互联网上应用的前景，于是改造了Oak，于1995年5月以Java的名称正式发布。Java伴随着互联网的迅猛发展而发展，逐渐成为重要的网络编程语言。</p>
+<span id="more"></span>
+<p>　　Java编程语言的风格十分接近C++语言。继承了C++语言面向对象技术的核心，舍弃了容易引起错误的指针，以引用取代；移除了C++中的运算符重载和多重继承特性，用接口取代；增加垃圾回收器功能。在Java SE 1.5版本中引入了泛型编程、类型安全的枚举、不定长参数和自动装&#x2F;拆箱特性。Sun微系统对Java语言的解释是：“Java编程语言是个简单、面向对象、分布式、解释性、健壮、安全、与系统无关、可移植、高性能、多线程和动态的语言”。Java不同于一般的编译语言或解释型语言。它首先将源代码编译成字节码，再依赖各种不同平台上的虚拟机来解释执行字节码，从而具有“一次编写，到处运行”的跨平台特性。在早期JVM中，这在一定程度上降低了Java程序的运行效率。但在J2SE1.4.2发布后，Java的执行速度有了大幅提升。与传统类型不同，Sun微系统在推出Java时就将其作为开放的技术。全球的Java开发公司被要求所设计的Java软件必须兼容。“Java语言靠群体的力量而非公司的力量”是Sun微系统的口号之一，并获得了广大软件开发商的认同。这与微软公司所倡导的注重精英和封闭式的模式完全不同，此外，微软公司后来推出了与之竞争的.NET平台以及模仿Java的C#语言。后来Sun微系统被甲骨文公司并购，Java也随之成为甲骨文公司的产品。目前，移动操作系统Android大部分的代码采用Java编程语言编程。</p>
+<h2 id="基本信息"><a href="#基本信息" class="headerlink" title="基本信息"></a>基本信息</h2><p><img src="https://s3.bmp.ovh/imgs/2024/04/13/1f145e2cfcd2fe1c.png" alt="Java_logo"></p>
+<p><img src="https://s3.bmp.ovh/imgs/2024/04/13/23e840de9958cd13.jpg" alt="James_Gosling"></p>
+<p>设计者:詹姆斯·高斯林、太阳计算机系统公司<br>发行时间:1995年<br>类型系统:静态、安全、强类型、标明类型<br>许可证:GNU通用公共许可协议、JCP<br>文件扩展名:.java、.class、.jar<br>官方网站:<a target="_blank" rel="noopener" href="https://www.java.com/">https://www.java.com/</a></p>
+<h2 id="历史"><a href="#历史" class="headerlink" title="历史"></a>历史</h2><h3 id="开放源代码项目"><a href="#开放源代码项目" class="headerlink" title="开放源代码项目"></a>开放源代码项目</h3><p>　　2006年Sun微系统在JavaOne公布Java 开放源代码项目，并推出OpenJDK计划。Java虚拟机、Java编译器和Java类库以GNU通用公共许可证公开。</p>
+<h3 id="版本历史"><a href="#版本历史" class="headerlink" title="版本历史"></a>版本历史</h3><p>●1995年5月23日，Java语言诞生<br>●1996年1月，第一个JDK-JDK1.0诞生<br>●1996年4月，10个最主要的操作系统供应商申明将在其产品中嵌入JAVA技术<br>●1996年9月，约8.3万个网页应用了JAVA技术来制作<br>●1997年2月18日，JDK1.1发布<br>●1997年4月2日，JavaOne会议召开，参与者逾一万人，创当时全球同类会议规模之纪录<br>●1997年9月，JavaDeveloperConnection社区成员超过十万<br>●1998年2月，JDK1.1被下载超过2,000,000次<br>●1998年12月8日，JAVA2企业平台J2EE发布<br>●1999年6月，Sun微系统发布Java的三个版本：标准版（J2SE）、企业版（J2EE）和微型版（J2ME）<br>●2000年5月8日，JDK1.3发布<br>●2000年5月29日，JDK1.4发布<br>●2001年6月5日，NOKIA宣布，到2003年将出售1亿部支持Java的手机<br>●2001年9月24日，J2EE1.3发布<br>●2002年2月26日，J2SE1.4发布，自此Java的计算能力有了大幅提升<br>●2004年9月30日18:00PM，J2SE1.5发布，成为Java语言发展史上的又一里程碑。为了表示该版本的重要性，J2SE1.5更名为Java SE 5.0<br>●2005年6月，JavaOne大会召开，Sun微系统公开Java SE 6。此时，Java的各种版本已经更名，以取消其中的数字“2”：J2EE更名为Java EE，J2SE更名为Java SE，J2ME更名为Java ME<br>●2006年12月，Sun微系统发布JRE6.0<br>●2009年12月，Sun微系统发布Java EE 6<br>●2010年11月，由于Oracle公司对于Java社群的不友善，因此Apache扬言将退出JCP<br>●2011年7月28日，Oracle公司发布Java SE 7<br>●2014年3月18日，Oracle公司发布Java SE 8<br>●2017年9月21日，Oracle公司发布Java SE 9<br>●2018年3月21日，Oracle公司发布Java SE 10<br>●2018年9月25日，Oracle公司发布Java SE 11 (LTS)<br>●2019年3月，Oracle公司发布Java SE 12<br>●2019年9月，Oracle公司发布Java SE 13<br>●2020年3月，Oracle公司发布Java SE 14<br>●2020年9月，Oracle公司发布Java SE 15<br>●2021年3月，Oracle公司发布Java SE 16<br>●2021年9月，Oracle公司发布Java SE 17<br>●2022年3月，Oracle公司发布Java SE 18<br>●2022年9月，Oracle公司发布Java SE 19<br>●2023年3月，Oracle公司发布Java SE 20</p>
+<h3 id="版本使用"><a href="#版本使用" class="headerlink" title="版本使用"></a>版本使用</h3><p>目前Java提供以下三个版本：<br>●Java Platform, Enterprise Edition（Java EE：Java平台企业版）[常用于Web方向的网站开发]<br>●Java Platform, Standard Edition（Java SE：Java平台标准版）[用于桌面应用的开发，是其他版本的基础]<br>●Java Platform, Micro Edition（Java ME：Java平台微型版）[面向嵌入式等设备应用的开发]</p>
+<h2 id="语言特性"><a href="#语言特性" class="headerlink" title="语言特性"></a>语言特性</h2><p>Java可以实现以下五个目的：<br>●应当使用面向对象程序设计方法学<br>●应当允许同一程序在不同的计算机平台执行<br>●应当包括内置的对计算机网络的支持<br>●应当被设计成安全地执行远端代码<br>●应当易于使用，并借鉴以前那些面向对象语言（如C++）的长处。</p>
+<h3 id="面向对象"><a href="#面向对象" class="headerlink" title="面向对象"></a>面向对象</h3><p>　　Java的特点之一就是面向对象，是程序设计方法的一种。“面向对象程序设计语言”的核心之一就是开发者在设计软件的时候可以使用自定义的类型和关联操作。代码和数据的实际集合体叫做“对象”。一个对象可以想象成绑定了很多“行为（代码）”和“状态（数据）”的物体。对于数据结构的改变需要和代码进行通信然后操作，反之亦然。面向对象设计让大型软件工程的计划和设计变得更容易管理，能增强工程的健康度，减少失败工程的数量。</p>
+<h3 id="跨平台性"><a href="#跨平台性" class="headerlink" title="跨平台性"></a>跨平台性</h3><p>　　跨平台性是Java主要的特性之一，跨平台使得用Java语言编写的程序可以在编译后不用经过任何更改，就能在任何硬件设备条件下运行。这个特性经常被称为“一次编译，到处运行”。</p>
+<h3 id="自动垃圾回收-Garbage-Collection"><a href="#自动垃圾回收-Garbage-Collection" class="headerlink" title="自动垃圾回收(Garbage Collection)"></a>自动垃圾回收(Garbage Collection)</h3><p>　　C++语言被用户诟病的原因之一是大多数C++编译器不支持垃圾收集机制。通常使用C++编程的时候，程序员于程序中初始化对象时，会在主机存储器堆栈上分配一块存储器与地址，当不需要此对象时，进行析构或者删除的时候再释放分配的存储器地址。如果对象是在堆栈上分配的，而程序员又忘记进行删除，那么就会造成存储器泄漏（Memory Leak）。长此以往，程序运行的时候可能会生成很多不清除的垃圾，浪费了不必要的存储器空间。而且如果同一存储器地址被删除两次的话，程序会变得不稳定，甚至崩溃。因此有经验的C++程序员都会在删除之后将指针重置为NULL，然后在删除之前先判断指针是否为NULL。C++中也可以使用“智能指针”（Smart Pointer）或者使用C++托管扩展编译器的方法来实现自动化存储器释放，智能指针可以在标准类库中找到，而C++托管扩展被微软的Visual C++ 7.0及以上版本所支持。智能指针的优点是不需引入缓慢的垃圾收集机制，而且可以不考虑线程安全的问题，但是缺点是如果不善使用智能指针的话，性能有可能不如垃圾收集机制，而且不断地分配和释放存储器可能造成存储器碎片，需要手动对堆进行压缩。除此之外，由于智能指针是一个基于模板的功能，所以没有经验的程序员在需要使用多态特性进行自动清理时也可能束手无策。<br>　　Java语言则不同，上述的情况被自动垃圾收集功能自动处理。对象的建立和放置都是在存储器堆栈上面进行的。当一个对象没有任何引用的时候，Java的自动垃圾收集机制就发挥作用，自动删除这个对象所占用的空间，释放存储器以避免存储器泄漏。注意程序员不需要修改finalize方法，自动垃圾收集也会发生作用。但是存储器泄漏并不是就此避免了，当程序员疏忽大意地忘记解除一个对象不应该有的引用时，存储器泄漏仍然不可避免。<br>　　不同厂商、不同版本的JVM中的存储器垃圾回收机制并不完全一样，通常越新版本的存储器回收机制越快，IBM、BEA、Sun微系统等等开发JVM的公司都曾宣称过自己制造出了世界上最快的JVM，JVM性能的世界纪录也在不断的被打破并提高。IBM有一篇有关Java存储器回收机制比不激活垃圾收集机制的C++存储器处理快数倍的技术文章，而著名的Java技术书籍《Java编程思想》（Thinking in Java）也有一段论述Java存储器及性能达到甚至超过C++的章节。</p>
+<h2 id="运行机制"><a href="#运行机制" class="headerlink" title="运行机制"></a>运行机制</h2><h3 id="运行流程"><a href="#运行流程" class="headerlink" title="运行流程"></a>运行流程</h3><p>　　Java是编译型语言与解释型语言的结合体。Java程序运行时，必须经过编译和运行两个步骤。首先对后缀名为.java的源文件进行编译，生成后缀名为.class的字节码文件。然后java虚拟机对字节码文件进行解释执行，并将结果显示出来。<br>　　编译运行过程如下：<br>①编写Hello World.java文件。</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">HelloWorld</span> &#123;</span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title function_">main</span><span class="params">(String[] args)</span> &#123;</span><br><span class="line">        System.out.println(<span class="string">&quot;Hello World&quot;</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>②使用“javac Hello World.java”命令运行Java编译器编译HelloWorld.java文件，编译结束后生成一个名为HelloWorld.class的字节码文件。<br>③使用“java HelloWorld”命令运行Java虚拟机，Java虚拟机首先将编译好的字节码文件加载到内存，这个过程称为类加载，由类加载器完成。然后Java虚拟机针对加载到内存中的Java类进行解释执行，输出运行结果。</p>
+<p><img src="https://s3.bmp.ovh/imgs/2024/04/13/01c5cff4191ff4bb.png" alt="JAVA运行机制"><br>　　整个过程Java程序是由虚拟机负责解释执行的，而并非操作系统。这样就可以实现Java程序的跨平台，即在不同的操作系统上安装不同版本的Java虚拟机就可以运行相同的Java程序编译好的字节码文件。</p>
+<h3 id="JVM-Java-Virtual-Machine"><a href="#JVM-Java-Virtual-Machine" class="headerlink" title="JVM(Java Virtual Machine)"></a>JVM(Java Virtual Machine)</h3><p>1.JVM即Java虚拟机，是Java字节码执行的引擎，为java程序的执行提供必要的支持，能优化java字节码，使之转换成效率更高的机器指令。程序员编写的程序最终都要在JVM上执行，JVM中类的装载是由类加载器（ClassLoader）和它的子类来实现的。<br>2.ClassLoader是java运行时一个重要的系统组件，负责在运行时查找和装入类文件的类。<br>3.JVM屏蔽了与具体操作系统平台相关的信息，从而实现了java程序只需生成在JVM上运行的字节码文件(class文件)，就可以在多种平台上不加修改地运行。不同平台对应着不同的JVM，在执行字节码时，JVM负责将每一条要执行的字节码送给解释器，解释器再将其翻译成特定平台环境的机器指令并执行。java语言最重要的特点就是跨平台运行，使用JVM就是为了支持与操作系统无关，实现跨平台运行。</p>
+<h3 id="ClassLoader"><a href="#ClassLoader" class="headerlink" title="ClassLoader"></a>ClassLoader</h3><p>1.是JVM实现的一部分，包括bootstrapclassloader（启动类加载器）<br>2.ClassLoader在JVM运行的时候加载java核心的API，通过java程序实现两个ClassLoader:<br>①ExtClassLoader，它的作用是用来加载java的扩展API，也就是lib\ext类；<br>②AppClassLoader，用来加载用户机器上CLASSPATH设置目录中的Class.<br>3.ClassLoader加载流程：当运行一个程序的时候，JVM启动，运行bootstrapclassloader，该ClassLoader加载java核心API，然后调用ExtClassLoader加载扩展API，最后AppClassLoader加载CLASSPATH目录下定义的Class.</p>
+<h3 id="JRE-Java-Runtime-Environment"><a href="#JRE-Java-Runtime-Environment" class="headerlink" title="JRE(Java Runtime Environment)"></a>JRE(Java Runtime Environment)</h3><p>JRE即java运行时环境，它是java程序运行所必须的环境集合，主要由java虚拟机、java平台核心类和若干支持文件组成。其不包含开发工具、编译器、调试器以及其他工具。<br>　　在执行java程序的时候，操作系统会按照下面顺序寻找JRE环境。<br>①先查找当前目录下有没有JRE<br>②再查找父目录下有没有JRE<br>③接着在环境变量PATH制定的路径中查找JRE<br>④注册表查看CurrentVersion的键值指向哪个JRE<br>　　JRE自带的基础类库主要在JRE\LIB\rt.jar文件中。在程序运行时，JRE由ClassLoader(类加载器)负责查找和加载程序引用到的基类库和其他类库。基础类库，Classloader会自动到rt.jar的位置；其他的类库，ClassLoader在环境变量CLASSPATH制定的路径中搜索。</p>
+<h3 id="JDK-Java-Development-Kit"><a href="#JDK-Java-Development-Kit" class="headerlink" title="JDK(Java Development Kit)"></a>JDK(Java Development Kit)</h3><p>JDK即java开发工具包。JDK是java的核心，它包括java运行环境、一系列java工具和java基础的类库（rt.jar）。JDK包含JRE的全部内容外，还包含开发者用以编译、调试和运行java程序的工具。</p>
+<h3 id="JDK，JRE和JVM之间的关系"><a href="#JDK，JRE和JVM之间的关系" class="headerlink" title="JDK，JRE和JVM之间的关系"></a>JDK，JRE和JVM之间的关系</h3><p>JDK包含了JRE和JVM，JRE包含了JVM。JDK是开发Java程序必备的工具，而JRE则是Java程序运行的必备环境。<br><img src="https://s3.bmp.ovh/imgs/2024/04/13/5c5a1870d15ff647.png" alt="JDK,JRE,JVM之间的关系"></p>
+<h2 id="基本语法"><a href="#基本语法" class="headerlink" title="基本语法"></a>基本语法</h2><p>●大小写敏感：Java是大小写敏感的，这就意味着标识符<code>Hello</code>与<code>hello</code>是不同的。<br>●类名：对于所有的类来说，类名的首字母应该大写。如果类名由若干单词组成，那么每个单词的首字母应该大写，例如<code>MyFirstJavaClass</code>。<br>●方法名：所有的方法名都应该以小写字母开头。如果方法名含有若干单词，则后面的每个单词首字母大写，例如<code>myFirstJavaMethod</code>。<br>●源文件名：源文件名必须和文件内名字唯一且公开(由public 关键词修饰)的类名相同。当保存文件的时候，你应该使用该类名作为文件名保存（切记Java是大小写敏感的），文件名的后缀为<code>.java</code>。（如果文件名和类名不相同则会导致编译错误）。<br>●主方法入口：所有的Java程序由<code>public static void main(String[] args)</code>方法开始执行。</p>
+<h2 id="Java关键字"><a href="#Java关键字" class="headerlink" title="Java关键字"></a>Java关键字</h2><p>这些关键字不能用于常量、变量、和任何标识符的名称。</p>
+<table>
+<thead>
+<tr>
+<th>类别</th>
+<th>关键字</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>访问控制</td>
+<td>private</td>
+<td>私有的</td>
+</tr>
+<tr>
+<td>protected</td>
+<td>受保护的</td>
+<td></td>
+</tr>
+<tr>
+<td>public</td>
+<td>公共的</td>
+<td></td>
+</tr>
+<tr>
+<td>类、方法和变量修饰符</td>
+<td>abstract</td>
+<td>声明抽象</td>
+</tr>
+<tr>
+<td>class</td>
+<td>类</td>
+<td></td>
+</tr>
+<tr>
+<td>extends</td>
+<td>扩充,继承</td>
+<td></td>
+</tr>
+<tr>
+<td>final</td>
+<td>最终值,不可改变的</td>
+<td></td>
+</tr>
+<tr>
+<td>implements</td>
+<td>实现（接口）</td>
+<td></td>
+</tr>
+<tr>
+<td>interface</td>
+<td>接口</td>
+<td></td>
+</tr>
+<tr>
+<td>native</td>
+<td>本地，原生方法（非Java实现）</td>
+<td></td>
+</tr>
+<tr>
+<td>new</td>
+<td>新,创建</td>
+<td></td>
+</tr>
+<tr>
+<td>static</td>
+<td>静态</td>
+<td></td>
+</tr>
+<tr>
+<td>strictfp</td>
+<td>严格,精准</td>
+<td></td>
+</tr>
+<tr>
+<td>synchronized</td>
+<td>线程,同步</td>
+<td></td>
+</tr>
+<tr>
+<td>transient</td>
+<td>短暂</td>
+<td></td>
+</tr>
+<tr>
+<td>volatile</td>
+<td>易失</td>
+<td></td>
+</tr>
+<tr>
+<td>程序控制语句</td>
+<td>break</td>
+<td>跳出循环</td>
+</tr>
+<tr>
+<td>case</td>
+<td>定义一个值以供switch选择</td>
+<td></td>
+</tr>
+<tr>
+<td>continue</td>
+<td>继续</td>
+<td></td>
+</tr>
+<tr>
+<td>default</td>
+<td>默认</td>
+<td></td>
+</tr>
+<tr>
+<td>do</td>
+<td>运行</td>
+<td></td>
+</tr>
+<tr>
+<td>else</td>
+<td>否则</td>
+<td></td>
+</tr>
+<tr>
+<td>for</td>
+<td>循环</td>
+<td></td>
+</tr>
+<tr>
+<td>if</td>
+<td>如果</td>
+<td></td>
+</tr>
+<tr>
+<td>instanceof</td>
+<td>实例</td>
+<td></td>
+</tr>
+<tr>
+<td>return</td>
+<td>返回</td>
+<td></td>
+</tr>
+<tr>
+<td>switch</td>
+<td>根据值选择执行</td>
+<td></td>
+</tr>
+<tr>
+<td>while</td>
+<td>循环</td>
+<td></td>
+</tr>
+<tr>
+<td>错误处理</td>
+<td>assert</td>
+<td>断言表达式是否为真</td>
+</tr>
+<tr>
+<td>catch</td>
+<td>捕捉异常</td>
+<td></td>
+</tr>
+<tr>
+<td>finally</td>
+<td>有没有异常都执行</td>
+<td></td>
+</tr>
+<tr>
+<td>throw</td>
+<td>抛出一个异常对象</td>
+<td></td>
+</tr>
+<tr>
+<td>throws</td>
+<td>声明一个异常可能被抛出</td>
+<td></td>
+</tr>
+<tr>
+<td>try</td>
+<td>捕获异常</td>
+<td></td>
+</tr>
+<tr>
+<td>包相关</td>
+<td>import</td>
+<td>引入</td>
+</tr>
+<tr>
+<td>package</td>
+<td>包</td>
+<td></td>
+</tr>
+<tr>
+<td>基本类型</td>
+<td>boolean</td>
+<td>布尔型</td>
+</tr>
+<tr>
+<td>byte</td>
+<td>字节型</td>
+<td></td>
+</tr>
+<tr>
+<td>char</td>
+<td>字符型</td>
+<td></td>
+</tr>
+<tr>
+<td>double</td>
+<td>双精度浮点</td>
+<td></td>
+</tr>
+<tr>
+<td>float</td>
+<td>单精度浮点</td>
+<td></td>
+</tr>
+<tr>
+<td>int</td>
+<td>整型</td>
+<td></td>
+</tr>
+<tr>
+<td>long</td>
+<td>长整型</td>
+<td></td>
+</tr>
+<tr>
+<td>short</td>
+<td>短整型</td>
+<td></td>
+</tr>
+<tr>
+<td>null</td>
+<td>空</td>
+<td></td>
+</tr>
+<tr>
+<td>变量引用</td>
+<td>super</td>
+<td>父类,超类</td>
+</tr>
+<tr>
+<td>this</td>
+<td>本类</td>
+<td></td>
+</tr>
+<tr>
+<td>void</td>
+<td>无返回值</td>
+<td></td>
+</tr>
+<tr>
+<td>保留关键字</td>
+<td>goto</td>
+<td>是关键字，但不能使用</td>
+</tr>
+<tr>
+<td>const</td>
+<td>是关键字，但不能使用</td>
+<td></td>
+</tr>
+</tbody></table>
+<hr>
+<p><strong>版权声明</strong></p>
+<p><img src="/images/cc.png"></p>
+<p><a href="https://scholargeek.github.io/">Scholar’s Blog</a> by <a href="https://scholargeek.github.io/About/">scholargeek</a> is licensed under a <a target="_blank" rel="noopener" href="http://creativecommons.org/licenses/by-nc-nd/4.0/">Creative Commons BY-NC-ND 4.0 International License</a>.<br>由<a href="https://scholargeek.github.io/About/">董仕麟</a>创作并维护的<a href="https://scholargeek.github.io/">scholargeek</a>博客采用<a target="_blank" rel="noopener" href="http://creativecommons.org/licenses/by-nc-nd/4.0/">创作共用保留署名-非商业-禁止演绎4.0国际许可证</a>。</p>
+<p>本文首发于<a href="https://scholargeek.github.io/">Scholar’s Blog</a>博客，版权所有，侵权必究。</p>
+<p>本文永久链接：<a href="https://scholargeek.github.io/2019/02/28/JAVA/">https://scholargeek.github.io/2019/02/28/JAVA/</a></p>
+
+      
+    </div>
+    <footer class="article-footer">
+	  
+	  <!-- 百度分享 Start -->
+	  <div class="bdsharebuttonbox"><a href="#" class="bds_more" data-cmd="more"></a><a href="#" class="bds_qzone" data-cmd="qzone" title="分享到QQ空间"></a><a href="#" class="bds_tsina" data-cmd="tsina" title="分享到新浪微博"></a><a href="#" class="bds_tqq" data-cmd="tqq" title="分享到腾讯微博"></a><a href="#" class="bds_renren" data-cmd="renren" title="分享到人人网"></a><a href="#" class="bds_weixin" data-cmd="weixin" title="分享到微信"></a></div>
+	  <!-- 百度分享 End -->
+    
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/JAVA/" rel="tag">JAVA</a></li></ul>
+
+	  
+<span>
+更新日期:<time datetime="2019-02-28T04:28:08.000Z" itemprop="dateModified">2019-02-28</time>
+</span>
+
+
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2019/07/12/%E6%88%91%E7%9A%84%E7%AC%AC%E4%B8%80%E7%AF%87%E5%8D%9A%E5%AE%A2%E6%96%87%E7%AB%A0/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">前一篇</strong>
+      <div class="article-nav-title">
+        
+          我的第一篇博客文章——博客的搭建
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2018/09/05/Linux4/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">后一篇</strong>
+      <div class="article-nav-title">CentOS简介与基本配置</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+
+</section>
+        
+          
+  <div id="toc" class="toc-aside">
+  <h2 class="toc-title">文章目录</h2>
+    
+        <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#JAVA%E7%AE%80%E4%BB%8B"><span class="toc-number">1.</span> <span class="toc-text">JAVA简介</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%9F%BA%E6%9C%AC%E4%BF%A1%E6%81%AF"><span class="toc-number">1.1.</span> <span class="toc-text">基本信息</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%8E%86%E5%8F%B2"><span class="toc-number">1.2.</span> <span class="toc-text">历史</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%BC%80%E6%94%BE%E6%BA%90%E4%BB%A3%E7%A0%81%E9%A1%B9%E7%9B%AE"><span class="toc-number">1.2.1.</span> <span class="toc-text">开放源代码项目</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%89%88%E6%9C%AC%E5%8E%86%E5%8F%B2"><span class="toc-number">1.2.2.</span> <span class="toc-text">版本历史</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%89%88%E6%9C%AC%E4%BD%BF%E7%94%A8"><span class="toc-number">1.2.3.</span> <span class="toc-text">版本使用</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%AF%AD%E8%A8%80%E7%89%B9%E6%80%A7"><span class="toc-number">1.3.</span> <span class="toc-text">语言特性</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1"><span class="toc-number">1.3.1.</span> <span class="toc-text">面向对象</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%B7%A8%E5%B9%B3%E5%8F%B0%E6%80%A7"><span class="toc-number">1.3.2.</span> <span class="toc-text">跨平台性</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%87%AA%E5%8A%A8%E5%9E%83%E5%9C%BE%E5%9B%9E%E6%94%B6-Garbage-Collection"><span class="toc-number">1.3.3.</span> <span class="toc-text">自动垃圾回收(Garbage Collection)</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%BF%90%E8%A1%8C%E6%9C%BA%E5%88%B6"><span class="toc-number">1.4.</span> <span class="toc-text">运行机制</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%BF%90%E8%A1%8C%E6%B5%81%E7%A8%8B"><span class="toc-number">1.4.1.</span> <span class="toc-text">运行流程</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#JVM-Java-Virtual-Machine"><span class="toc-number">1.4.2.</span> <span class="toc-text">JVM(Java Virtual Machine)</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#ClassLoader"><span class="toc-number">1.4.3.</span> <span class="toc-text">ClassLoader</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#JRE-Java-Runtime-Environment"><span class="toc-number">1.4.4.</span> <span class="toc-text">JRE(Java Runtime Environment)</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#JDK-Java-Development-Kit"><span class="toc-number">1.4.5.</span> <span class="toc-text">JDK(Java Development Kit)</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#JDK%EF%BC%8CJRE%E5%92%8CJVM%E4%B9%8B%E9%97%B4%E7%9A%84%E5%85%B3%E7%B3%BB"><span class="toc-number">1.4.6.</span> <span class="toc-text">JDK，JRE和JVM之间的关系</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%9F%BA%E6%9C%AC%E8%AF%AD%E6%B3%95"><span class="toc-number">1.5.</span> <span class="toc-text">基本语法</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Java%E5%85%B3%E9%94%AE%E5%AD%97"><span class="toc-number">1.6.</span> <span class="toc-text">Java关键字</span></a></li></ol></li></ol>
+    
+  </div>
+
+<aside id="sidebar">
+
+  
+    
+<div class="widget-wrap">
+  <h3 class="widget-title">ABOUT ME</h3>
+  <ul class="widget about-me">
+    
+    <li><img class="author" title="About me" src="/images/HeadPortrait.png" /></li>
+    
+    
+    <li>Hi, I'm Dong Shilin.<br>I will share my learning experience and anecdotes with you on this blog.</li>
+    
+  </ul>
+</div>
+
+
+  
+    <div class="widget-wrap">
+  <h3 class="widget-title">音乐</h3>
+  <div class="widget">
+    <div class="aplayer no-destroy" data-id="30413159" data-server="netease" data-type="song" data-fixed="true" data-autoplay="true"> </div>
+  </div>
+</div>
+
+  
+    <div class="widget-wrap">
+  <h3 class="widget-title">日历</h3>
+  <div class="widget" id="calendar">
+  </div>
+</div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">分类</h3>
+    <div class="widget">
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/Tutorial/">教程</a><span class="category-list-count">18</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Log/">日志</a><span class="category-list-count">4</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Programming/">编程</a><span class="category-list-count">31</span></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">标签</h3>
+    <div class="widget">
+      <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/C/" rel="tag">C</a><span class="tag-list-count">13</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/CSS/" rel="tag">CSS</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/DOS/" rel="tag">DOS</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/DataStructure/" rel="tag">DataStructure</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/HTML/" rel="tag">HTML</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Hexo/" rel="tag">Hexo</a><span class="tag-list-count">18</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/JAVA/" rel="tag">JAVA</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/JavaScript/" rel="tag">JavaScript</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Linux/" rel="tag">Linux</a><span class="tag-list-count">5</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/MySQL/" rel="tag">MySQL</a><span class="tag-list-count">5</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/PostgraduateEntranceExamination/" rel="tag">PostgraduateEntranceExamination</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Shell/" rel="tag">Shell</a><span class="tag-list-count">1</span></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">标签云</h3>
+    <div class="widget tagcloud">
+      <a href="/tags/C/" style="font-size: 18.25px; color: #35b838">C</a> <a href="/tags/CSS/" style="font-size: 14.75px; color: #65bfa7">CSS</a> <a href="/tags/DOS/" style="font-size: 13px; color: #7dc3de">DOS</a> <a href="/tags/DataStructure/" style="font-size: 13px; color: #7dc3de">DataStructure</a> <a href="/tags/HTML/" style="font-size: 13px; color: #7dc3de">HTML</a> <a href="/tags/Hexo/" style="font-size: 20px; color: #1db400">Hexo</a> <a href="/tags/JAVA/" style="font-size: 13px; color: #7dc3de">JAVA</a> <a href="/tags/JavaScript/" style="font-size: 13px; color: #7dc3de">JavaScript</a> <a href="/tags/Linux/" style="font-size: 16.5px; color: #4dbc6f">Linux</a> <a href="/tags/MySQL/" style="font-size: 16.5px; color: #4dbc6f">MySQL</a> <a href="/tags/PostgraduateEntranceExamination/" style="font-size: 14.75px; color: #65bfa7">PostgraduateEntranceExamination</a> <a href="/tags/Shell/" style="font-size: 13px; color: #7dc3de">Shell</a>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">归档</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2023/03/">三月 2023</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2023/02/">二月 2023</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/12/">十二月 2022</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/12/">十二月 2021</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/09/">九月 2019</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/08/">八月 2019</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/07/">七月 2019</a><span class="archive-list-count">19</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/02/">二月 2019</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/09/">九月 2018</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/08/">八月 2018</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/06/">六月 2018</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/02/">二月 2018</a><span class="archive-list-count">13</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/01/">一月 2018</a><span class="archive-list-count">1</span></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">最新文章</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2023/03/06/JavaScript/">JavaScript学习</a>
+          </li>
+        
+          <li>
+            <a href="/2023/02/07/MySQL4/">数据库学习4</a>
+          </li>
+        
+          <li>
+            <a href="/2023/02/05/MySQL3/">数据库学习3</a>
+          </li>
+        
+          <li>
+            <a href="/2023/02/03/MySQL2/">数据库学习2</a>
+          </li>
+        
+          <li>
+            <a href="/2023/02/01/MySQL1/">数据库学习1</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+
+  
+    
+<div class="widget-wrap">
+  <h3 class="widget-title">友情链接</h3>
+  <ul class="widget">
+    
+    <li><a href="https://weibo.com/scholargeek" target="_BLANK">微博</a></li>
+    
+    <li><a href="http://user.qzone.qq.com/2511880290/infocenter" target="_BLANK">QQ空间</a></li>
+    
+  </ul>
+</div>
+
+
+  
+
+</aside>
+
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2024 董仕麟<br>
+      Powered by <a href="https://scholargeek.github.io/" target="_blank">DSL</a>
+    </div>
+  </div>
+  
+  <p align="center">
+  
+        <!-- 不蒜子统计 -->
+	    <br>
+        <span id="busuanzi_container_site_pv">
+         本站总访问量  <span id="busuanzi_value_site_pv"></span> 次
+        </span>      
+        <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+  
+  </p>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">主页</a>
+  
+    <a href="/Introduction" class="mobile-nav-link">简介</a>
+  
+    <a href="/About" class="mobile-nav-link">关于</a>
+  
+    <a href="/Learn" class="mobile-nav-link">学习</a>
+  
+    <a href="/archives" class="mobile-nav-link">档案</a>
+  
+</nav>
+    
+
+
+<!-- 百度分享 start -->
+<script>window._bd_share_config={"common":{"bdSnsKey":{},"bdText":"","bdMini":"2","bdMiniList":["mshare","douban","bdysc","sqq","qq","hi","baidu","huaban","youdao","sdo","mail","xg","diandian","fx","copy","print"],"bdPic":"","bdStyle":"1","bdSize":"16"},"share":{},"image":{"viewList":["qzone","tsina","tqq","renren","weixin"],"viewText":"分享到","viewSize":"16"}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];</script>
+<!-- 百度分享 end -->
+
+
+
+<script src="/js/jquery-3.4.1.min.js"></script>
+
+
+
+  
+<script src="/fancybox/jquery.fancybox.min.js"></script>
+
+
+
+<div class="bottom-btn">
+
+	<a class="icon-gotop" href="javascript:void(0)" title="返回顶部"></a>
+	
+<script src="/js/gotop.js"></script>
+
+
+
+	<a class="icon-toc-toggle" href="javascript:void(0)" title="文章目录"></a>
+	
+<script src="/js/toc_aside_toggle.js"></script>
+
+
+</div>
+
+
+
+<script src="/js/script.js"></script>
+
+
+
+
+
+
+
+  
+<script src="/js/languages.js"></script>
+
+  
+<script src="/js/calendar.js"></script>
+
+
+  <script type="text/javascript">
+  $(function() {
+    
+    $('#calendar').aCalendar('zh-CN', {root:'/', calendarSingle:true, calendarRoot:'calendar/'});
+    
+  });
+  </script>
+
+
+
+
+  </div>
+<script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"debug":false,"model":{"jsonPath":"/live2dw/assets/assets/z16.model.json"},"display":{"position":"left","width":150,"height":300,"hOffset":-15,"vOffset":-15},"mobile":{"show":true},"react":{"opacity":0.8},"log":false});</script></body>
+</html>
+
+<!-- 页面点击小红心 -->
+<script type="text/javascript" src="/js/love.js"></script>
+
+<!--动态线条背景-->
+<script type="text/javascript"
+color="255, 0, 0" opacity='0.7' zIndex="-2" count="200" src="//cdn.bootcss.com/canvas-nest.js/1.0.0/canvas-nest.min.js">
+</script>
